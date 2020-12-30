@@ -13,14 +13,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Climbing
+  - Player
+  - Background
+  - Enemy
+  - Hazards
+  - Interactable
+  - Layer
   - 
   - 
   - 
@@ -40,4 +40,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 77852303
+    locked: 0
+  - name: Enemy
+    uniqueID: 1628628131
+    locked: 0
+  - name: Player
+    uniqueID: 3303043859
+    locked: 0
+  - name: Interactable
+    uniqueID: 492043173
+    locked: 0
+  - name: Climbing
+    uniqueID: 111297717
+    locked: 0
+  - name: hazards
+    uniqueID: 3588091133
+    locked: 0
+  - name: Background
+    uniqueID: 2825954759
     locked: 0
