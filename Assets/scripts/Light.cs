@@ -37,4 +37,13 @@ public class Light : MonoBehaviour
         if(parameters.pointLightOuterRadius > 0)
             parameters.pointLightOuterRadius -= 0.001f * fadeSpeed;
     }
+
+    public void changeRadius(float amount)
+    {
+        parameters.pointLightOuterRadius = Mathf.Max(0, parameters.pointLightOuterRadius += amount);
+        if(parameters.pointLightOuterRadius > initialRadius)
+        {
+            initialRadius = parameters.pointLightOuterRadius;
+        }
+    }
 }
