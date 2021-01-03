@@ -13033,7 +13033,7 @@ GameObject:
   - component: {fileID: 1973933934}
   - component: {fileID: 1973933933}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: musicPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13049,7 +13049,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bc7d8ef851e7142219cdd3cec469231c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aefb8500980974769bf15eaec54c4365, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.306
   m_Pitch: 1
@@ -13440,12 +13440,12 @@ PrefabInstance:
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -101.91008
+      value: -98.7199
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.8889084
+      value: 4.888834
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557295, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
