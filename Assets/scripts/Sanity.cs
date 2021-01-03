@@ -41,7 +41,7 @@ public class Sanity : MonoBehaviour
 
     public void Recover(float amount)
     {
-        sanity = Mathf.Max(initialSanity, sanity + amount);
+        sanity = Mathf.Min(initialSanity, sanity + amount);
     }
 
     // Start is called before the first frame update

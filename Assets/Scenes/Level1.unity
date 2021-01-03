@@ -551,6 +551,7 @@ GameObject:
   - component: {fileID: 591159254}
   - component: {fileID: 591159256}
   - component: {fileID: 591159255}
+  - component: {fileID: 591159257}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -616,6 +617,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591159253}
   m_CullTransparentMesh: 0
+--- !u!114 &591159257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591159253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68fda9dc4df294d07aa2a777f5bee2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &754496274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,16 +1120,27 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 591159253}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 591159257}
+        m_MethodName: pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1217983355
 MonoBehaviour:
@@ -1241,7 +1265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1548390236}
-  fadeSpeed: 10
+  fadeSpeed: 1
 --- !u!1 &1271177886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34, y: 34}
+  m_AnchoredPosition: {x: 5, y: 34}
   m_SizeDelta: {x: 621.19403, y: 116.47388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1271177888
@@ -1302,8 +1326,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.9150943, g: 0.91105795, b: 0.34100214, a: 1}
+    m_PressedColor: {r: 0.8301529, g: 0.8490566, b: 0.14017442, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1323,7 +1347,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1271177889}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 591159257}
+        m_MethodName: resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 591159253}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1271177889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,7 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9716981, g: 0.96050507, b: 0.41709682, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1727,7 +1773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1735,11 +1781,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
-    m_FontStyle: 0
+    m_FontSize: 80
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 70
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1821,8 +1867,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Paused
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9acd023113bcd4aebb65c5b3e629d447, type: 2}
+  m_sharedMaterial: {fileID: -4081718596137922130, guid: 9acd023113bcd4aebb65c5b3e629d447,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13791,7 +13838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -108.6, y: -56.6}
+  m_AnchoredPosition: {x: -108.59961, y: -56.600098}
   m_SizeDelta: {x: 170.97737, y: 29.904907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097679483
@@ -14045,17 +14092,17 @@ PrefabInstance:
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -98.41284
+      value: -92.56955
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.888827
+      value: 1.8846049
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557295, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 830719147819348189, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
