@@ -8,6 +8,11 @@ public class Sanity : MonoBehaviour
     [SerializeField] float sanityLossSpeed;
     float initialSanity;
 
+    public void SetSanityLossSpeed(float amount)
+    {
+        sanityLossSpeed = amount;
+    }
+
     public float GetInitialSanity()
     {
         return initialSanity;
@@ -16,6 +21,11 @@ public class Sanity : MonoBehaviour
     public float GetSanity()
     {
         return sanity;
+    }
+
+    public float GetSanityLossSpeed()
+    {
+        return sanityLossSpeed;
     }
 
     public void LoseSanity(float amount)

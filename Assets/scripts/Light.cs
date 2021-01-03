@@ -15,10 +15,21 @@ public class Light : MonoBehaviour
         return parameters.pointLightOuterRadius;
     }
 
+    public void SetFadeSpeed(float amount)
+    {
+        fadeSpeed = amount;
+    }
+
     public float GetInitialRadius()
     {
         return initialRadius;
     }
+
+    public float GetFadeSpeed()
+    {
+        return fadeSpeed;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +37,6 @@ public class Light : MonoBehaviour
         transform.position = player.transform.position;
         parameters = GetComponent<Light2D>();
         initialRadius = parameters.pointLightOuterRadius;
-
     }
 
     // Update is called once per frame
