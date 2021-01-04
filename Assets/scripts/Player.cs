@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     // State
     bool isAlive = true;
+    bool couldHurt = true;
 
     // cached component references
     Rigidbody2D myRidigidBody;
@@ -34,7 +35,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (!isAlive) { return; }
-        Die();
         Run();
         Jump();
         FlipSprite();
@@ -77,20 +77,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    
-    private void Die()
+
+    public void Hurt(int amount)
     {
-        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
-        {
-            /*
-            myAnimator.SetTrigger("Dying");
-            GetComponent<Rigidbody2D>().velocity = deathKick;
-            isAlive = false; */
-            //FindObjectOfType<GameSession>().ProcessPlayerDeath();
+        if (couldHurt) {
+            FindObjectOfType<Sanity>().LoseSanity(amount);
         }
     }
+ 
 
-    public void slowDown(float speed) {
+
+public void slowDown(float speed) {
         runSpeed = speed;
     }
 
