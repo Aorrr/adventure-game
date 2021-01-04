@@ -30,7 +30,6 @@ public class Enemy: MonoBehaviour
             canDamage = true;
             hurtPlayer();
         }
-        Debug.Log(timeSinceAttack);
     }
 
     public void hurtPlayer()
