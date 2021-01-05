@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
     // for combo system
     float reset = 0f;
-    float resetTime = 0.4f;
+    float resetTime = 1f;
 
     // Assistance
     [SerializeField] Transform attackPoint;
@@ -78,7 +78,6 @@ public class Player : MonoBehaviour
         } else
         {
             myAnimator.SetBool("isJumping", false);
-            myAnimator.SetTrigger("land");
         }
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
@@ -119,6 +118,7 @@ public class Player : MonoBehaviour
             {
                 myAnimator.SetTrigger("attack");
                 reset = 0;
+                Debug.Log(reset + " attack");
             }
             else if (CrossPlatformInputManager.GetButtonDown("Fire2"))
             {

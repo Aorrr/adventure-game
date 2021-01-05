@@ -2235,6 +2235,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
+--- !u!1 &1694100580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5593614822031056931, guid: 7687db0c35d7c8646bda5172514f1884,
+    type: 3}
+  m_PrefabInstance: {fileID: 5593614821426498631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1694100584
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694100580}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1719614705
 GameObject:
   m_ObjectHideFlags: 0
@@ -19764,6 +19791,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1029373661}
     m_Modifications:
+    - target: {fileID: 1029373660, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 2063127362}
+    - target: {fileID: 1029373660, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 5593614822031056931, guid: 7687db0c35d7c8646bda5172514f1884,
+        type: 3}
     - target: {fileID: 1000816217385713664, guid: cbb1e982ffb6b45b48f07829d650a5cf,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
