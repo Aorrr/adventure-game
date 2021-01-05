@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
     {
         if(myAnimator.GetBool("isRunning")==true)
         {
-            if(Input.GetKeyDown(KeyCode.L))
+            if(Input.GetKeyDown(KeyCode.S))
             {
                 myAnimator.SetBool("slide", true);
             }
