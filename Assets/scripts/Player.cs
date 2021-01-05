@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
     [SerializeField] float attackSpeed = 2f;
+    [SerializeField] float attackRange = 2f;
+    [SerializeField] float arrowSpeed = 25f;
 
     // State
     bool isAlive = true;
@@ -25,13 +27,18 @@ public class Player : MonoBehaviour
 
     // for combo system
     float reset = 0f;
-    float resetTime = 0.4f;
+    float resetTime = 1f;
 
-    // Message then methods 
+    // Assistance
+    [SerializeField] Transform attackPoint;
+    [SerializeField] Transform shootPoint;
+    [SerializeField] GameObject arrowPrefab;
+
+    // Message then methods
     void Start()
     {
         myRidigidBody = GetComponent<Rigidbody2D>();
-   
+
         myAnimator = GetComponentInChildren<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
@@ -47,6 +54,15 @@ public class Player : MonoBehaviour
         Jump();
         FlipSprite();
         Attack();
+        BowLight();
+        Slide();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     private void Run()
@@ -54,6 +70,20 @@ public class Player : MonoBehaviour
         float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal"); // -1 to 1
         Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRidigidBody.velocity.y);
         myRidigidBody.velocity = playerVelocity;
+    }
+
+    private void Slide()
+    {
+        if(myAnimator.GetBool("isRunning")==true)
+        {
+            if(Input.GetKeyDown(KeyCode.S))
+            {
+                myAnimator.SetBool("slide", true);
+            }
+        } else
+        {
+            myAnimator.SetBool("slide", false);
+        }
     }
 
     private void Jump()
@@ -64,11 +94,11 @@ public class Player : MonoBehaviour
         } else
         {
             myAnimator.SetBool("isJumping", false);
-            myAnimator.SetTrigger("land");
         }
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
+            myAnimator.SetBool("slide", false);
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRidigidBody.velocity += jumpVelocityToAdd;
         }
@@ -105,21 +135,40 @@ public class Player : MonoBehaviour
             {
                 myAnimator.SetTrigger("attack");
                 reset = 0;
+                Debug.Log(reset + " attack");
             }
             else if (CrossPlatformInputManager.GetButtonDown("Fire2"))
             {
                 myAnimator.SetTrigger("attackHeavy");
                 reset = 0;
             }
-        } else
+        }
+        else
         {
             myAnimator.SetTrigger("reset");
             reset = 0;
         }
     }
 
+    private void BowLight()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Fire3"))
+        {
+            myAnimator.SetTrigger("bowLight");
+        }
+    }
 
-public void slowDown(float speed) {
+    public void BowLightShoot()
+    {
+        GameObject arrow = Instantiate(
+                arrowPrefab,
+                shootPoint.position,
+                Quaternion.identity) as GameObject;
+        arrow.GetComponent<Rigidbody2D>().velocity = new Vector2(-arrowSpeed * transform.localScale.x, 0);
+    }
+
+
+    public void slowDown(float speed) {
         runSpeed = speed;
     }
 
