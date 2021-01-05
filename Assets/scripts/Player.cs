@@ -34,11 +34,11 @@ public class Player : MonoBehaviour
     [SerializeField] Transform shootPoint;
     [SerializeField] GameObject arrowPrefab;
 
-    // Message then methods 
+    // Message then methods
     void Start()
     {
         myRidigidBody = GetComponent<Rigidbody2D>();
-   
+
         myAnimator = GetComponentInChildren<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
         FlipSprite();
         Attack();
         BowLight();
+        Slide();
     }
 
     private void OnDrawGizmosSelected()
@@ -71,6 +72,20 @@ public class Player : MonoBehaviour
         myRidigidBody.velocity = playerVelocity;
     }
 
+    private void Slide()
+    {
+        if(myAnimator.GetBool("isRunning")==true)
+        {
+            if(Input.GetKeyDown(KeyCode.L))
+            {
+                myAnimator.SetBool("slide", true);
+            }
+        } else
+        {
+            myAnimator.SetBool("slide", false);
+        }
+    }
+
     private void Jump()
     {
         if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
@@ -83,6 +98,7 @@ public class Player : MonoBehaviour
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
+            myAnimator.SetBool("slide", false);
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRidigidBody.velocity += jumpVelocityToAdd;
         }
@@ -126,7 +142,7 @@ public class Player : MonoBehaviour
                 myAnimator.SetTrigger("attackHeavy");
                 reset = 0;
             }
-        } 
+        }
         else
         {
             myAnimator.SetTrigger("reset");
