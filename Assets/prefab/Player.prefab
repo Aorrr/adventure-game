@@ -123,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.62}
+    oldSize: {x: 3.7333333, y: 4.4333334}
     newSize: {x: 0.22, y: 0.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 5
   jumpSpeed: 15
-  climbSpeed: 5
   deathKick: {x: 10, y: 15}
+  attackSpeed: 0.2
 --- !u!70 &8177663173715260131
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
