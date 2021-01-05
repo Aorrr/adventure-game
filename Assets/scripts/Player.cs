@@ -9,10 +9,12 @@ public class Player : MonoBehaviour
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
+    [SerializeField] float attackSpeed = 2f;
 
     // State
     bool isAlive = true;
     bool couldHurt = true;
+    float attackInterval;
 
     // cached component references
     Rigidbody2D myRidigidBody;
@@ -21,14 +23,20 @@ public class Player : MonoBehaviour
     CapsuleCollider2D myBodyCollider;
     float gravityScaleAtStart;
 
+    // for combo system
+    float reset = 0f;
+    float resetTime = 0.4f;
+
     // Message then methods 
     void Start()
     {
         myRidigidBody = GetComponent<Rigidbody2D>();
-        myAnimator = GetComponent<Animator>();
+   
+        myAnimator = GetComponentInChildren<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRidigidBody.gravityScale;
+        attackInterval = 1/attackSpeed;
     }
 
     // Update is called once per frame
@@ -38,6 +46,7 @@ public class Player : MonoBehaviour
         Run();
         Jump();
         FlipSprite();
+        Attack();
     }
 
     private void Run()
@@ -55,6 +64,7 @@ public class Player : MonoBehaviour
         } else
         {
             myAnimator.SetBool("isJumping", false);
+            myAnimator.SetTrigger("land");
         }
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
@@ -84,7 +94,29 @@ public class Player : MonoBehaviour
             FindObjectOfType<Sanity>().LoseSanity(amount);
         }
     }
- 
+
+
+    public void Attack()
+    {
+        if(reset < resetTime)
+        {
+            reset += Time.deltaTime;
+            if (CrossPlatformInputManager.GetButtonDown("Fire1"))
+            {
+                myAnimator.SetTrigger("attack");
+                reset = 0;
+            }
+            else if (CrossPlatformInputManager.GetButtonDown("Fire2"))
+            {
+                myAnimator.SetTrigger("attackHeavy");
+                reset = 0;
+            }
+        } else
+        {
+            myAnimator.SetTrigger("reset");
+            reset = 0;
+        }
+    }
 
 
 public void slowDown(float speed) {
