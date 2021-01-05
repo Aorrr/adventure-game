@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
     [SerializeField] float attackSpeed = 2f;
+
     // State
     bool isAlive = true;
     bool couldHurt = true;
@@ -30,7 +31,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         myRidigidBody = GetComponent<Rigidbody2D>();
-        myAnimator = GetComponent<Animator>();
+   
+        myAnimator = GetComponentInChildren<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRidigidBody.gravityScale;
@@ -62,6 +64,7 @@ public class Player : MonoBehaviour
         } else
         {
             myAnimator.SetBool("isJumping", false);
+            myAnimator.SetTrigger("land");
         }
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
