@@ -47,6 +47,7 @@ public class Player : MonoBehaviour
         Jump();
         FlipSprite();
         Attack();
+        Slide();
     }
 
     private void Run()
@@ -60,17 +61,14 @@ public class Player : MonoBehaviour
     {
         if(myAnimator.GetBool("isRunning")==true)
         {
-            if(CrossPlatformInputManager.GetButtonDown("Horizontal"))
+            if(Input.GetKeyDown(KeyCode.L))
             {
-                myAnimator.SetTrigger("slide");
-                speedUp(6);
+                myAnimator.SetBool("slide", true);
             }
-
-            else
-            {
-                slowDown(3);
-            }
-        } 
+        } else
+        {
+            myAnimator.SetBool("slide", false);
+        }
     }
 
     private void Jump()
@@ -85,6 +83,7 @@ public class Player : MonoBehaviour
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
+            myAnimator.SetBool("slide", false);
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRidigidBody.velocity += jumpVelocityToAdd;
         }
