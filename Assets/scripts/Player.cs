@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
     [SerializeField] float attackSpeed = 2f;
+    [SerializeField] float attackRange = 2f;
+    [SerializeField] float arrowSpeed = 25f;
 
     // State
     bool isAlive = true;
@@ -26,6 +28,10 @@ public class Player : MonoBehaviour
     // for combo system
     float reset = 0f;
     float resetTime = 0.4f;
+
+    // Assistance
+    [SerializeField] Transform attackPoint;
+    [SerializeField] GameObject arrowPrefab;
 
     // Message then methods 
     void Start()
@@ -47,6 +53,14 @@ public class Player : MonoBehaviour
         Jump();
         FlipSprite();
         Attack();
+        BowLight();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     private void Run()
@@ -111,15 +125,33 @@ public class Player : MonoBehaviour
                 myAnimator.SetTrigger("attackHeavy");
                 reset = 0;
             }
-        } else
+        } 
+        else
         {
             myAnimator.SetTrigger("reset");
             reset = 0;
         }
     }
 
+    private void BowLight()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Fire3"))
+        {
+            myAnimator.SetTrigger("bowLight");
+        }
+    }
 
-public void slowDown(float speed) {
+    public void BowLightShoot()
+    {
+        GameObject arrow = Instantiate(
+                arrowPrefab,
+                transform.position + new Vector3(0, 0.1f, 0),
+                Quaternion.identity) as GameObject;
+        arrow.GetComponent<Rigidbody2D>().velocity = new Vector2(-arrowSpeed * transform.localScale.x, 0);
+    }
+
+
+    public void slowDown(float speed) {
         runSpeed = speed;
     }
 

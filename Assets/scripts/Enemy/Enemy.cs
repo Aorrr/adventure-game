@@ -11,8 +11,9 @@ public class Enemy: MonoBehaviour
 
 
     [SerializeField] int Damage = 1;
-    private float timeSinceAttack;
     [SerializeField] float attackInterval;
+    [SerializeField] int hp = 30;
+    private float timeSinceAttack;
     private bool canDamage = true;
 
     void Start()
@@ -45,5 +46,19 @@ public class Enemy: MonoBehaviour
     {
         myAnimator.SetBool("inRage", true);
         ccollider.enabled = true;
+    }
+
+    public void Hurt(int damage)
+    {
+        hp -= damage;
+        if (hp <= 0)
+            Die();
+    }
+
+    public void Die()
+    {
+        Destroy(this);
+        //play death animation
+        //play particle effect
     }
 }
