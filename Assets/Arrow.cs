@@ -13,7 +13,11 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var hittedObj = collision.gameObject;
-        hittedObj.GetComponent<Enemy>().Hurt(damage);
+        Enemy enemy = collision.GetComponent<Enemy>();
+        if(enemy != null)
+        {
+            enemy.Hurt(damage);
+        }
+        Destroy(gameObject);
     }
 }

@@ -17,6 +17,11 @@ public class body : MonoBehaviour
         
     }
 
+    public void bowLightShoot()
+    {
+        player.BowLightShoot();
+    }
+
     public void stop(float amount)
     {
         player.slowDown(amount);

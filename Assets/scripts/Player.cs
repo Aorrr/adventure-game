@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
 
     // Assistance
     [SerializeField] Transform attackPoint;
+    [SerializeField] Transform shootPoint;
     [SerializeField] GameObject arrowPrefab;
 
     // Message then methods 
@@ -145,7 +146,7 @@ public class Player : MonoBehaviour
     {
         GameObject arrow = Instantiate(
                 arrowPrefab,
-                transform.position + new Vector3(0, 0.1f, 0),
+                shootPoint.position,
                 Quaternion.identity) as GameObject;
         arrow.GetComponent<Rigidbody2D>().velocity = new Vector2(-arrowSpeed * transform.localScale.x, 0);
     }

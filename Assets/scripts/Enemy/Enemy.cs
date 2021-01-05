@@ -57,7 +57,7 @@ public class Enemy: MonoBehaviour
 
     public void Die()
     {
-        Destroy(this);
+        Destroy(gameObject);
         //play death animation
         //play particle effect
     }
