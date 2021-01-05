@@ -56,6 +56,23 @@ public class Player : MonoBehaviour
         myRidigidBody.velocity = playerVelocity;
     }
 
+    private void Slide()
+    {
+        if(myAnimator.GetBool("isRunning")==true)
+        {
+            if(CrossPlatformInputManager.GetButtonDown("Horizontal"))
+            {
+                myAnimator.SetTrigger("slide");
+                speedUp(6);
+            }
+
+            else
+            {
+                slowDown(3);
+            }
+        } 
+    }
+
     private void Jump()
     {
         if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
@@ -119,9 +136,9 @@ public class Player : MonoBehaviour
     }
 
 
-public void slowDown(float speed) {
-        runSpeed = speed;
-    }
+    public void slowDown(float speed) {
+            runSpeed = speed;
+        }
 
     public void speedUp(float speed) {
         runSpeed = speed;
