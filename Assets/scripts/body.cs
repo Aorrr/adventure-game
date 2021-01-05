@@ -17,13 +17,13 @@ public class body : MonoBehaviour
         
     }
 
-    public void stop()
+    public void stop(float amount)
     {
-        player.slowDown(0);
+        player.slowDown(amount);
     }
 
-    public void release()
+    public void release(float amount)
     {
-        player.speedUp(3);
+        player.speedUp(amount);
     }
 }
