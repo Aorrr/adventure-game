@@ -15,9 +15,10 @@ public class Enemy: MonoBehaviour
     [SerializeField] int hp = 30;
     private float timeSinceAttack;
     private bool canDamage = true;
-
+    private int maxHealth;
     void Start()
     {
+        maxHealth = hp;
         myAnimator = GetComponent<Animator>();
         ccollider = GetComponent<CapsuleCollider2D>();
     }
@@ -60,5 +61,10 @@ public class Enemy: MonoBehaviour
         Destroy(gameObject);
         //play death animation
         //play particle effect
+    }
+
+    public float GetHealthPercentage()
+    {
+        return (float)hp / (float)maxHealth;
     }
 }
