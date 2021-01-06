@@ -147,6 +147,13 @@ AnimationClip:
     floatParameter: 0.1
     intParameter: 3
     messageOptions: 0
+  - time: 0.9166667
+    functionName: Attack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 3
+    messageOptions: 0
   - time: 1.3333334
     functionName: ResetSpeed
     data: 

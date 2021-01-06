@@ -11,6 +11,7 @@ public class MeleeAttack : MonoBehaviour
      LayerMask enemyLayer;
     [SerializeField] float attackRange;
     [SerializeField] int baseDamage;
+    [SerializeField] CamShakeController shaker;
 
     Player player;
 
@@ -39,6 +40,8 @@ public class MeleeAttack : MonoBehaviour
         for(int i = 0; i < enemiesInRange.Length; i++)
         {
             enemiesInRange[i].GetComponent<Enemy>().Hurt(baseDamage * DamageFactor);
+            StartCoroutine(shaker.ShakeIdle(0.3f, 3f, 2f));
+            StartCoroutine(shaker.ShakeRun(0.3f, 3f, 2f));
         }
     }
 
