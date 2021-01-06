@@ -116,14 +116,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: stop
+    functionName: SlowDown
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
+    floatParameter: 0.01
     intParameter: 0
     messageOptions: 0
   - time: 1.3333334
-    functionName: release
+    functionName: ResetSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

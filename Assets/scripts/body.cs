@@ -55,4 +55,9 @@ public class body : MonoBehaviour
         }
            
     }
+
+    public void Attack(int damageFactor)
+    {
+        FindObjectOfType<MeleeAttack>().Attack(damageFactor);
+    }
 }

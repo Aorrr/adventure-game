@@ -136,7 +136,6 @@ public class Player : MonoBehaviour
             {
                 myAnimator.SetTrigger("attack");
                 reset = 0;
-                Debug.Log(reset + " attack");
             }
             else if (CrossPlatformInputManager.GetButtonDown("Fire2"))
             {
@@ -186,4 +185,6 @@ public class Player : MonoBehaviour
     {
         runSpeed = initialSpeed;
     }
+
+
 }
