@@ -22,13 +22,37 @@ public class body : MonoBehaviour
         player.BowLightShoot();
     }
 
-    public void stop(float amount)
+    public void SpeedUp(float amount)
     {
-        player.slowDown(amount);
+        if(amount > 1)
+        {
+            player.SetSpeed(player.GetSpeed() * amount);
+        }
     }
 
-    public void release(float amount)
+    public void SlowDown(float amount)
     {
-        player.speedUp(amount);
+        if(amount > 0 && amount < 1)
+        {
+            player.SetSpeed(player.GetSpeed() * amount);
+        }
+    }
+
+    public void ResetSpeed()
+    {
+        player.SetDefaultSpeed();
+    }
+
+    public void AddVertiSpeed(float amount)
+    {
+        if (amount > 0)
+        {
+            player.GetComponent<Rigidbody2D>().velocity += new Vector2(0f, amount);
+        }
+        else
+        {
+            Debug.Log("Please enter a positive amount for AddVertiSpeed");
+        }
+           
     }
 }
