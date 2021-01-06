@@ -144,6 +144,12 @@ MonoBehaviour:
     m_ParentHash: 756556552
   - m_Hash: 1297308987
     m_ParentHash: 756556552
+  - m_Hash: 1775166388
+    m_ParentHash: 756556552
+  - m_Hash: -140271136
+    m_ParentHash: 756556552
+  - m_Hash: -433031001
+    m_ParentHash: 756556552
 --- !u!1 &830719146514470605
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830719146868825707}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.79772, y: 9.437709, z: 2.72363}
+  m_LocalPosition: {x: 2.6277204, y: 4.157709, z: 2.72363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 830719147834116078}
@@ -310,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830719146899557292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.837429, y: 4.8818645, z: -13}
+  m_LocalPosition: {x: -3.3304868, y: 4.886321, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830719146514470606}
@@ -343,7 +349,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -562,7 +568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830719147819348188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.79772, y: 9.437709, z: 2.72363}
+  m_LocalPosition: {x: 2.6277204, y: 4.157709, z: 2.72363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 830719147707507160}
