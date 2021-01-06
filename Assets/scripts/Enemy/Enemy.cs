@@ -13,6 +13,7 @@ public class Enemy: MonoBehaviour
     [SerializeField] int Damage = 1;
     [SerializeField] float attackInterval;
     [SerializeField] int hp = 30;
+    [SerializeField] GameObject hurtEffect;
     private float timeSinceAttack;
     private bool canDamage = true;
     private int maxHealth;
@@ -51,7 +52,9 @@ public class Enemy: MonoBehaviour
 
     public void Hurt(int damage)
     {
+        GameObject blood = Instantiate(hurtEffect, transform.position, transform.rotation);
         hp -= damage;
+        Destroy(blood, 1f);
         if (hp <= 0)
             Die();
     }
