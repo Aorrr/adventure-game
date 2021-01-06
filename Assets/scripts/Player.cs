@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     bool isAlive = true;
     bool couldHurt = true;
     float attackInterval;
+    float initialSpeed;
 
     // cached component references
     Rigidbody2D myRidigidBody;
@@ -43,7 +44,7 @@ public class Player : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRidigidBody.gravityScale;
-        attackInterval = 1/attackSpeed;
+        initialSpeed = runSpeed;
     }
 
     // Update is called once per frame
@@ -76,9 +77,9 @@ public class Player : MonoBehaviour
     {
         if(myAnimator.GetBool("isRunning")==true)
         {
-            if(Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S))
             {
-                myAnimator.SetBool("slide", true);
+                myAnimator.SetTrigger("startSlide");
             }
         } else
         {
@@ -135,7 +136,6 @@ public class Player : MonoBehaviour
             {
                 myAnimator.SetTrigger("attack");
                 reset = 0;
-                Debug.Log(reset + " attack");
             }
             else if (CrossPlatformInputManager.GetButtonDown("Fire2"))
             {
@@ -168,11 +168,23 @@ public class Player : MonoBehaviour
     }
 
 
-    public void slowDown(float speed) {
-        runSpeed = speed;
+    public void SetSpeed(float speed)
+    {
+        if(speed > 0)
+        {
+            runSpeed = speed;
+        }
     }
 
-    public void speedUp(float speed) {
-        runSpeed = speed;
+    public float GetSpeed()
+    {
+        return runSpeed;
     }
+
+    public void SetDefaultSpeed()
+    {
+        runSpeed = initialSpeed;
+    }
+
+
 }
