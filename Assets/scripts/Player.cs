@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] float attackSpeed = 2f;
     [SerializeField] float attackRange = 2f;
     [SerializeField] float arrowSpeed = 25f;
+    [SerializeField] GameObject DieEffect;
 
     // State
     bool isAlive = true;
@@ -123,9 +124,18 @@ public class Player : MonoBehaviour
     {
         if (couldHurt) {
             FindObjectOfType<Sanity>().LoseSanity(amount);
+            myAnimator.SetTrigger("hurt");
+            couldHurt = false;
+            StartCoroutine(InvulnerableTime(3));
         }
     }
 
+   IEnumerator InvulnerableTime(int invulnerableDuration)
+    {
+
+        yield return new WaitForSeconds(invulnerableDuration);
+        couldHurt = true;
+    }
 
     public void Attack()
     {
@@ -186,5 +196,19 @@ public class Player : MonoBehaviour
         runSpeed = initialSpeed;
     }
 
+    public void Die()
+    {
+        if(isAlive)
+        {
+            Vector3 pos = transform.position;
+            pos.y -= 0.7f;
+            GameObject light = Instantiate(DieEffect, pos, transform.rotation);
+            myRidigidBody.velocity = new Vector2(0f, 0f);
 
+            isAlive = false;
+            myAnimator.SetTrigger("die");
+            FindObjectOfType<Light>().SetFadeSpeed(3f);
+            Time.timeScale = 0.5f;
+        }
+    }
 }

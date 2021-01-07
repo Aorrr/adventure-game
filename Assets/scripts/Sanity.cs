@@ -54,5 +54,9 @@ public class Sanity : MonoBehaviour
     void Update()
     {
         sanity -= 0.001f * sanityLossSpeed;
+        if(sanity <= 0)
+        {
+            FindObjectOfType<Player>().Die();
+        }
     }
 }

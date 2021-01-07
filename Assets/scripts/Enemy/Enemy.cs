@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemy: MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class Enemy: MonoBehaviour
     [SerializeField] float attackInterval;
     [SerializeField] int hp = 30;
     [SerializeField] GameObject hurtEffect;
+    [SerializeField] int armour;
+    [SerializeField] int magicalResistance;
+    [SerializeField] DamagePopUp popUpObject;
+
     private float timeSinceAttack;
     private bool canDamage = true;
     private int maxHealth;
@@ -50,8 +55,32 @@ public class Enemy: MonoBehaviour
         ccollider.enabled = true;
     }
 
-    public void Hurt(int damage)
+    public void Hurt(int damage, string type)
     {
+        float reduction = 1;
+        // calculate physical damage with armour
+        if(type.ToLower() == "physical")
+        {
+            
+            reduction = (float)armour / ((float)armour + 100);
+            reduction = 1 - reduction;
+            damage = (int)Mathf.Round(reduction * damage);
+        }
+
+        // calculate maginal damage with MR
+        else if(type.ToLower() == "magical")
+        {
+            reduction = (float)magicalResistance / ((float)magicalResistance + 100);
+            reduction = 1 - reduction;
+            damage = (int)Mathf.Round(reduction * damage);
+        }
+
+        popUpObject.SetDamage(damage);
+        
+        GameObject popUp = Instantiate<GameObject>
+        (popUpObject.gameObject, transform.position, Quaternion.identity);
+
+        Destroy(popUp, 2f);
         GameObject blood = Instantiate(hurtEffect, transform.position, transform.rotation);
         hp -= damage;
         Destroy(blood, 1f);
