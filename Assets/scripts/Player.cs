@@ -203,19 +203,12 @@ public class Player : MonoBehaviour
             Vector3 pos = transform.position;
             pos.y -= 0.7f;
             GameObject light = Instantiate(DieEffect, pos, transform.rotation);
-            initialSpeed = 0f;
             myRidigidBody.velocity = new Vector2(0f, 0f);
+
             isAlive = false;
             myAnimator.SetTrigger("die");
-            FindObjectOfType<Light>().SetFadeSpeed(5f);
+            FindObjectOfType<Light>().SetFadeSpeed(3f);
             Time.timeScale = 0.5f;
-            StartCoroutine(FadeOut());
         }
-    }
-
-    IEnumerator FadeOut()
-    {
-        yield return new WaitForSeconds(1);
-        Destroy(gameObject);
     }
 }
