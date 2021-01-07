@@ -45,7 +45,7 @@ public class Light : MonoBehaviour
         Vector2 lightPos = new Vector2(player.transform.position.x, player.transform.position.y);
         transform.position = lightPos;
         if(parameters.pointLightOuterRadius > 0)
-            parameters.pointLightOuterRadius -= 0.001f * fadeSpeed;
+            parameters.pointLightOuterRadius -= fadeSpeed * Time.deltaTime;
     }
 
     public void changeRadius(float amount)
