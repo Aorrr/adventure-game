@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemy: MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Enemy: MonoBehaviour
     [SerializeField] GameObject hurtEffect;
     [SerializeField] int armour;
     [SerializeField] int magicalResistance;
+    [SerializeField] DamagePopUp popUpObject;
 
     private float timeSinceAttack;
     private bool canDamage = true;
@@ -72,6 +74,13 @@ public class Enemy: MonoBehaviour
             reduction = 1 - reduction;
             damage = (int)Mathf.Round(reduction * damage);
         }
+
+        popUpObject.SetDamage(damage);
+        
+        GameObject popUp = Instantiate<GameObject>
+        (popUpObject.gameObject, transform.position, Quaternion.identity);
+
+        Destroy(popUp, 2f);
         GameObject blood = Instantiate(hurtEffect, transform.position, transform.rotation);
         hp -= damage;
         Destroy(blood, 1f);

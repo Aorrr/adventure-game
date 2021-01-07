@@ -453,3 +453,5 @@ MonoBehaviour:
     type: 3}
   armour: 25
   magicalResistance: 0
+  popUpObject: {fileID: 3884357209951137487, guid: 8a065255c1b7449dd83098fcf891defa,
+    type: 3}
