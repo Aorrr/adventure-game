@@ -22,11 +22,12 @@ public class Enemy: MonoBehaviour
     private float timeSinceAttack;
     private bool canDamage = true;
     private int maxHealth;
+   
     void Start()
     {
         maxHealth = hp;
-        myAnimator = GetComponent<Animator>();
         ccollider = GetComponent<CapsuleCollider2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,7 +38,12 @@ public class Enemy: MonoBehaviour
         {
             canDamage = true;
             hurtPlayer();
+        } else
+        {
+            ease();
         }
+
+  
     }
 
     public void hurtPlayer()
@@ -46,13 +52,22 @@ public class Enemy: MonoBehaviour
         {
             FindObjectOfType<Player>().Hurt(Damage);
             timeSinceAttack = 0;
+            ease();
         }
     }
 
     public void rage()
     {
-        myAnimator.SetBool("inRage", true);
-        ccollider.enabled = true;
+        if(canDamage)
+        {
+            GetComponent<EnemyMovement>().changeMoveSpeed(3f);
+            myAnimator.SetBool("inRage", true);
+        }
+    }
+
+    public void ease()
+    {
+        myAnimator.SetBool("inRage", false);
     }
 
     public void Hurt(int damage, string type)

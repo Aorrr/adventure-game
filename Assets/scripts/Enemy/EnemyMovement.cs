@@ -32,4 +32,9 @@ public class EnemyMovement : MonoBehaviour
     {
         transform.localScale = new Vector2((Mathf.Sign(myRigidBody.velocity.x)), 1f);
     }
+
+    public void changeMoveSpeed(float speed)
+    {
+        moveSpeed = speed;
+    }
 }
