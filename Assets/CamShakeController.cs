@@ -25,11 +25,11 @@ public class CamShakeController : MonoBehaviour
         {
             virtualCameraIdleNoise.m_AmplitudeGain = shakeAmplitude;
             virtualCameraIdleNoise.m_FrequencyGain = shakeFrequency;
-            Debug.Log("yes");
+            //Debug.Log("yes");
             yield return new WaitForSeconds(shakeDuration);
         }
         virtualCameraIdleNoise.m_AmplitudeGain = 0f;
-        Debug.Log("stop");
+        //Debug.Log("stop");
     }
 
     public IEnumerator ShakeRun(float shakeDuration, float shakeAmplitude, float shakeFrequency)
@@ -38,10 +38,10 @@ public class CamShakeController : MonoBehaviour
         {
             virtualCameraRunNoise.m_AmplitudeGain = shakeAmplitude;
             virtualCameraRunNoise.m_FrequencyGain = shakeFrequency;
-            Debug.Log("yes");
+            //Debug.Log("yes");
             yield return new WaitForSeconds(shakeDuration);
         }
         virtualCameraRunNoise.m_AmplitudeGain = 0f;
-        Debug.Log("stop");
+        //Debug.Log("stop");
     }
 }

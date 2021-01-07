@@ -28,7 +28,6 @@ public class MeleeAttack : MonoBehaviour
 
     public void Attack(int DamageFactor)
     {
-        Debug.Log("Start attacking");
         if(DamageFactor < 0)
         {
             Debug.Log("Damage factor for Attack() cannot be smaller than 0");
