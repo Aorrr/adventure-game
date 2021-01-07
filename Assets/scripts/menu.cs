@@ -5,13 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
+    public Animator transition;
+    public float transition_time;
     public void StartFirstLevel()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadLevelWithCrossFade(2));
+    }
+
+    public void LoadLevelSelection()
+    {
+        StartCoroutine(LoadLevelWithCrossFade(1));
     }
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadLevelWithCrossFade(0));
+    }
+
+    IEnumerator LoadLevelWithCrossFade(int index)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(index);
     }
 }
