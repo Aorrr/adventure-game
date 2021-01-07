@@ -30,7 +30,7 @@ public class Arrow : MonoBehaviour
                 shakeIdle = StartCoroutine(controller.ShakeIdle(0.3f, 3f, 2f));
                 shakeRun = StartCoroutine(controller.ShakeRun(0.3f, 3f, 2f));
             }
-            enemy.Hurt(damage);
+            enemy.Hurt(damage, "physical");
             isHitted = true;
             GetComponent<SpriteRenderer>().enabled = false;
         } 

@@ -123,6 +123,7 @@ public class Player : MonoBehaviour
     {
         if (couldHurt) {
             FindObjectOfType<Sanity>().LoseSanity(amount);
+            myAnimator.SetTrigger("hurt");
         }
     }
 
