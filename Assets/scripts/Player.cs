@@ -31,10 +31,14 @@ public class Player : MonoBehaviour
     float reset = 0f;
     float resetTime = 1f;
 
+    // for slide timer
+    float sinceLastSlide = 0f;
+
     // Assistance
     [SerializeField] Transform attackPoint;
     [SerializeField] Transform shootPoint;
     [SerializeField] GameObject arrowPrefab;
+    [SerializeField] float slideCD = 2.5f;
 
     // Message then methods
     void Start()
@@ -58,6 +62,7 @@ public class Player : MonoBehaviour
         Attack();
         BowLight();
         Slide();
+
     }
 
     private void OnDrawGizmosSelected()
@@ -76,11 +81,14 @@ public class Player : MonoBehaviour
 
     private void Slide()
     {
+        sinceLastSlide += Time.deltaTime;
+
         if(myAnimator.GetBool("isRunning")==true)
         {
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S) && sinceLastSlide > slideCD)
             {
                 myAnimator.SetTrigger("startSlide");
+                sinceLastSlide = 0;
             }
         } else
         {

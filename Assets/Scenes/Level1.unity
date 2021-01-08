@@ -551,12 +551,12 @@ PrefabInstance:
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.075045
+      value: 6.0985622
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9950476
+      value: -2.989961
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557295, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
@@ -766,6 +766,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 766156511}
     m_Modifications:
+    - target: {fileID: 1047564595, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.030000687
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047564595, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7799969
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416255791, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416255791, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8310011842806876051, guid: 8eb9ea673e91a4a7b873e49aea067fe5,
         type: 3}
       propertyPath: m_Name
@@ -774,12 +790,12 @@ PrefabInstance:
     - target: {fileID: 8310011842806876053, guid: 8eb9ea673e91a4a7b873e49aea067fe5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.6080885
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 8310011842806876053, guid: 8eb9ea673e91a4a7b873e49aea067fe5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.5735846
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 8310011842806876053, guid: 8eb9ea673e91a4a7b873e49aea067fe5,
         type: 3}
@@ -1082,7 +1098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551ab3132631543cc8b1986f40324bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanity: 20
+  sanity: 30
   sanityLossSpeed: 0
 --- !u!4 &1476377308
 Transform:
