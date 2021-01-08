@@ -7,26 +7,30 @@ public class PlayerDetection : MonoBehaviour
 {
 
     [SerializeField] Enemy enemy;
+    BoxCollider2D box;
+    CircleCollider2D circle;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        box = GetComponent<BoxCollider2D>();
+        circle = GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        DetectPlayer();
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void DetectPlayer()
     {
-        enemy.rage();
-    }
-
-    public void OnTriggerExit2D(Collider2D other)
-    {
-        enemy.ease();
+        if(box.IsTouchingLayers(LayerMask.GetMask("Player")))
+        {
+            enemy.ToggleRage(true);
+        } else if (!circle.IsTouchingLayers(LayerMask.GetMask("Player")))
+        {
+            enemy.ToggleRage(false);
+        }
     }
 }
