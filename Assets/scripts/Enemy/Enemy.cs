@@ -61,7 +61,6 @@ public class Enemy: MonoBehaviour
     {
         if(canDamage)
         {
-            GetComponent<EnemyMovement>().changeMoveSpeed(3f);
             myAnimator.SetBool("inRage", true);
         }
     }
