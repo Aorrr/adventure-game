@@ -22,6 +22,7 @@ public class Arrow : MonoBehaviour
         EnemyBody enemy = collision.GetComponent<EnemyBody>();
         if(enemy != null)
         {
+            Debug.Log("ok");
             if (isHitted)
                 return;
             CamShakeController controller = FindObjectOfType<CamShakeController>();
@@ -36,6 +37,11 @@ public class Arrow : MonoBehaviour
         } 
         else
         {
+            if(shakeIdle != null && shakeRun != null)
+            {
+                StopCoroutine(shakeIdle);
+                StopCoroutine(shakeRun);
+            }
             Destroy(gameObject);
         }
     }
