@@ -7,6 +7,7 @@ public class Sanity : MonoBehaviour
     [SerializeField] float sanity;
     [SerializeField] float sanityLossSpeed;
     float initialSanity;
+    bool invulnerable = false;
 
     public void SetSanityLossSpeed(float amount)
     {
@@ -28,8 +29,13 @@ public class Sanity : MonoBehaviour
         return sanityLossSpeed;
     }
 
+    public void ToggleInvulnerability(bool invulState)
+    {
+        invulnerable = invulState;
+    }
     public void LoseSanity(float amount)
     {
+        if(invulnerable) { return; }
         if(sanity > 0)
         {
             sanity = Mathf.Max(0, sanity - amount);

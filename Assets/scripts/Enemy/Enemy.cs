@@ -89,4 +89,9 @@ public class Enemy: MonoBehaviour
     {
         return hp;
     }
+
+    public int GetDamage()
+    {
+        return Damage;
+    }
 }

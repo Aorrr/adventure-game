@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBody : MonoBehaviour
+public class SkullKing : MonoBehaviour
 {
-    [SerializeField] Enemy enemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +14,5 @@ public class EnemyBody : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void Hurt(int amount, string type)
-    {
-        enemy.Hurt(amount, type);
     }
 }

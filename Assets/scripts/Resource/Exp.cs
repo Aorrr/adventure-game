@@ -33,7 +33,6 @@ public class Exp : MonoBehaviour
         if(amount < 0) { return; }
         if(expToNextLevel <= 0) { Debug.Log("Experience to the next level cannot be negative or zero"); }
         currentExp += amount;
-        Debug.Log("gain " + amount + "exp");
         while(currentExp > expToNextLevel)
         {
             currentLevel++;
