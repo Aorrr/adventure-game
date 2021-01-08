@@ -13,6 +13,10 @@ public class EnemyMovement : MonoBehaviour
     Transform parentTransform;
     [SerializeField] Enemy enemy;
 
+    float unStuckTime = 0;
+    float minUnStuckTime = 1f;
+    float leapAttempt = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,9 +42,6 @@ public class EnemyMovement : MonoBehaviour
             {
                 myRigidBody.velocity = new Vector2(moveSpeed, 0f);
             }
-        } else
-        {
-            myRigidBody.velocity = new Vector2(0f, 0f);
         }
     }
 
@@ -57,4 +58,5 @@ public class EnemyMovement : MonoBehaviour
     {
         moveSpeed = speed;
     }
+
 }

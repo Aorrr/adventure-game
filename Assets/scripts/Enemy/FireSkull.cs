@@ -6,23 +6,43 @@ public class FireSkull : MonoBehaviour
 {
 
     Enemy enemy;
+    float timeAfterLastAttack;
+    float timeInterval;
+    Player player;
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<Player>();
         enemy = GetComponent<Enemy>();
+        timeAfterLastAttack = 0;
+        timeInterval = 2.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timeAfterLastAttack += Time.deltaTime;
         if (enemy.IfRage())
         {
-            FireSkullAttack();
+            if(timeAfterLastAttack >= timeInterval)
+            {
+                StartCoroutine(FireSkullLeapAttack());
+                timeAfterLastAttack = 0;
+            }
         }
     }
 
-    private void FireSkullAttack()
+    IEnumerator FireSkullLeapAttack()
     {
-        
+        Debug.Log("starts");
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        yield return new WaitForSeconds(1);
+
+        Vector2 direction = player.transform.position - enemy.transform.position;
+        direction.y = 0;
+        direction.x = Mathf.Sign(direction.x) * 15;
+        GetComponent<Rigidbody2D>().velocity += direction;
+
+
     }
 }

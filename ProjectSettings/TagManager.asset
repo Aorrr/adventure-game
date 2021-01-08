@@ -15,16 +15,16 @@ TagManager:
   - 
   - 
   - Ground
-  - Climbing
+  - EnemyComponent
   - Player
   - Background
   - Enemy
-  - Hazards
-  - Interactable
-  - Layer
   - Detection
   - PlayerProjectile
   - Particles
+  - 
+  - 
+  - 
   - 
   - 
   - 

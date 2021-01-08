@@ -8,7 +8,7 @@ public class Enemy: MonoBehaviour
     // Start is called before the first frame update
     bool inRage = false;
     Animator myAnimator;
-    CapsuleCollider2D ccollider;
+    BoxCollider2D ccollider;
 
 
     [SerializeField] int Damage = 1;
@@ -25,7 +25,7 @@ public class Enemy: MonoBehaviour
     void Start()
     {
         maxHealth = hp;
-        ccollider = GetComponent<CapsuleCollider2D>();
+        ccollider = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
     }
 
