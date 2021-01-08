@@ -8,11 +8,10 @@ public class Enemy: MonoBehaviour
     // Start is called before the first frame update
     bool inRage = false;
     Animator myAnimator;
-    CapsuleCollider2D ccollider;
+    BoxCollider2D ccollider;
 
 
     [SerializeField] int Damage = 1;
-    [SerializeField] float attackInterval;
     [SerializeField] int hp = 30;
     [SerializeField] GameObject hurtEffect;
     [SerializeField] int armour;
@@ -20,54 +19,25 @@ public class Enemy: MonoBehaviour
     [SerializeField] DamagePopUp popUpObject;
     [SerializeField] int exp;
 
-    private float timeSinceAttack;
     private bool canDamage = true;
     private int maxHealth;
    
     void Start()
     {
         maxHealth = hp;
-        ccollider = GetComponent<CapsuleCollider2D>();
+        ccollider = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        timeSinceAttack += Time.deltaTime;
-        if (timeSinceAttack > attackInterval)
-        {
-            canDamage = true;
-            hurtPlayer();
-        } else
-        {
-            ease();
-        }
 
-  
+    public void ToggleRage(bool status)
+    {
+        myAnimator.SetBool("inRage", status);
     }
 
-    public void hurtPlayer()
+    public bool IfRage()
     {
-        if(ccollider.IsTouchingLayers(LayerMask.GetMask("Player")))
-        {
-            FindObjectOfType<Player>().Hurt(Damage);
-            timeSinceAttack = 0;
-            ease();
-        }
-    }
-
-    public void rage()
-    {
-        if(canDamage)
-        {
-            myAnimator.SetBool("inRage", true);
-        }
-    }
-
-    public void ease()
-    {
-        myAnimator.SetBool("inRage", false);
+        return myAnimator.GetBool("inRage");
     }
 
     public void Hurt(int damage, string type)

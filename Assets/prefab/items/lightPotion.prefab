@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 719636774365119199}
   - component: {fileID: 719636774365119196}
   - component: {fileID: 719636774365119197}
-  - component: {fileID: 719636774365119198}
+  - component: {fileID: -3274858990932427599}
   m_Layer: 0
-  m_Name: sanityPotion
+  m_Name: lightPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4601702bb5c354c9485c00fceb469e1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25e91ac64c9fc42329db42b941f4e971, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.112905025}
   serializedVersion: 2
   m_Radius: 0.367095
---- !u!114 &719636774365119198
+--- !u!114 &-3274858990932427599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,10 +108,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 719636774365119186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07a189ec2a6b34f5690d02cb643764aa, type: 3}
+  m_Script: {fileID: 11500000, guid: bb38f110012a44b448890b9ae3d47cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 2
+  lightAmount: 1
   pickupEffect: {fileID: 6504780785476869609, guid: c97506f1945674cc3844de5ee43679a0,
     type: 3}
   animationDuration: 0.5

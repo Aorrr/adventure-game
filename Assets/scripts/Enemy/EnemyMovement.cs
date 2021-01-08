@@ -10,11 +10,17 @@ public class EnemyMovement : MonoBehaviour
     BoxCollider2D horiDetector;
     CapsuleCollider2D vertDetector;
     Rigidbody2D myRigidBody;
-    [SerializeField] Transform parentTransform;
+    Transform parentTransform;
+    [SerializeField] Enemy enemy;
+
+    float unStuckTime = 0;
+    float minUnStuckTime = 1f;
+    float leapAttempt = 1;
 
     // Start is called before the first frame update
     void Start()
     {
+        parentTransform = enemy.transform;
         myRigidBody = GetComponentInParent<Rigidbody2D>();
         horiDetector = GetComponent<BoxCollider2D>();
         vertDetector = GetComponent<CapsuleCollider2D>();
@@ -28,11 +34,14 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkCollision();
-        if (isFacingLeft()) { myRigidBody.velocity = new Vector2(-moveSpeed, 0f);  }
-        else
+        if(!enemy.IfRage())
         {
-            myRigidBody.velocity = new Vector2(moveSpeed, 0f);
+            checkCollision();
+            if (isFacingLeft()) { myRigidBody.velocity = new Vector2(-moveSpeed, 0f); }
+            else
+            {
+                myRigidBody.velocity = new Vector2(moveSpeed, 0f);
+            }
         }
     }
 
@@ -49,4 +58,5 @@ public class EnemyMovement : MonoBehaviour
     {
         moveSpeed = speed;
     }
+
 }
