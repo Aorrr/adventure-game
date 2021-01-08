@@ -24,4 +24,9 @@ public class PlayerDetection : MonoBehaviour
     {
         enemy.rage();
     }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        enemy.ease();
+    }
 }

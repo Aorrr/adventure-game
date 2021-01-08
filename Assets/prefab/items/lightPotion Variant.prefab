@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightAmount: 1
+  pickupEffect: {fileID: 0}
+  animationDuration: 0
 --- !u!1001 &5483688601352703756
 PrefabInstance:
   m_ObjectHideFlags: 0
