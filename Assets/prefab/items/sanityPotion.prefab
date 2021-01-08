@@ -112,3 +112,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 2
+  pickupEffect: {fileID: 0}
+  animationDuration: 0
