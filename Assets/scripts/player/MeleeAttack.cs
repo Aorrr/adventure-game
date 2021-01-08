@@ -12,6 +12,7 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] float attackRange;
     [SerializeField] int baseDamage;
     [SerializeField] CamShakeController shaker;
+    [SerializeField] AudioClip clip;
 
     Player player;
 
@@ -28,7 +29,6 @@ public class MeleeAttack : MonoBehaviour
 
     public void Attack(int DamageFactor)
     {
-        Debug.Log("Start attacking");
         if(DamageFactor < 0)
         {
             Debug.Log("Damage factor for Attack() cannot be smaller than 0");
@@ -36,7 +36,12 @@ public class MeleeAttack : MonoBehaviour
         }
         Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackPos.position
             , attackRange, enemyLayer);
-        
+
+        if(enemiesInRange.Length > 0)
+        {
+            AudioSource.PlayClipAtPoint(clip, Camera.main.gameObject.transform.position);
+        }
+
         for(int i = 0; i < enemiesInRange.Length; i++)
         {
             enemiesInRange[i].GetComponent<Enemy>().Hurt(baseDamage * DamageFactor, "physical");

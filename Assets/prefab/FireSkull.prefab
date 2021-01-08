@@ -448,10 +448,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 2
   attackInterval: 2
-  hp: 100
+  hp: 50
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
   armour: 25
   magicalResistance: 0
   popUpObject: {fileID: 3884357209951137487, guid: 8a065255c1b7449dd83098fcf891defa,
     type: 3}
+  exp: 20

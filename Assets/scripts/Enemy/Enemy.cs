@@ -18,6 +18,7 @@ public class Enemy: MonoBehaviour
     [SerializeField] int armour;
     [SerializeField] int magicalResistance;
     [SerializeField] DamagePopUp popUpObject;
+    [SerializeField] int exp;
 
     private float timeSinceAttack;
     private bool canDamage = true;
@@ -72,6 +73,7 @@ public class Enemy: MonoBehaviour
 
     public void Hurt(int damage, string type)
     {
+        if (hp <= 0) { return; }
         float reduction = 1;
         // calculate physical damage with armour
         if(type.ToLower() == "physical")
@@ -105,9 +107,8 @@ public class Enemy: MonoBehaviour
 
     public void Die()
     {
+        FindObjectOfType<Exp>().GainExp(exp);
         Destroy(gameObject);
-        //play death animation
-        //play particle effect
     }
 
     public float GetHealthPercentage()
