@@ -84,4 +84,9 @@ public class Enemy: MonoBehaviour
     {
         return (float)hp / (float)maxHealth;
     }
+
+    public float GetHealth()
+    {
+        return hp;
+    }
 }
