@@ -19,7 +19,6 @@ public class EnemyBody : MonoBehaviour
 
     public void Hurt(int amount, string type)
     {
-        Debug.Log("hurt!!!");
         enemy.Hurt(amount, type);
     }
 }
