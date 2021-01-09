@@ -53,6 +53,12 @@ public class EnemyMovement : MonoBehaviour
             parentTransform.localScale = new Vector2((Mathf.Sign(myRigidBody.velocity.x))*
                 Mathf.Abs(parentTransform.localScale.x), parentTransform.localScale.y);
         }
+
+        if(!vertDetector.IsTouchingLayers(LayerMask.GetMask("Ground")) &&
+            horiDetector.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
+
+            myRigidBody.velocity += new Vector2(0f, -4f);
+        }
     }
 
     public void changeMoveSpeed(float speed)
