@@ -20,5 +20,6 @@ public class EnemyBody : MonoBehaviour
     public void Hurt(int amount, string type)
     {
         enemy.Hurt(amount, type);
+        enemy.GetComponent<Animator>().SetTrigger("TakeDamage");
     }
 }

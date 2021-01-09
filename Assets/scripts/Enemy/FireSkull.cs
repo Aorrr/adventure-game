@@ -11,6 +11,7 @@ public class FireSkull : MonoBehaviour
     Player player;
     bool couldDamage = false;
     EnemyBody body;
+    Animator myAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +19,15 @@ public class FireSkull : MonoBehaviour
         player = FindObjectOfType<Player>();
         enemy = GetComponent<Enemy>();
         timeAfterLastAttack = 0;
-        timeInterval = 1.5f;
+        timeInterval = 1f;
         body = GetComponentInChildren<EnemyBody>();
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeAfterLastAttack += Time.deltaTime;
+        if(!couldDamage) { timeAfterLastAttack += Time.deltaTime; }
         if (enemy.IfRage())
         {
             if(timeAfterLastAttack >= timeInterval)
@@ -34,6 +36,7 @@ public class FireSkull : MonoBehaviour
                 timeAfterLastAttack = 0;
             }
         }
+        myAnimator.SetBool("Fire", couldDamage);
         DamagePlayer();
     }
 
@@ -57,4 +60,9 @@ public class FireSkull : MonoBehaviour
             couldDamage = false;
         }
     }
-}
+
+    public void ToggleAttackStatus(bool status)
+    {
+        couldDamage = status;
+    }
+ }
