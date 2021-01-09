@@ -9,6 +9,7 @@ public class SkullKing : MonoBehaviour
     [SerializeField] GameObject skullKingPath;
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] float SpawnSkullCD = 4f;
+    [SerializeField] Fire iceFire;
 
     Sanity sanity;
 
@@ -33,6 +34,10 @@ public class SkullKing : MonoBehaviour
     float movementThisFrame;
     bool couldDamage = false;
 
+    // timer for fire attack;
+    float fireCD = 1.5f;
+    float sinceLastFireAttack = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +60,7 @@ public class SkullKing : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
 
-            if (enemy.GetHealthPercentage() >= 0.6)
+            if (enemy.GetHealthPercentage() >= 0.8)
             {
                 if (SummonSkull)
                 {
@@ -77,9 +82,14 @@ public class SkullKing : MonoBehaviour
                     Sprint();
                 }
             }
+
+
         }
 
-        animator.SetBool("Fire", couldDamage);
+        animator.SetBool("CouldFire", couldDamage);
+
+        FireAttack();
+        CorrectRotation();
     }
 
     IEnumerator SummonSkulls()
@@ -87,7 +97,7 @@ public class SkullKing : MonoBehaviour
         SummonSkull = false;
         Instantiate(skull, transform.position, Quaternion.identity);
 
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         SummonSkull = true;
     }
 
@@ -117,9 +127,11 @@ public class SkullKing : MonoBehaviour
     {
 
         sinceLastSprint += Time.deltaTime;
+
         if(sinceLastSprint > sprintCD)
         {
-            animator.SetBool("Fire", true);
+            couldDamage = true;
+            animator.SetBool("CouldFire", true);
             transform.position = Vector2.MoveTowards
             (transform.position, targetPosition, movementThisFrame);
 
@@ -129,14 +141,15 @@ public class SkullKing : MonoBehaviour
                 {
                     sanity.LoseSanity(enemy.GetDamage());
                     couldDamage = false;
+                    sinceLastSprint = 0;
                 }
             }
 
         } else
         {
-            animator.SetBool("Fire", false);
+            //animator.SetBool("CouldFire", false);
             targetPosition = player.transform.position;
-            movementThisFrame = moveSpeed * 2 * Time.deltaTime;
+            movementThisFrame = moveSpeed * 4 * Time.deltaTime;
         }
 
         if(transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)
@@ -148,5 +161,30 @@ public class SkullKing : MonoBehaviour
     public void ToggleDamageStatus(bool status)
     {
         couldDamage = status;
+    }
+
+    private void FireAttack()
+    {
+        sinceLastFireAttack += Time.deltaTime;
+
+        if(sinceLastFireAttack > fireCD)
+        {
+            Debug.Log("Fire");
+            iceFire.StartFire();
+            sinceLastFireAttack = 0;
+        }
+    }
+
+    private void CorrectRotation()
+    {
+        if(player.transform.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x)
+                , transform.localScale.y);
+        } else
+        {
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x)
+    , transform.localScale.y);
+        }
     }
 }

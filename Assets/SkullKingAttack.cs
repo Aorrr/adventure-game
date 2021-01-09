@@ -10,11 +10,6 @@ public class SkullKingAttack : StateMachineBehaviour
     //    
     //}
 
-    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        animator.GetComponent<SkullKing>().ToggleDamageStatus(true);
-    }
-
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
