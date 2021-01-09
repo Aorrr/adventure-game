@@ -44,4 +44,14 @@ public class CamShakeController : MonoBehaviour
         virtualCameraRunNoise.m_AmplitudeGain = 0f;
         //Debug.Log("stop");
     }
+
+    public void ShakeIdleAtController(float shakeDuration, float shakeAmplitude, float shakeFrequency)
+    {
+        StartCoroutine(ShakeIdle(shakeDuration, shakeAmplitude, shakeFrequency));
+    }
+
+    public void ShakeRunAtController(float shakeDuration, float shakeAmplitude, float shakeFrequency)
+    {
+        StartCoroutine(ShakeRun(shakeDuration, shakeAmplitude, shakeFrequency));
+    }
 }
