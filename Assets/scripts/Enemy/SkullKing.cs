@@ -8,7 +8,7 @@ public class SkullKing : MonoBehaviour
     [SerializeField] FireSkull skull;
     [SerializeField] GameObject skullKingPath;
     [SerializeField] float moveSpeed = 2f;
-    [SerializeField] float SpawnSkullCD = 4f;
+    [SerializeField] float SpawnSkullCD = 5f;
     [SerializeField] Fire iceFire;
 
     Sanity sanity;
@@ -28,14 +28,14 @@ public class SkullKing : MonoBehaviour
 
 
     // For the sprint of fire skull king
-    float sprintCD = 2.5f;
+    float sprintCD = 3f;
     float sinceLastSprint = 0f;
     Vector2 targetPosition;
     float movementThisFrame;
     bool couldDamage = false;
 
     // timer for fire attack;
-    float fireCD = 1.5f;
+    float fireCD = 5f;
     float sinceLastFireAttack = 0f;
 
     // Start is called before the first frame update
@@ -60,17 +60,19 @@ public class SkullKing : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
 
-            if (enemy.GetHealthPercentage() >= 0.8)
+            if (enemy.GetHealthPercentage() >= 0.6)
             {
-                if (SummonSkull)
-                {
-                    StartCoroutine(SummonSkulls());
-                }
 
                 if (canMove)
                 {
                     MoveToNextLocation();
                 }
+
+                if (SummonSkull)
+                {
+                    StartCoroutine(SummonSkulls());
+                }
+
             } else if(enemy.GetHealthPercentage() > 0)
             {
                 nextPosIndex = 5;
@@ -150,6 +152,7 @@ public class SkullKing : MonoBehaviour
             //animator.SetBool("CouldFire", false);
             targetPosition = player.transform.position;
             movementThisFrame = moveSpeed * 4 * Time.deltaTime;
+            couldDamage = false;
         }
 
         if(transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)
@@ -167,11 +170,17 @@ public class SkullKing : MonoBehaviour
     {
         sinceLastFireAttack += Time.deltaTime;
 
+        if(sinceLastFireAttack > fireCD - 1.5)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(62 / 255f, 133 / 255f, 255 / 255f);
+        }
+
         if(sinceLastFireAttack > fireCD)
         {
             Debug.Log("Fire");
             iceFire.StartFire();
             sinceLastFireAttack = 0;
+            GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 

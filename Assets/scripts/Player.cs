@@ -40,6 +40,9 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject arrowPrefab;
     [SerializeField] float slideCD = 2.5f;
 
+    // for colour change
+     [SerializeField]SpriteRenderer bodyRenderer;
+
     // Message then methods
     void Start()
     {
@@ -218,5 +221,28 @@ public class Player : MonoBehaviour
             FindObjectOfType<Light>().SetFadeSpeed(3f);
             Time.timeScale = 0.5f;
         }
+    }
+
+    public void SlowDown(float slowFactor, int duration)
+    {
+        if(slowFactor < 1 && slowFactor > 0)
+        {
+            StartCoroutine(SlowMovement(duration, initialSpeed * slowFactor));
+        }
+    }
+
+    IEnumerator SlowMovement(int duration, float newSpeed)
+    {
+        float speed = initialSpeed;
+        float initialJumpSpeed = jumpSpeed;
+        initialSpeed = newSpeed;
+        jumpSpeed = jumpSpeed * newSpeed/speed;
+
+        bodyRenderer.material.color = new Color(124/255f, 199/255f, 255/255f);
+        yield return new WaitForSeconds(duration);
+
+        bodyRenderer.material.color = Color.white;
+        initialSpeed = speed;
+        jumpSpeed = initialJumpSpeed;
     }
 }
