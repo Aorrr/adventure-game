@@ -22,8 +22,8 @@ public class SkullKing : MonoBehaviour
 
 
     // index for controlling king movement
-    int nextPosIndex = 0;
-    int currentPosIndex = 0;
+    int nextPosIndex = 5;
+    int currentPosIndex = 5;
 
 
     // For the sprint of fire skull king
