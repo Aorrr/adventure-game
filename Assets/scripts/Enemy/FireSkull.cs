@@ -44,11 +44,17 @@ public class FireSkull : MonoBehaviour
     {
         couldDamage = true;
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        yield return new WaitForSeconds(1);
         Vector2 direction = player.transform.position - enemy.transform.position;
         direction.y = 0;
         direction.x = Mathf.Sign(direction.x) * 15;
+
+        transform.localScale = new Vector2(-Mathf.Sign(direction.x) *
+Mathf.Abs(transform.localScale.x), transform.localScale.y);
+
+        yield return new WaitForSeconds(2);
+       
         GetComponent<Rigidbody2D>().velocity += direction;
+
     }
 
     public void DamagePlayer()
