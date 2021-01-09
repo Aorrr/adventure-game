@@ -40,7 +40,10 @@ public class SeekerWalk : StateMachineBehaviour
         }
         
         if(newPos.x > range[0] && newPos.x < range[1])
+        {
             rb.MovePosition(newPos);
+        }
+            
 
         if(Vector2.Distance(player.position, rb.transform.position) < attackRange)
         {
