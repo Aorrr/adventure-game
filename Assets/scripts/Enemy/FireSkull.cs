@@ -54,7 +54,6 @@ public class FireSkull : MonoBehaviour
         if (body.GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player")))
         {
             FindObjectOfType<Sanity>().LoseSanity(enemy.GetDamage());
-            Debug.Log("hurt: " + enemy.GetDamage());
             couldDamage = false;
         }
     }

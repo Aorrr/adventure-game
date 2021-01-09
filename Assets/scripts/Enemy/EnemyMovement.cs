@@ -50,7 +50,8 @@ public class EnemyMovement : MonoBehaviour
         if(!vertDetector.IsTouchingLayers(LayerMask.GetMask("Ground")) ||
             horiDetector.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            parentTransform.localScale = new Vector2((Mathf.Sign(myRigidBody.velocity.x)), 1f);
+            parentTransform.localScale = new Vector2((Mathf.Sign(myRigidBody.velocity.x))*
+                Mathf.Abs(parentTransform.localScale.x), parentTransform.localScale.y);
         }
     }
 
