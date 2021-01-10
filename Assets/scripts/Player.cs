@@ -253,7 +253,6 @@ public class Player : MonoBehaviour
 
     public void PushBack(float velocity, int duration)
     {
-        Debug.Log("Pushback");
         myRidigidBody.velocity = new Vector2(velocity, myRidigidBody.velocity.y);
         StartCoroutine(Uncontrollable(duration));
     }
@@ -263,10 +262,8 @@ public class Player : MonoBehaviour
         Debug.Log("not controllable");
         myAnimator.SetBool("controllable", false);
         float speed = initialSpeed;
-        initialSpeed = 0.01f;
 
         yield return new WaitForSeconds(duration);
         myAnimator.SetBool("controllable", true);
-        initialSpeed = speed;
     }
 }
