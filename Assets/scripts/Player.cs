@@ -261,10 +261,10 @@ public class Player : MonoBehaviour
     {
         Debug.Log("not controllable");
         myAnimator.SetBool("controllable", false);
-        mybo
         float speed = initialSpeed;
 
         yield return new WaitForSeconds(duration);
         myAnimator.SetBool("controllable", true);
+
     }
 }
