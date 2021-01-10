@@ -956,10 +956,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 741101761}
-  - {fileID: 1919689018}
+  - {fileID: 938250405}
   - {fileID: 944940809}
   - {fileID: 361521081}
   - {fileID: 860376669}
+  - {fileID: 1919689018}
+  - {fileID: 1887299778}
   - {fileID: 1426695318}
   - {fileID: 261484960}
   - {fileID: 1376767011}
@@ -1359,12 +1361,12 @@ PrefabInstance:
     - target: {fileID: 830719146868825708, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4422793
+      value: -9.4722805
       objectReference: {fileID: 0}
     - target: {fileID: 830719146868825708, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.937709
+      value: -9.692291
       objectReference: {fileID: 0}
     - target: {fileID: 830719146868825709, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
@@ -1379,12 +1381,12 @@ PrefabInstance:
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.081621
+      value: -11.11377
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.8818035
+      value: -7.7409887
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557295, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
@@ -1394,12 +1396,12 @@ PrefabInstance:
     - target: {fileID: 830719147819348189, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4422793
+      value: -9.4722805
       objectReference: {fileID: 0}
     - target: {fileID: 830719147819348189, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.937709
+      value: -9.692291
       objectReference: {fileID: 0}
     - target: {fileID: 830719147819348190, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
@@ -1493,6 +1495,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893310066}
   m_CullTransparentMesh: 0
+--- !u!4 &938250405 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8310011842806876053, guid: 8eb9ea673e91a4a7b873e49aea067fe5,
+    type: 3}
+  m_PrefabInstance: {fileID: 145629920}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &944940809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8310011842806876053, guid: 8eb9ea673e91a4a7b873e49aea067fe5,
@@ -2461,28 +2469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c952a1c611b564a9e98e77cfe2dbef06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1638970229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3322020513807908952, guid: 52a7874b9a3c0411699d18de76e9540f,
-    type: 3}
-  m_PrefabInstance: {fileID: 827890463}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1638970233
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638970229}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.8543593, y: 0.8663212}
-  serializedVersion: 2
-  m_Radius: 0.47136104
 --- !u!4 &1669503050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 719636774365119199, guid: 4e0757a8da405411ebd49969afa83691,
@@ -20630,12 +20616,12 @@ PrefabInstance:
     - target: {fileID: 1000816217385713666, guid: cbb1e982ffb6b45b48f07829d650a5cf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.4
+      value: -15.43
       objectReference: {fileID: 0}
     - target: {fileID: 1000816217385713666, guid: cbb1e982ffb6b45b48f07829d650a5cf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.9
+      value: -7.73
       objectReference: {fileID: 0}
     - target: {fileID: 1000816217385713666, guid: cbb1e982ffb6b45b48f07829d650a5cf,
         type: 3}
