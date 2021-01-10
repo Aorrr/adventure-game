@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] float attackRange = 2f;
     [SerializeField] float arrowSpeed = 25f;
     [SerializeField] GameObject DieEffect;
+    [SerializeField] float invulnerableTime = 3f;
 
     // State
     bool isAlive = true;
@@ -39,9 +40,10 @@ public class Player : MonoBehaviour
     [SerializeField] Transform shootPoint;
     [SerializeField] GameObject arrowPrefab;
     [SerializeField] float slideCD = 1f;
+    [SerializeField] Animator hurtEffectAnimator;
 
     // for colour change
-     [SerializeField]SpriteRenderer bodyRenderer;
+    [SerializeField] SpriteRenderer bodyRenderer;
 
 
     // Message then methods
@@ -142,11 +144,12 @@ public class Player : MonoBehaviour
             FindObjectOfType<Sanity>().LoseSanity(amount);
             myAnimator.SetTrigger("hurt");
             couldHurt = false;
-            StartCoroutine(InvulnerableTime(3));
+            StartCoroutine(InvulnerableTime(invulnerableTime));
+            hurtEffectAnimator.SetTrigger("hurt");
         }
     }
 
-   IEnumerator InvulnerableTime(int invulnerableDuration)
+   IEnumerator InvulnerableTime(float invulnerableDuration)
     {
 
         yield return new WaitForSeconds(invulnerableDuration);

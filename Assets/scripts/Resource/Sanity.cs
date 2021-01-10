@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Sanity : MonoBehaviour
 {
     [SerializeField] float sanity;
     [SerializeField] float sanityLossSpeed;
+    [SerializeField] Light light;
+
+    Light2D light2d;
     float initialSanity;
     bool invulnerable = false;
 
@@ -54,12 +58,14 @@ public class Sanity : MonoBehaviour
     void Start()
     {
         initialSanity = sanity;
+        light2d = light.GetComponent<Light2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        sanity -= 0.001f * sanityLossSpeed;
+        if(light2d.pointLightOuterRadius <= light.GetMinimalRadius())
+            sanity -= Time.deltaTime * sanityLossSpeed;
         if(sanity <= 0)
         {
             FindObjectOfType<Player>().Die();

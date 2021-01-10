@@ -45,9 +45,9 @@ public class SeekerWalk : StateMachineBehaviour
         }
             
 
-        if(Vector2.Distance(player.position, rb.transform.position) < attackRange)
+        if(Vector2.Distance(player.position, rb.transform.position) <= attackRange)
         {
-            animator.SetTrigger("attack");
+            animator.SetBool("isAttacking", true);
         }
 
         

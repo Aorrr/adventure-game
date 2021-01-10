@@ -18,6 +18,6 @@ public class lightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value = light.GetRadius() / light.GetInitialRadius();
+        slider.value = (light.GetRadius() - light.GetMinimalRadius()) / (light.GetInitialRadius() - light.GetMinimalRadius());
     }
 }
