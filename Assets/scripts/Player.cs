@@ -43,8 +43,6 @@ public class Player : MonoBehaviour
     // for colour change
      [SerializeField]SpriteRenderer bodyRenderer;
 
-    // for crowd effect
-    bool controllable = true;
 
     // Message then methods
     void Start()
@@ -63,7 +61,7 @@ public class Player : MonoBehaviour
     {
         if (!isAlive) { return; }
 
-        if(controllable)
+        if(myAnimator.GetBool("controllable"))
         {
             Run();
             Jump();
@@ -255,15 +253,20 @@ public class Player : MonoBehaviour
 
     public void PushBack(float velocity, int duration)
     {
-        SlowMovement(duration, 0);
-        Uncontrollable(duration);
+        Debug.Log("Pushback");
         myRidigidBody.velocity = new Vector2(velocity, myRidigidBody.velocity.y);
+        StartCoroutine(Uncontrollable(duration));
     }
 
     IEnumerator Uncontrollable(int duration)
     {
-        controllable = false;
+        Debug.Log("not controllable");
+        myAnimator.SetBool("controllable", false);
+        float speed = initialSpeed;
+        initialSpeed = 0.01f;
+
         yield return new WaitForSeconds(duration);
-        controllable = true;
+        myAnimator.SetBool("controllable", true);
+        initialSpeed = speed;
     }
 }

@@ -8,8 +8,8 @@ public class kingScream : MonoBehaviour
     Player player;
     // Start is called before the first frame update
 
-    float sinceLastPushBack = 2f;
-    float pushCD = 2f;
+    float sinceLastPushBack = 4f;
+    float pushCD = 4f;
     Animator animator;
 
     void Start()
@@ -32,10 +32,16 @@ public class kingScream : MonoBehaviour
         {
             if (sinceLastPushBack > pushCD)
             {
+                Debug.Log("triggers push function");
                 float sign = Mathf.Sign(player.transform.position.x - circle.transform.position.x);
-                player.PushBack(sign * 5, 2);
+                player.PushBack(sign *10, 1);
                 sinceLastPushBack = 0;
             }
         }
+    }
+
+    public void StartScream()
+    {
+        animator.SetTrigger("Scream");
     }
 }
