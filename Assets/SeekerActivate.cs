@@ -10,8 +10,9 @@ public class SeekerActivate : StateMachineBehaviour
 
     public AudioClip scream;
     public GameObject ripple;
+    public float rippleStartTime = 0.5f;
 
-    
+    bool haveRippled = false;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -19,15 +20,23 @@ public class SeekerActivate : StateMachineBehaviour
         rb = animator.GetComponent<Rigidbody2D>();
         shaker = FindObjectOfType<CamShakeController>();
         AudioSource.PlayClipAtPoint(scream, rb.position);
-        GameObject myRipple = Instantiate(ripple, rb.transform.position, rb.transform.rotation);
-        shaker.ShakeIdleAtController(1.5f, 4f, 2f);
-        shaker.ShakeRunAtController(1.5f, 4f, 2f);
-        Destroy(myRipple, 1.5f);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if(rippleStartTime > 0 && !haveRippled)
+        {
+            rippleStartTime -= Time.deltaTime;
+            if(rippleStartTime <= 0)
+            {
+                haveRippled = true;
+                GameObject myRipple = Instantiate(ripple, rb.transform.position, rb.transform.rotation);
+                Destroy(myRipple, 1.5f);
+                shaker.ShakeIdleAtController(1.5f, 4f, 2f);
+                shaker.ShakeRunAtController(1.5f, 4f, 2f);
+            }
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
