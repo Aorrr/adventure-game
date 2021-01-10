@@ -32,17 +32,16 @@ public class FireSkull : MonoBehaviour
         {
             if (timeAfterLastAttack >= timeInterval)
             {
-                couldDamage = true;
                 StartCoroutine(FireSkullLeapAttack());
             }
         }
-        myAnimator.SetBool("Fire", couldDamage);
         DamagePlayer();
     }
 
     IEnumerator FireSkullLeapAttack()
     {
         timeAfterLastAttack = 0;
+        myAnimator.SetBool("Fire", true);
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         Vector2 direction = player.transform.position - enemy.transform.position;
         direction.y = 0;
@@ -51,7 +50,8 @@ public class FireSkull : MonoBehaviour
         transform.localScale = new Vector2(-Mathf.Sign(direction.x) *
 Mathf.Abs(transform.localScale.x), transform.localScale.y);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
+        couldDamage = true;
         GetComponent<Rigidbody2D>().velocity = direction;
         StartCoroutine(StopRage());
     }
@@ -61,6 +61,7 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
         yield return new WaitForSeconds(1);
         if(couldDamage)
         {
+            myAnimator.SetBool("Fire", false);
             timeAfterLastAttack = 0;
             couldDamage = false;
         }
@@ -74,6 +75,7 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
         {
             FindObjectOfType<Sanity>().LoseSanity(enemy.GetDamage());
             couldDamage = false;
+            myAnimator.SetBool("Fire", false);
             timeAfterLastAttack = 0;
         }
     }
