@@ -5,22 +5,22 @@ using TMPro;
 
 public class Enemy: MonoBehaviour
 {
-    // Start is called before the first frame update
-    bool inRage = false;
-    Animator myAnimator;
-    BoxCollider2D ccollider;
+    // Start is called before the first frame update   
+    protected Animator myAnimator;
+    protected BoxCollider2D ccollider;
 
 
-    [SerializeField] int Damage = 1;
-    [SerializeField] int hp = 30;
-    [SerializeField] GameObject hurtEffect;
-    [SerializeField] int armour;
-    [SerializeField] int magicalResistance;
-    [SerializeField] DamagePopUp popUpObject;
-    [SerializeField] int exp;
+    [SerializeField] protected int Damage = 1;
+    [SerializeField] protected int hp = 30;
+    [SerializeField] protected GameObject hurtEffect;
+    [SerializeField] protected int armour;
+    [SerializeField] protected int magicalResistance;
+    [SerializeField] protected DamagePopUp popUpObject;
+    [SerializeField] protected int exp;
 
-    private bool canDamage = true;
-    private int maxHealth;
+    protected bool inRage = false;
+    protected bool canDamage = true;
+    protected int maxHealth;
    
     void Start()
     {
@@ -40,7 +40,7 @@ public class Enemy: MonoBehaviour
         return myAnimator.GetBool("inRage");
     }
 
-    public void Hurt(int damage, string type)
+    public virtual void Hurt(int damage, string type)
     {
         if (hp <= 0) { return; }
         float reduction = 1;
@@ -72,9 +72,10 @@ public class Enemy: MonoBehaviour
         Destroy(blood, 1f);
         if (hp <= 0)
             Die();
+        Debug.Log("hello from parent");
     }
 
-    public void Die()
+public void Die()
     {
         FindObjectOfType<Exp>().GainExp(exp);
         Destroy(gameObject);
