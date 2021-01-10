@@ -349,7 +349,6 @@ GameObject:
   - component: {fileID: 8310011842425568858}
   - component: {fileID: 8310011842425568856}
   - component: {fileID: 8310011842425568857}
-  - component: {fileID: 8105506670703887908}
   m_Layer: 9
   m_Name: playerDetection
   m_TagString: Untagged
@@ -397,7 +396,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.3994268, y: 0.21209335}
+  m_Offset: {x: 0.0750556, y: 0.0047454834}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -408,24 +407,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9748847, y: 1.2252407}
+  m_Size: {x: 6.5849085, y: 0.73796844}
   m_EdgeRadius: 0
---- !u!58 &8105506670703887908
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8310011842425568859}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.19024181, y: 0}
-  serializedVersion: 2
-  m_Radius: 6.5641365
 --- !u!1 &8310011842806876051
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,8 +552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc6334e1349b4e90afbfafd0c1ca80f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 2
-  hp: 50
+  Damage: 3
+  hp: 30
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
   armour: 25

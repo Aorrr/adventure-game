@@ -56,8 +56,6 @@ public class SkullKing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemy.IfRage())
-        {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
 
             if (enemy.GetHealthPercentage() >= 0.6)
@@ -85,8 +83,6 @@ public class SkullKing : MonoBehaviour
                 }
             }
 
-
-        }
 
         animator.SetBool("CouldFire", couldDamage);
 

@@ -18,8 +18,8 @@ public class FireSkull : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         enemy = GetComponent<Enemy>();
-        timeAfterLastAttack = 0;
-        timeInterval = 1f;
+        timeAfterLastAttack = timeInterval;
+        timeInterval = 2f;
         body = GetComponentInChildren<EnemyBody>();
         myAnimator = GetComponent<Animator>();
     }
@@ -27,13 +27,13 @@ public class FireSkull : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!couldDamage) { timeAfterLastAttack += Time.deltaTime; }
+        timeAfterLastAttack += Time.deltaTime;
         if (enemy.IfRage())
         {
-            if(timeAfterLastAttack >= timeInterval)
+            if (timeAfterLastAttack >= timeInterval)
             {
+                couldDamage = true;
                 StartCoroutine(FireSkullLeapAttack());
-                timeAfterLastAttack = 0;
             }
         }
         myAnimator.SetBool("Fire", couldDamage);
@@ -42,18 +42,28 @@ public class FireSkull : MonoBehaviour
 
     IEnumerator FireSkullLeapAttack()
     {
-        couldDamage = true;
+        timeAfterLastAttack = 0;
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         Vector2 direction = player.transform.position - enemy.transform.position;
         direction.y = 0;
-        direction.x = Mathf.Sign(direction.x) * 15;
+        direction.x = Mathf.Sign(direction.x) * 20;
 
         transform.localScale = new Vector2(-Mathf.Sign(direction.x) *
 Mathf.Abs(transform.localScale.x), transform.localScale.y);
 
-        yield return new WaitForSeconds(2);
-       
-        GetComponent<Rigidbody2D>().velocity += direction;
+        yield return new WaitForSeconds(1);
+        GetComponent<Rigidbody2D>().velocity = direction;
+        StartCoroutine(StopRage());
+    }
+
+    IEnumerator StopRage()
+    {
+        yield return new WaitForSeconds(1);
+        if(couldDamage)
+        {
+            timeAfterLastAttack = 0;
+            couldDamage = false;
+        }
 
     }
 
@@ -64,6 +74,7 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
         {
             FindObjectOfType<Sanity>().LoseSanity(enemy.GetDamage());
             couldDamage = false;
+            timeAfterLastAttack = 0;
         }
     }
 
