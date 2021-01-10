@@ -1072,6 +1072,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3322020513807908953, guid: 52a7874b9a3c0411699d18de76e9540f,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322020513807908953, guid: 52a7874b9a3c0411699d18de76e9540f,
+        type: 3}
+      propertyPath: frostDuration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322020513807908953, guid: 52a7874b9a3c0411699d18de76e9540f,
+        type: 3}
+      propertyPath: slowFactor
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3322020513807908954, guid: 52a7874b9a3c0411699d18de76e9540f,
         type: 3}
       propertyPath: m_Offset.x
@@ -1115,7 +1130,7 @@ PrefabInstance:
     - target: {fileID: 3322020513807908956, guid: 52a7874b9a3c0411699d18de76e9540f,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3322020513807908957, guid: 52a7874b9a3c0411699d18de76e9540f,
         type: 3}
@@ -1381,12 +1396,12 @@ PrefabInstance:
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.11377
+      value: -4.000704
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.7409887
+      value: -7.7591047
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557295, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
@@ -21006,7 +21021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 5
-  hp: 300
+  hp: 400
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
   armour: 50
