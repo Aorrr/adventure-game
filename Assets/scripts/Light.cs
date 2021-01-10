@@ -7,6 +7,7 @@ public class Light : MonoBehaviour
 {
     [SerializeField] Player player;
     [SerializeField] float fadeSpeed;
+    [SerializeField] float minimalRadius = 0.3f;
     float initialRadius;
     Light2D parameters;
 
@@ -23,6 +24,11 @@ public class Light : MonoBehaviour
     public float GetInitialRadius()
     {
         return initialRadius;
+    }
+
+    public float GetMinimalRadius()
+    {
+        return minimalRadius;
     }
 
     public float GetFadeSpeed()
@@ -44,7 +50,7 @@ public class Light : MonoBehaviour
     {
         Vector2 lightPos = new Vector2(player.transform.position.x, player.transform.position.y);
         transform.position = lightPos;
-        if(parameters.pointLightOuterRadius > 0)
+        if(parameters.pointLightOuterRadius > minimalRadius)
             parameters.pointLightOuterRadius -= fadeSpeed * Time.deltaTime;
     }
 
