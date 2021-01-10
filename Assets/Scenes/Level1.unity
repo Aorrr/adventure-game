@@ -603,10 +603,9 @@ GameObject:
   - component: {fileID: 431391504}
   - component: {fileID: 431391509}
   - component: {fileID: 431391508}
-  - component: {fileID: 431391507}
   - component: {fileID: 431391506}
   - component: {fileID: 431391505}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Scream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,38 +648,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.030012071, y: 0.02282992}
+  m_Offset: {x: -0.07983725, y: 0.4240257}
   serializedVersion: 2
-  m_Radius: 2.7978373
---- !u!61 &431391507
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431391503}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.09, y: 7.09}
-    newSize: {x: 7.09, y: 7.09}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 7.09, y: 7.09}
-  m_EdgeRadius: 0
+  m_Radius: 4.9411526
 --- !u!212 &431391508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -822,6 +795,28 @@ SpriteRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 1000816217382945268}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &698918405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3322020513807908952, guid: 52a7874b9a3c0411699d18de76e9540f,
+    type: 3}
+  m_PrefabInstance: {fileID: 827890463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &698918409
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698918405}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.9172978, y: 1.0163445}
+  serializedVersion: 2
+  m_Radius: 0.6139895
 --- !u!4 &741101761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8310011842806876053, guid: 8eb9ea673e91a4a7b873e49aea067fe5,
@@ -970,7 +965,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 827890463}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 698918405}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a32e56d3b4037438b957e17e975a2293, type: 3}
@@ -1288,12 +1283,12 @@ PrefabInstance:
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.131336
+      value: -12.900881
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.047737
+      value: -19.066507
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557295, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
@@ -2092,7 +2087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551ab3132631543cc8b1986f40324bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanity: 50
+  sanity: 1500
   sanityLossSpeed: 0
 --- !u!4 &1476377308
 Transform:
@@ -20809,6 +20804,8 @@ MonoBehaviour:
   moveSpeed: 4
   SpawnSkullCD: 4
   iceFire: {fileID: 813152522}
+  scream: {fileID: 431391505}
+  sprintCD: 3
 --- !u!114 &8310011842459898203
 MonoBehaviour:
   m_ObjectHideFlags: 0
