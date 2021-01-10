@@ -69,10 +69,13 @@ public class SkullKing : MonoBehaviour
                     MoveToNextLocation();
                 }
 
+            if (enemy.IfRage())
+            {
                 if (SummonSkull)
                 {
                     StartCoroutine(SummonSkulls());
                 }
+            }
 
             } else if(enemy.GetHealthPercentage() > 0)
             {
@@ -95,7 +98,7 @@ public class SkullKing : MonoBehaviour
         SummonSkull = false;
         Instantiate(skull, transform.position, Quaternion.identity);
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(SpawnSkullCD);
         SummonSkull = true;
     }
 

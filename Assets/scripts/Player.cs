@@ -32,13 +32,13 @@ public class Player : MonoBehaviour
     float resetTime = 1f;
 
     // for slide timer
-    float sinceLastSlide = 0f;
+    float sinceLastSlide = 5f;
 
     // Assistance
     [SerializeField] Transform attackPoint;
     [SerializeField] Transform shootPoint;
     [SerializeField] GameObject arrowPrefab;
-    [SerializeField] float slideCD = 2.5f;
+    [SerializeField] float slideCD = 1f;
 
     // for colour change
      [SerializeField]SpriteRenderer bodyRenderer;
