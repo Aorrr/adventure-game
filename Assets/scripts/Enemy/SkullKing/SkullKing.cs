@@ -8,8 +8,9 @@ public class SkullKing : MonoBehaviour
     [SerializeField] FireSkull skull;
     [SerializeField] GameObject skullKingPath;
     [SerializeField] float moveSpeed = 2f;
-    [SerializeField] float SpawnSkullCD = 5f;
+    [SerializeField] float SpawnSkullCD = 10f;
     [SerializeField] Fire iceFire;
+    [SerializeField] kingScream scream;
 
     Sanity sanity;
 
@@ -28,14 +29,16 @@ public class SkullKing : MonoBehaviour
 
 
     // For the sprint of fire skull king
-    float sprintCD = 3f;
+    [SerializeField] float sprintCD = 3f;
     float sinceLastSprint = 0f;
     Vector2 targetPosition;
     float movementThisFrame;
     bool couldDamage = false;
+    bool attacking = false;
+    bool ifPrep = false;
 
     // timer for fire attack;
-    float fireCD = 5f;
+    float fireCD = 6f;
     float sinceLastFireAttack = 0f;
 
     // Start is called before the first frame update
@@ -66,10 +69,13 @@ public class SkullKing : MonoBehaviour
                     MoveToNextLocation();
                 }
 
+            if (enemy.IfRage())
+            {
                 if (SummonSkull)
                 {
                     StartCoroutine(SummonSkulls());
                 }
+            }
 
             } else if(enemy.GetHealthPercentage() > 0)
             {
@@ -83,9 +89,6 @@ public class SkullKing : MonoBehaviour
                 }
             }
 
-
-        animator.SetBool("CouldFire", couldDamage);
-
         FireAttack();
         CorrectRotation();
     }
@@ -95,7 +98,7 @@ public class SkullKing : MonoBehaviour
         SummonSkull = false;
         Instantiate(skull, transform.position, Quaternion.identity);
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(SpawnSkullCD);
         SummonSkull = true;
     }
 
@@ -120,41 +123,49 @@ public class SkullKing : MonoBehaviour
         }
     }
 
-    // The ice skull king sprints towards the player
     public void Sprint()
     {
-
         sinceLastSprint += Time.deltaTime;
+        if (sinceLastSprint < sprintCD) { animator.SetBool("Fire", false);  return; }
 
-        if(sinceLastSprint > sprintCD)
+        if(!attacking && !ifPrep)
         {
-            couldDamage = true;
-            animator.SetBool("CouldFire", true);
+            scream.StartScream();
+            animator.SetBool("Fire", true);
+            StartCoroutine(PrepareFireAttack());
+        } else if(attacking)
+        {
             transform.position = Vector2.MoveTowards
             (transform.position, targetPosition, movementThisFrame);
-
-            if(enemyBody.GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player")))
+            if (enemyBody.GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player")))
             {
-                if(couldDamage)
-                {
-                    sanity.LoseSanity(enemy.GetDamage());
-                    couldDamage = false;
-                    sinceLastSprint = 0;
-                }
+                sanity.LoseSanity(enemy.GetDamage());
+                couldDamage = false;
+                attacking = false;
+                animator.SetBool("Fire", false);
+                sinceLastSprint = 0;
             }
+            else if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)
+            {
+                attacking = false;
+                couldDamage = false;
+                animator.SetBool("Fire", false);
+                sinceLastSprint = 0;
+            }
+        } 
 
-        } else
-        {
-            //animator.SetBool("CouldFire", false);
-            targetPosition = player.transform.position;
-            movementThisFrame = moveSpeed * 4 * Time.deltaTime;
-            couldDamage = false;
-        }
+    }
 
-        if(transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)
-        {
-            sinceLastSprint = 0;
-        }
+
+    IEnumerator PrepareFireAttack()
+    {
+        ifPrep = true;
+        yield return new WaitForSeconds(2);
+        targetPosition = player.transform.position;
+        movementThisFrame = moveSpeed * 4 * Time.deltaTime;
+        couldDamage = true;
+        attacking = true;
+        ifPrep = false;
     }
 
     public void ToggleDamageStatus(bool status)

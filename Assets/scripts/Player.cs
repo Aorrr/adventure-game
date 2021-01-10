@@ -32,16 +32,17 @@ public class Player : MonoBehaviour
     float resetTime = 1f;
 
     // for slide timer
-    float sinceLastSlide = 0f;
+    float sinceLastSlide = 5f;
 
     // Assistance
     [SerializeField] Transform attackPoint;
     [SerializeField] Transform shootPoint;
     [SerializeField] GameObject arrowPrefab;
-    [SerializeField] float slideCD = 2.5f;
+    [SerializeField] float slideCD = 1f;
 
     // for colour change
      [SerializeField]SpriteRenderer bodyRenderer;
+
 
     // Message then methods
     void Start()
@@ -59,12 +60,16 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (!isAlive) { return; }
-        Run();
-        Jump();
-        FlipSprite();
-        Attack();
-        BowLight();
-        Slide();
+
+        if(myAnimator.GetBool("controllable"))
+        {
+            Run();
+            Jump();
+            FlipSprite();
+            Attack();
+            BowLight();
+            Slide();
+        }
 
     }
 
@@ -244,5 +249,22 @@ public class Player : MonoBehaviour
         bodyRenderer.material.color = Color.white;
         initialSpeed = speed;
         jumpSpeed = initialJumpSpeed;
+    }
+
+    public void PushBack(float velocity, int duration)
+    {
+        myRidigidBody.velocity = new Vector2(velocity, myRidigidBody.velocity.y);
+        StartCoroutine(Uncontrollable(duration));
+    }
+
+    IEnumerator Uncontrollable(int duration)
+    {
+        Debug.Log("not controllable");
+        myAnimator.SetBool("controllable", false);
+        float speed = initialSpeed;
+
+        yield return new WaitForSeconds(duration);
+        myAnimator.SetBool("controllable", true);
+
     }
 }
