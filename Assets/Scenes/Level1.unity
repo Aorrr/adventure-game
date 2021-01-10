@@ -1112,7 +1112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.00048828125, y: 14.699951}
+  m_AnchoredPosition: {x: -0.0009765625, y: 14.699707}
   m_SizeDelta: {x: 0.0007324219, y: 19.353172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &836730511
@@ -1283,12 +1283,12 @@ PrefabInstance:
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.900881
+      value: -11.142586
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557200, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.066507
+      value: -19.056126
       objectReference: {fileID: 0}
     - target: {fileID: 830719146899557295, guid: 27584a87b416b44ec8647bd3fe0efc5d,
         type: 3}
@@ -1357,7 +1357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.017089844, y: 21.412003}
+  m_AnchoredPosition: {x: -0.016601562, y: 21.412003}
   m_SizeDelta: {x: 0.034179688, y: 42.823914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893310068
@@ -2087,7 +2087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551ab3132631543cc8b1986f40324bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanity: 1500
+  sanity: 50
   sanityLossSpeed: 0
 --- !u!4 &1476377308
 Transform:
@@ -20802,10 +20802,10 @@ MonoBehaviour:
   skull: {fileID: 1416255794, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
   skullKingPath: {fileID: 81085297}
   moveSpeed: 4
-  SpawnSkullCD: 4
+  SpawnSkullCD: 8
   iceFire: {fileID: 813152522}
   scream: {fileID: 431391505}
-  sprintCD: 3
+  sprintCD: 5
 --- !u!114 &8310011842459898203
 MonoBehaviour:
   m_ObjectHideFlags: 0

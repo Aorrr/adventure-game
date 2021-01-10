@@ -8,7 +8,7 @@ public class SkullKing : MonoBehaviour
     [SerializeField] FireSkull skull;
     [SerializeField] GameObject skullKingPath;
     [SerializeField] float moveSpeed = 2f;
-    [SerializeField] float SpawnSkullCD = 5f;
+    [SerializeField] float SpawnSkullCD = 10f;
     [SerializeField] Fire iceFire;
     [SerializeField] kingScream scream;
 
@@ -61,7 +61,7 @@ public class SkullKing : MonoBehaviour
     {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
 
-            if (enemy.GetHealthPercentage() >= 2)
+            if (enemy.GetHealthPercentage() >= 0.6)
             {
 
                 if (canMove)
