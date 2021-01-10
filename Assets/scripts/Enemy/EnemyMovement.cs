@@ -34,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!enemy.IfRage())
+        if(!enemy.CouldDamage())
         {
             checkCollision();
             if (isFacingLeft()) { myRigidBody.velocity = new Vector2(-moveSpeed, 0f); }

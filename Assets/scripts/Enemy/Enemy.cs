@@ -95,5 +95,8 @@ public class Enemy: MonoBehaviour
         return Damage;
     }
 
-
+    public bool CouldDamage()
+    {
+        return myAnimator.GetBool("Fire");
+    }
 }
