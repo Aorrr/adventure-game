@@ -43,6 +43,9 @@ public class Player : MonoBehaviour
     // for colour change
      [SerializeField]SpriteRenderer bodyRenderer;
 
+    // for crowd effect
+    bool controllable = true;
+
     // Message then methods
     void Start()
     {
@@ -59,12 +62,16 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (!isAlive) { return; }
-        Run();
-        Jump();
-        FlipSprite();
-        Attack();
-        BowLight();
-        Slide();
+
+        if(controllable)
+        {
+            Run();
+            Jump();
+            FlipSprite();
+            Attack();
+            BowLight();
+            Slide();
+        }
 
     }
 
@@ -244,5 +251,19 @@ public class Player : MonoBehaviour
         bodyRenderer.material.color = Color.white;
         initialSpeed = speed;
         jumpSpeed = initialJumpSpeed;
+    }
+
+    public void PushBack(float velocity, int duration)
+    {
+        SlowMovement(duration, 0);
+        Uncontrollable(duration);
+        myRidigidBody.velocity = new Vector2(velocity, myRidigidBody.velocity.y);
+    }
+
+    IEnumerator Uncontrollable(int duration)
+    {
+        controllable = false;
+        yield return new WaitForSeconds(duration);
+        controllable = true;
     }
 }
