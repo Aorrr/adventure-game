@@ -115,7 +115,7 @@ AnimationClip:
     functionName: SpeedUp
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 1.6
+    floatParameter: 2.5
     intParameter: 0
     messageOptions: 0
   - time: 0.55
