@@ -171,16 +171,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ea3b3b3375e574a93851110f58376a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 1
+  hp: 30
+  hurtEffect: {fileID: 0}
+  armour: 0
+  magicalResistance: 0
+  popUpObject: {fileID: 0}
+  exp: 0
   attackDamage: 10
   attackPoint: {fileID: 7053914796379933037}
-  attackRange: 1.2
+  attackRange: 1.4
   attackMask:
     serializedVersion: 2
     m_Bits: 1024
-  x_left: -22
-  x_right: -8.1
-  y_up: 10
-  y_down: 6
+  x_left: 0.8
+  x_right: 16
+  y_up: -7
+  y_down: -11
 --- !u!114 &-5268931197322088814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +204,7 @@ MonoBehaviour:
   hp: 30
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
-  armour: 0
+  armour: 50
   magicalResistance: 0
   popUpObject: {fileID: 3884357209951137487, guid: 8a065255c1b7449dd83098fcf891defa,
     type: 3}
