@@ -73,7 +73,7 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
         if(!couldDamage) { return; }
         if (body.GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player")))
         {
-            FindObjectOfType<Sanity>().LoseSanity(enemy.GetDamage());
+            player.Hurt(enemy.GetDamage());
             couldDamage = false;
             myAnimator.SetBool("Fire", false);
             timeAfterLastAttack = 0;
