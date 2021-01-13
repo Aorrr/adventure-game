@@ -14,19 +14,15 @@ public abstract class Skill : MonoBehaviour
     [SerializeField] int maxLevel;
     [SerializeField] SkillTree tree;
 
+    [Header("Skill VFX")]
+    [SerializeField] Image vertex;
+
     bool unlocked = false;
     int currentLevel = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
 
     // Update is called once per frame
     void Update()
     {
-
     }
     public string GetName()
     {
@@ -50,6 +46,15 @@ public abstract class Skill : MonoBehaviour
 
     public void LevelUp()
     {
+        if(currentLevel == 0)
+        {
+            if(vertex!=null)
+            {
+                vertex.color = Color.white;
+            }
+            GetComponent<Image>().color = Color.white;
+        }
+
         if(currentLevel < maxLevel)
         {
             currentLevel++;
@@ -60,12 +65,12 @@ public abstract class Skill : MonoBehaviour
     public Sprite GetImage()
     {
         return GetComponent<Image>().sprite;
+ 
     }
 
     public void SkillSelected()
     {
         tree.SelectSkill(this);
-
     }
 
     public bool IfUnlocked()

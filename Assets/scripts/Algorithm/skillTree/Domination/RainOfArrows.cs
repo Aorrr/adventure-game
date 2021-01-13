@@ -18,6 +18,6 @@ public class RainOfArrows : Skill
 
     public override void TakeEffect()
     {
-        throw new System.NotImplementedException();
+        
     }
 }
