@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class HellBeastIdle : StateMachineBehaviour
+public class HellBeastWalk : StateMachineBehaviour
 {
     public float attackRange = 5;
+    public float speed = 6f;
 
     Transform player;
     Enemy enemy;
@@ -21,14 +22,23 @@ public class HellBeastIdle : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {   
-        if (Vector2.Distance(player.position, rb.position) < attackRange )
+    {
+        Vector2 target = new Vector2(player.position.x, rb.position.y);
+        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
+        
+        if (newPos.x - rb.position.x > 0)
         {
-            animator.SetTrigger("breath");
-        } 
+            rb.transform.localScale = new Vector2(-1f, 1f);
+        }
         else
         {
-            animator.SetBool("isWalking", true);
+            rb.transform.localScale = new Vector2(1f, 1f);
+        }
+
+        rb.MovePosition(newPos);
+        if (Vector2.Distance(player.position, rb.position) < attackRange)
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 

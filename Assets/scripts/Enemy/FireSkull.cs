@@ -2,33 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireSkull : MonoBehaviour
+public class FireSkull : Enemy
 {
-
-    Enemy enemy;
     float timeAfterLastAttack;
     float timeInterval;
     Player player;
     bool couldDamage = false;
     EnemyBody body;
-    Animator myAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = hp;
+        ccollider = GetComponent<BoxCollider2D>();
+        myAnimator = GetComponent<Animator>();
         player = FindObjectOfType<Player>();
-        enemy = GetComponent<Enemy>();
         timeAfterLastAttack = timeInterval;
         timeInterval = 2f;
         body = GetComponentInChildren<EnemyBody>();
-        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         timeAfterLastAttack += Time.deltaTime;
-        if (enemy.IfRage())
+        if (IfRage())
         {
             if (timeAfterLastAttack >= timeInterval)
             {
@@ -43,7 +41,7 @@ public class FireSkull : MonoBehaviour
         timeAfterLastAttack = 0;
         myAnimator.SetBool("Fire", true);
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        Vector2 direction = player.transform.position - enemy.transform.position;
+        Vector2 direction = player.transform.position - transform.position;
         direction.y = 0;
         direction.x = Mathf.Sign(direction.x) * 20;
 
@@ -73,7 +71,7 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
         if(!couldDamage) { return; }
         if (body.GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player")))
         {
-            player.Hurt(enemy.GetDamage());
+            player.Hurt(GetDamage());
             couldDamage = false;
             myAnimator.SetBool("Fire", false);
             timeAfterLastAttack = 0;
@@ -83,5 +81,15 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
     public void ToggleAttackStatus(bool status)
     {
         couldDamage = status;
+    }
+
+    public override void PlayerDetected()
+    {
+        ToggleRage(true);
+    }
+
+    public override void PlayerNotDetected()
+    {
+        ToggleRage(false);
     }
  }
