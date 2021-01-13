@@ -86,16 +86,16 @@ public class StatsManager : MonoBehaviour
         skillPts += amount;
     }
 
-    public bool SpendSkillPt(int amount)
+
+
+    public void SpendSkillPt(int amount)
     {
         if(amount > skillPts)
         {
             Debug.Log("Not enough skillPts");
-            return false;
         } else
         {
             skillPts -= amount;
-            return true;
         }
     }
 }

@@ -49,14 +49,17 @@ public class SkillTree : MonoBehaviour
     public void ConfirmBtnPress()
     {
         if (!currentSkill.CouldUnlock() ||
-            !stats.SpendSkillPt(currentSkill.AmountOfSkillPtsNeeded())
-
+            !(stats.GetSkillPtsRemaining() >= currentSkill.AmountOfSkillPtsNeeded())
             ) { return; }
+
         currentSkill.LevelUp();
         if (!currentSkill.IfUnlocked())
         {
             AddToSkillList(currentSkill);
             currentSkill.ToggleUnlockStatus(true);
+        } else if(currentSkill.GetCurrentLevel() <= currentSkill.GetMaxLevel())
+        {
+            stats.SpendSkillPt(currentSkill.AmountOfSkillPtsNeeded());
         }
     }
 
