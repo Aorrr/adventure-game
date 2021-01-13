@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSkills : MonoBehaviour
+public class RainOfArrows : Skill
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,10 @@ public class PlayerSkills : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public override void TakeEffect()
+    {
+        throw new System.NotImplementedException();
     }
 }
