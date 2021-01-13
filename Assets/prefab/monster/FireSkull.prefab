@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3452885ca41dd47b5a74b828874a864d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8310011842806876043}
+  enemy: {fileID: 1416255794}
 --- !u!61 &1047564595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  enemy: {fileID: 8310011842806876043}
+  enemy: {fileID: 1416255794}
 --- !u!1 &2363399310270413387
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6e15240888b947c68d2f2f2acfa57f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttachedEnemy: {fileID: 8310011842806876043}
+  AttachedEnemy: {fileID: 1416255794}
   Hpbar: {fileID: 1789326658}
 --- !u!1 &8310011842425568859
 GameObject:
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434b1c2d2194746cba06e153a2cc33b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8310011842806876043}
+  enemy: {fileID: 1416255794}
 --- !u!61 &8310011842425568857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -421,7 +421,6 @@ GameObject:
   - component: {fileID: 8310011842806876054}
   - component: {fileID: 8310011842806876055}
   - component: {fileID: 8310011842806876052}
-  - component: {fileID: 8310011842806876043}
   - component: {fileID: 1416255791}
   - component: {fileID: 1416255794}
   m_Layer: 16
@@ -540,27 +539,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8310011842806876043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8310011842806876051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fc6334e1349b4e90afbfafd0c1ca80f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 3
-  hp: 30
-  hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
-    type: 3}
-  armour: 25
-  magicalResistance: 0
-  popUpObject: {fileID: 3884357209951137487, guid: 0e9783bd4d2dc4bcdbadeb825fe44fa2,
-    type: 3}
-  exp: 20
 --- !u!61 &1416255791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -599,3 +577,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd8b24978b9b4758bf2b9aafee748f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 1
+  hp: 30
+  hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
+    type: 3}
+  armour: 25
+  magicalResistance: 0
+  popUpObject: {fileID: 3884357209951137487, guid: 0e9783bd4d2dc4bcdbadeb825fe44fa2,
+    type: 3}
+  exp: 20
