@@ -50,7 +50,7 @@ public abstract class Skill : MonoBehaviour
         {
             if(vertex!=null)
             {
-                vertex.color = Color.white;
+                vertex.color = Color.red;
             }
             GetComponent<Image>().color = Color.white;
         }

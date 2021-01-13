@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField] Canvas canvas;
 
     float sanRate;
     float lightRate;
@@ -49,5 +50,10 @@ public class PauseMenu : MonoBehaviour
     {
         light.SetFadeSpeed(lightRate);
         san.SetSanityLossSpeed(sanRate);
+    }
+
+    public void PopSkillTreeCanvas(bool state)
+    {
+        canvas.gameObject.SetActive(state);
     }
 }

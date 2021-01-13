@@ -15,12 +15,12 @@ public class LevelMusicPlayer : MonoBehaviour
     {       
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 0.8f;
-        box = FindObjectOfType<bossSceneTrigger>().GetComponent<BoxCollider2D>();
+        //box = FindObjectOfType<bossSceneTrigger>().GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
-        if(box.IsTouchingLayers(LayerMask.GetMask("Player"))) { SwitchSong(); }
+       // if(box.IsTouchingLayers(LayerMask.GetMask("Player"))) { SwitchSong(); }
     }
 
     public void SetVolume(float volume)
