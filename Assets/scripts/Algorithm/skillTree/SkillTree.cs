@@ -57,7 +57,7 @@ public class SkillTree : MonoBehaviour
         {
             AddToSkillList(currentSkill);
             currentSkill.ToggleUnlockStatus(true);
-        } else if(currentSkill.GetCurrentLevel() <= currentSkill.GetMaxLevel())
+        } else if(currentSkill.GetCurrentLevel() < currentSkill.GetMaxLevel())
         {
             stats.SpendSkillPt(currentSkill.AmountOfSkillPtsNeeded());
         }
