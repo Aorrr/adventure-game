@@ -25,10 +25,10 @@ public class PlayerDetection : MonoBehaviour
     {
         if(box.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
-            enemy.ToggleRage(true);
+            enemy.PlayerDetected();
         } else if (!box.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
-            enemy.ToggleRage(false);
+            enemy.PlayerNotDetected();
         }
     }
 }

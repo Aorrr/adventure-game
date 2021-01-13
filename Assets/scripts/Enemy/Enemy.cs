@@ -27,6 +27,12 @@ public class Enemy: MonoBehaviour
         maxHealth = hp;
         ccollider = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
+        if (myAnimator == null)
+            Debug.Log("myAnimator is null");
+        if(ccollider == null)
+        {
+            Debug.Log("ccollider is null");
+        }
     }
 
 
@@ -37,7 +43,19 @@ public class Enemy: MonoBehaviour
 
     public bool IfRage()
     {
+        if (myAnimator == null)
+            Debug.Log("oh no!!");
         return myAnimator.GetBool("inRage");
+    }
+
+    public virtual void PlayerDetected()
+    {
+        return;
+    }
+
+    public virtual void PlayerNotDetected()
+    {
+        return;
     }
 
     public virtual void Hurt(int damage, string type)
