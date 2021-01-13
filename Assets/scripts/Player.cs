@@ -194,6 +194,7 @@ public class Player : MonoBehaviour
                 shootPoint.position,
                 Quaternion.identity) as GameObject;
         arrow.GetComponent<Rigidbody2D>().velocity = new Vector2(-arrowSpeed * transform.localScale.x, 0);
+        arrow.GetComponent<Transform>().localScale = new Vector2(-Mathf.Sign(transform.localScale.x), 1f);
     }
 
 
