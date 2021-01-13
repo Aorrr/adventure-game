@@ -16218,9 +16218,10 @@ MonoBehaviour:
 
     Upgrade: Execution threshold increased by
     1%'
-  lockedDescription: 
   maxLevel: 5
   tree: {fileID: 5697903750595388753}
+  LowerlevelSkill: {fileID: 5697903751132386149}
+  LowerSkillLvRequirement: 3
   vertex: {fileID: 5697903749677610260}
   UnlockSkillPoints: 0
   LevelUpSkillPoints: 5
@@ -16719,9 +16720,10 @@ MonoBehaviour:
     Increase arrow travel speed
     by 10% and damage by 3. For each level, further increase damage by 1 and speed
     by 2%.'
-  lockedDescription: 
   maxLevel: 5
   tree: {fileID: 5697903750595388753}
+  LowerlevelSkill: {fileID: 5697903751696509919}
+  LowerSkillLvRequirement: 5
   vertex: {fileID: 5697903749627904343}
   UnlockSkillPoints: 10
   LevelUpSkillPoints: 5
@@ -17074,9 +17076,10 @@ MonoBehaviour:
 
     Upgrade: Addition 2% damage is converted
     for recovery'
-  lockedDescription: 
   maxLevel: 5
   tree: {fileID: 5697903750595388753}
+  LowerlevelSkill: {fileID: 5697903751508154058}
+  LowerSkillLvRequirement: 3
   vertex: {fileID: 5697903751179250811}
   UnlockSkillPoints: 0
   LevelUpSkillPoints: 5
@@ -17352,10 +17355,10 @@ MonoBehaviour:
 
     Upgrade:
     Gain additional 2% armor penetration'
-  lockedDescription: "You have not owned this power!\n\nREQUIREMENT: \n- TRUE BORN
-    WARRIOR [LV5]"
   maxLevel: 5
   tree: {fileID: 5697903750595388753}
+  LowerlevelSkill: {fileID: 5697903751696509919}
+  LowerSkillLvRequirement: 5
   vertex: {fileID: 5697903750483103012}
   UnlockSkillPoints: 10
   LevelUpSkillPoints: 5
@@ -17837,9 +17840,10 @@ MonoBehaviour:
     Gain 5 melee damage
     and 20 armor on unlocked. Then gain 2 melee damage and 5 armor for each level
     up.'
-  lockedDescription: 
   maxLevel: 5
   tree: {fileID: 5697903750595388753}
+  LowerlevelSkill: {fileID: 0}
+  LowerSkillLvRequirement: 0
   vertex: {fileID: 0}
   UnlockSkillPoints: 10
   LevelUpSkillPoints: 5
