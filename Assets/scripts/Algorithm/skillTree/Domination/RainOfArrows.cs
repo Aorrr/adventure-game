@@ -7,7 +7,7 @@ public class RainOfArrows : Skill
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetColorToGrey();
     }
 
     // Update is called once per frame

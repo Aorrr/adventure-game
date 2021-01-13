@@ -14,6 +14,7 @@ public class TruebornWarrior : Skill
     private void Start()
     {
         stats = FindObjectOfType <StatsManager> ();
+        SetColorToGrey();
     }
     public override void TakeEffect()
     {

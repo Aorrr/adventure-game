@@ -14,6 +14,7 @@ public class TheBloodthirster : Skill
     private void Start()
     {
         stats = FindObjectOfType<StatsManager>();
+        SetColorToGrey();
     }
 
 

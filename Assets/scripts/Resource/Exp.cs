@@ -10,7 +10,11 @@ public class Exp : MonoBehaviour
     [SerializeField] float ExpIncreaseBtwnLvs = 1.2f;
     [SerializeField] int currentLevel = 1;
     [SerializeField] TMP_Text levelText;
+    [SerializeField] int skillPtPerLevel = 1;
+    // number of levels to increase skillPtPerLevel
+    [SerializeField] int skillPtGainIncrement = 10;
 
+    StatsManager stats;
     Slider slider;
     int currentExp;
 
@@ -20,6 +24,7 @@ public class Exp : MonoBehaviour
         slider = GetComponent<Slider>();
         currentExp = 0;
         levelText.text = currentLevel.ToString();
+        stats = FindObjectOfType<StatsManager>();
     }
 
     // Update is called once per frame
@@ -40,6 +45,13 @@ public class Exp : MonoBehaviour
             Debug.Log("level: " + currentLevel + "current exp: "+ currentExp);
             expToNextLevel = (int)Mathf.Round((float)expToNextLevel * ExpIncreaseBtwnLvs);
             levelText.text = currentLevel.ToString();
+
+            GainSkillPtn();
         }
+    }
+
+    public void GainSkillPtn()
+    {
+        stats.GainSkillPt(skillPtPerLevel + currentLevel/skillPtGainIncrement);
     }
 }

@@ -12,6 +12,8 @@ public class StatsManager : MonoBehaviour
     [SerializeField] int armorPenetration;
     [SerializeField] int MeleeLifeSteal;
 
+    int skillPts = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +73,30 @@ public class StatsManager : MonoBehaviour
     public void ModifyMeleeLifeSteal(int amount)
     {
         MeleeLifeSteal = Mathf.Max(0, MeleeLifeSteal += amount);
+    }
+
+    public int GetSkillPtsRemaining()
+    {
+        return skillPts;
+    }
+
+    public void GainSkillPt(int amount)
+    {
+        if(amount < 0) { return;}
+        skillPts += amount;
+    }
+
+    public bool SpendSkillPt(int amount)
+    {
+        if(amount > skillPts)
+        {
+            Debug.Log("Not enough skillPts");
+            return false;
+        } else
+        {
+            skillPts -= amount;
+            return true;
+        }
     }
 }
 

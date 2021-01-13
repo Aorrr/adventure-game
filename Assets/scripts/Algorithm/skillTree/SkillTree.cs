@@ -15,7 +15,12 @@ public class SkillTree : MonoBehaviour
     [SerializeField] Image image;
     [SerializeField] Text confirmBtnTxt;
 
+    [Header("Skill Points")]
+    [SerializeField] TMP_Text skillPtsRemaining;
+    [SerializeField] TMP_Text skillPtsNeeded;
+
     Skill currentSkill;
+    StatsManager stats;
 
 
     List<Skill> unlockedSkills;
@@ -27,6 +32,7 @@ public class SkillTree : MonoBehaviour
     {
         unlockedSkills = new List<Skill>();
         currentSkill = defaultSkill;
+        stats = FindObjectOfType<StatsManager>();
     }
 
     // Update is called once per frame
@@ -42,12 +48,16 @@ public class SkillTree : MonoBehaviour
 
     public void ConfirmBtnPress()
     {
+        if (!currentSkill.CouldUnlock() ||
+            !stats.SpendSkillPt(currentSkill.AmountOfSkillPtsNeeded())
+
+            ) { return; }
         currentSkill.LevelUp();
         if (!currentSkill.IfUnlocked())
         {
             AddToSkillList(currentSkill);
             currentSkill.ToggleUnlockStatus(true);
-        } 
+        }
     }
 
     private void ShowCurrentSkillInfo()
@@ -69,6 +79,13 @@ public class SkillTree : MonoBehaviour
             {
                 confirmBtnTxt.text = "UNLOCK";
             }
+
+            skillPtsRemaining.text = String.Format("REMAINING POINTS: [" +
+                stats.GetSkillPtsRemaining() + "]");
+
+            skillPtsNeeded.text = String.Format("SKILL POINTS NEEDED: [" +
+                currentSkill.AmountOfSkillPtsNeeded() + "]");
+            
         }
     }
 

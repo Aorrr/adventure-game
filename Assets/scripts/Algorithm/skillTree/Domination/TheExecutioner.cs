@@ -13,6 +13,7 @@ public class TheExecutioner : Skill
     private void Start()
     {
         stats = FindObjectOfType<StatsManager>();
+        SetColorToGrey();
     }
 
 

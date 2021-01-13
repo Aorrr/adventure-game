@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DemonHunter : Skill
 {
@@ -13,6 +14,7 @@ public class DemonHunter : Skill
     private void Start()
     {
         stats = FindObjectOfType<StatsManager>();
+        SetColorToGrey();
     }
 
     public override void TakeEffect()

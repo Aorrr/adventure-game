@@ -13,9 +13,15 @@ public abstract class Skill : MonoBehaviour
     [Header("Skill Setting")]
     [SerializeField] int maxLevel;
     [SerializeField] SkillTree tree;
+    [SerializeField] Skill LowerlevelSkill;
+    [SerializeField] int LowerSkillLvRequirement;
 
     [Header("Skill VFX")]
     [SerializeField] Image vertex;
+
+    [Header("Skill Points")]
+    [SerializeField] int UnlockSkillPoints = 10;
+    [SerializeField] int LevelUpSkillPoints = 5;
 
     bool unlocked = false;
     int currentLevel = 0;
@@ -41,13 +47,20 @@ public abstract class Skill : MonoBehaviour
 
     public string GetDesc()
     {
-        return description;
+        if (CouldUnlock())
+        {
+            return description;
+        } else
+        {
+            return GetAltText();
+        }
     }
 
     public void LevelUp()
     {
         if(currentLevel == 0)
         {
+            if(!CouldUnlock()) { return; }
             if(vertex!=null)
             {
                 vertex.color = Color.red;
@@ -84,4 +97,43 @@ public abstract class Skill : MonoBehaviour
     }
 
     public abstract void TakeEffect();
+
+    public int AmountOfSkillPtsNeeded()
+    {
+        if(!unlocked)
+        {
+            return UnlockSkillPoints;
+        } else
+        {
+            return LevelUpSkillPoints;
+        }
+    }
+
+    public void SetColorToGrey()
+    {
+        GetComponent<Image>().color = Color.grey;
+        if(vertex != null)
+        {
+            vertex.color = Color.grey;
+        }
+    }
+
+
+    public bool CouldUnlock()
+    {
+        if(LowerlevelSkill == null)
+        {
+            return true;
+        } else
+        {
+            return LowerlevelSkill.GetCurrentLevel() >= LowerSkillLvRequirement;
+        }
+    }
+
+    private string GetAltText()
+    {
+        string lockedText = "You are not yet ready for this power!\n\nREQUIREMENT: " +
+            LowerlevelSkill.GetName() + " [" + LowerSkillLvRequirement + "]";
+        return lockedText;
+    }
 }
