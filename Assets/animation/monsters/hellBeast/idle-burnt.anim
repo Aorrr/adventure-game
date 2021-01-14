@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: scream
+  m_Name: idle-burnt
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,19 +20,22 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -8473535881398634344, guid: 41043b0fbc625284fad63778f7a7797d,
+      value: {fileID: -4409862702386203522, guid: d499419f028f7b74c9d5cf75f885d0f7,
         type: 3}
     - time: 0.1
-      value: {fileID: 3700778223479553246, guid: 41043b0fbc625284fad63778f7a7797d,
+      value: {fileID: -2199476273039170558, guid: d499419f028f7b74c9d5cf75f885d0f7,
         type: 3}
     - time: 0.2
-      value: {fileID: -728343487374458041, guid: 41043b0fbc625284fad63778f7a7797d,
+      value: {fileID: -4042273039486062591, guid: d499419f028f7b74c9d5cf75f885d0f7,
         type: 3}
     - time: 0.3
-      value: {fileID: 1487279022005020668, guid: 41043b0fbc625284fad63778f7a7797d,
+      value: {fileID: 1008468957157027635, guid: d499419f028f7b74c9d5cf75f885d0f7,
         type: 3}
-    - time: 2
-      value: {fileID: 1487279022005020668, guid: 41043b0fbc625284fad63778f7a7797d,
+    - time: 0.4
+      value: {fileID: 5978695634775976019, guid: d499419f028f7b74c9d5cf75f885d0f7,
+        type: 3}
+    - time: 0.5
+      value: {fileID: -3679161613502361157, guid: d499419f028f7b74c9d5cf75f885d0f7,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -53,22 +56,23 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -8473535881398634344, guid: 41043b0fbc625284fad63778f7a7797d, type: 3}
-    - {fileID: 3700778223479553246, guid: 41043b0fbc625284fad63778f7a7797d, type: 3}
-    - {fileID: -728343487374458041, guid: 41043b0fbc625284fad63778f7a7797d, type: 3}
-    - {fileID: 1487279022005020668, guid: 41043b0fbc625284fad63778f7a7797d, type: 3}
-    - {fileID: 1487279022005020668, guid: 41043b0fbc625284fad63778f7a7797d, type: 3}
+    - {fileID: -4409862702386203522, guid: d499419f028f7b74c9d5cf75f885d0f7, type: 3}
+    - {fileID: -2199476273039170558, guid: d499419f028f7b74c9d5cf75f885d0f7, type: 3}
+    - {fileID: -4042273039486062591, guid: d499419f028f7b74c9d5cf75f885d0f7, type: 3}
+    - {fileID: 1008468957157027635, guid: d499419f028f7b74c9d5cf75f885d0f7, type: 3}
+    - {fileID: 5978695634775976019, guid: d499419f028f7b74c9d5cf75f885d0f7, type: 3}
+    - {fileID: -3679161613502361157, guid: d499419f028f7b74c9d5cf75f885d0f7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.1
+    m_StopTime: 0.6
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -82,11 +86,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.3
-    functionName: Scream
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

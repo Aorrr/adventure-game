@@ -36,10 +36,6 @@ public class HellBeastWalk : StateMachineBehaviour
         }
 
         rb.MovePosition(newPos);
-        if (Vector2.Distance(player.position, rb.position) < attackRange)
-        {
-            animator.SetBool("isWalking", false);
-        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

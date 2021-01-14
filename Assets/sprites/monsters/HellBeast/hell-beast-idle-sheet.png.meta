@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 5fe0dea5addd6e54bab8eee4c02739ab
+guid: d499419f028f7b74c9d5cf75f885d0f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -446198063759132195
-    second: hell-beast-idle_0
+      213: -4409862702386203522
+    second: hell-beast-idle-sheet_0
   - first:
-      213: 1235243342741060904
-    second: hell-beast-idle_1
+      213: -2199476273039170558
+    second: hell-beast-idle-sheet_1
   - first:
-      213: 6008631576532437361
-    second: hell-beast-idle_2
+      213: -4042273039486062591
+    second: hell-beast-idle-sheet_2
   - first:
-      213: 5792058939128127358
-    second: hell-beast-idle_3
+      213: 1008468957157027635
+    second: hell-beast-idle-sheet_3
   - first:
-      213: 4185659681491201354
-    second: hell-beast-idle_4
+      213: 5978695634775976019
+    second: hell-beast-idle-sheet_4
   - first:
-      213: -3981304751274544797
-    second: hell-beast-idle_5
+      213: -3679161613502361157
+    second: hell-beast-idle-sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hell-beast-idle_0
+      name: hell-beast-idle-sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd97b2e9939cec9f0800000000000000
-      internalID: -446198063759132195
+      spriteID: e74b6049c350dc2c0800000000000000
+      internalID: -4409862702386203522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_1
+      name: hell-beast-idle-sheet_1
       rect:
         serializedVersion: 2
         x: 74
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82d3f3f8647742110800000000000000
-      internalID: 1235243342741060904
+      spriteID: 204a995abf3e971e0800000000000000
+      internalID: -2199476273039170558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_2
+      name: hell-beast-idle-sheet_2
       rect:
         serializedVersion: 2
         x: 148
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17949617592f26350800000000000000
-      internalID: 6008631576532437361
+      spriteID: 1007b446616f6e7c0800000000000000
+      internalID: -4042273039486062591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_3
+      name: hell-beast-idle-sheet_3
       rect:
         serializedVersion: 2
         x: 222
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7f9bd0eae6816050800000000000000
-      internalID: 5792058939128127358
+      spriteID: 33f6a566c2dcefd00800000000000000
+      internalID: 1008468957157027635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_4
+      name: hell-beast-idle-sheet_4
       rect:
         serializedVersion: 2
         x: 296
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4d25f1cd43761a30800000000000000
-      internalID: 4185659681491201354
+      spriteID: 358200bd00898f250800000000000000
+      internalID: 5978695634775976019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_5
+      name: hell-beast-idle-sheet_5
       rect:
         serializedVersion: 2
         x: 370
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 361b4bd2c609fb8c0800000000000000
-      internalID: -3981304751274544797
+      spriteID: bb150fb610ef0fcc0800000000000000
+      internalID: -3679161613502361157
       vertices: []
       indices: 
       edges: []

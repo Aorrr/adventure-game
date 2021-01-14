@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 5fe0dea5addd6e54bab8eee4c02739ab
+guid: bccb9ac3e8401ba449184f4fad751623
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -446198063759132195
-    second: hell-beast-idle_0
+      213: -7591770814889596373
+    second: hell-beast-burn-sheet_0
   - first:
-      213: 1235243342741060904
-    second: hell-beast-idle_1
+      213: 7683757216715578579
+    second: hell-beast-burn-sheet_1
   - first:
-      213: 6008631576532437361
-    second: hell-beast-idle_2
+      213: 7470510145851188381
+    second: hell-beast-burn-sheet_2
   - first:
-      213: 5792058939128127358
-    second: hell-beast-idle_3
+      213: 2258775193136725171
+    second: hell-beast-burn-sheet_3
   - first:
-      213: 4185659681491201354
-    second: hell-beast-idle_4
+      213: -3701242480220665029
+    second: hell-beast-burn-sheet_4
   - first:
-      213: -3981304751274544797
-    second: hell-beast-idle_5
+      213: 1259042463078560582
+    second: hell-beast-burn-sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hell-beast-idle_0
+      name: hell-beast-burn-sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd97b2e9939cec9f0800000000000000
-      internalID: -446198063759132195
+      spriteID: b2ae352baac94a690800000000000000
+      internalID: -7591770814889596373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_1
+      name: hell-beast-burn-sheet_1
       rect:
         serializedVersion: 2
         x: 74
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82d3f3f8647742110800000000000000
-      internalID: 1235243342741060904
+      spriteID: 3dc1da27a7032aa60800000000000000
+      internalID: 7683757216715578579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_2
+      name: hell-beast-burn-sheet_2
       rect:
         serializedVersion: 2
         x: 148
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17949617592f26350800000000000000
-      internalID: 6008631576532437361
+      spriteID: d94696ea5659ca760800000000000000
+      internalID: 7470510145851188381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_3
+      name: hell-beast-burn-sheet_3
       rect:
         serializedVersion: 2
         x: 222
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7f9bd0eae6816050800000000000000
-      internalID: 5792058939128127358
+      spriteID: 3bcf0661218c85f10800000000000000
+      internalID: 2258775193136725171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_4
+      name: hell-beast-burn-sheet_4
       rect:
         serializedVersion: 2
         x: 296
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4d25f1cd43761a30800000000000000
-      internalID: 4185659681491201354
+      spriteID: b3b8cd2039b82acc0800000000000000
+      internalID: -3701242480220665029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-beast-idle_5
+      name: hell-beast-burn-sheet_5
       rect:
         serializedVersion: 2
         x: 370
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 361b4bd2c609fb8c0800000000000000
-      internalID: -3981304751274544797
+      spriteID: 6433ee01374097110800000000000000
+      internalID: 1259042463078560582
       vertices: []
       indices: 
       edges: []
