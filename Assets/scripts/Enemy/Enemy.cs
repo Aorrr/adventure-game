@@ -27,12 +27,6 @@ public class Enemy: MonoBehaviour
         maxHealth = hp;
         ccollider = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
-        if (myAnimator == null)
-            Debug.Log("myAnimator is null");
-        if(ccollider == null)
-        {
-            Debug.Log("ccollider is null");
-        }
     }
 
 

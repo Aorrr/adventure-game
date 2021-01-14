@@ -6,29 +6,34 @@ using System;
 public class HellBeastIdle : StateMachineBehaviour
 {
     public float attackRange = 5;
+    public float breathInterval = 2.5f;
 
     Transform player;
-    Enemy enemy;
+    HellBeast beast;
     Rigidbody2D rb;
+
+    bool couldShoot;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = FindObjectOfType<Player>().transform;
         rb = animator.GetComponent<Rigidbody2D>();
-        enemy = animator.GetComponent<Enemy>();
-
+        beast = animator.GetComponent<HellBeast>();
+        couldShoot = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {   
-        if (Vector2.Distance(player.position, rb.position) < attackRange )
+    {
+        breathInterval -= Time.deltaTime;
+        if (beast.GetShootCountDown() <= 0 && couldShoot)
         {
             animator.SetTrigger("breath");
+            couldShoot = false;
         } 
         else
         {
-            animator.SetBool("isWalking", true);
+            animator.SetTrigger("walk");
         }
     }
 

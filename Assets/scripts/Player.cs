@@ -149,6 +149,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public bool CouldHurt()
+    {
+        return couldHurt;
+    }
+
    IEnumerator InvulnerableTime(float invulnerableDuration)
     {
 
