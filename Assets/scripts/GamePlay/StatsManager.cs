@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class StatsManager : MonoBehaviour
 {
-    [SerializeField] int meleeDamage;
-    [SerializeField] int arrowDamage;
-    [SerializeField] int magicalPower;
-    [SerializeField] int armor;
-    [SerializeField] int magicalResistance;
-    [SerializeField] int armorPenetration;
+    [Header("Melee Stats")]
+    [SerializeField] int meleeDamage = 10;
+    [SerializeField] int armor = 50;
     [SerializeField] int MeleeLifeSteal;
+
+    [Header("Arrow Stats")]
+    [SerializeField] int arrowDamage = 5;
+    [SerializeField] int armorPenetration = 0;
+    [SerializeField] GameObject arrowPrefab;
+    [SerializeField] float arrowSpeed = 25f;
+
+
+    [Header("Magical Stats")]
+    [SerializeField] int magicalPower = 0;
+    [SerializeField] int magicalResistance = 20;
 
     int skillPts = 100;
 
@@ -87,7 +95,6 @@ public class StatsManager : MonoBehaviour
     }
 
 
-
     public void SpendSkillPt(int amount)
     {
         if(amount > skillPts)
@@ -98,5 +105,30 @@ public class StatsManager : MonoBehaviour
             skillPts -= amount;
         }
     }
+
+
+    /* settings in regards to arrows */
+    public GameObject GetArrowPrefab()
+    {
+        return arrowPrefab;
+    }
+
+    public float GetArrowSpeed()
+    {
+        return arrowSpeed;
+    }
+
+    public void IncreaseArrowVelocity(int percent)
+    {
+        if (percent < 1) { return; }
+        arrowSpeed += arrowSpeed * percent / 100;
+    }
+
+    public void IncreaseArrowDmg(int amount)
+    {
+        arrowPrefab.GetComponent<Arrow>().IncreaseDamage(amount);
+    }
+
+
 }
 

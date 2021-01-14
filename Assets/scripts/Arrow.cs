@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    [SerializeField] int damage = 100;
+    [SerializeField] int damage = 10;
 
     private bool isHitted = false;
     private float timeToDestroy = 0;
@@ -43,5 +43,16 @@ public class Arrow : MonoBehaviour
             }
             Destroy(gameObject);
         }
+    }
+
+    public void IncreaseDamage(int amount)
+    {
+        if(amount < 0) { return; }
+        damage += amount;
+    }
+
+    public void SetInitialDamage(int initialDmg)
+    {
+        damage = initialDmg;
     }
 }

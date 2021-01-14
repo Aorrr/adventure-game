@@ -6,12 +6,11 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Player : MonoBehaviour
 {
     // Config
+    [Header("Player Config")]
+    [SerializeField] float slideCD = 1f;
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
-    [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
-    [SerializeField] float attackSpeed = 2f;
     [SerializeField] float attackRange = 2f;
-    [SerializeField] float arrowSpeed = 25f;
     [SerializeField] GameObject DieEffect;
     [SerializeField] float invulnerableTime = 3f;
 
@@ -35,12 +34,16 @@ public class Player : MonoBehaviour
     // for slide timer
     float sinceLastSlide = 5f;
 
-    // Assistance
+
+    [Header("Arrow Setting")]
     [SerializeField] Transform attackPoint;
     [SerializeField] Transform shootPoint;
-    [SerializeField] GameObject arrowPrefab;
-    [SerializeField] float slideCD = 1f;
     [SerializeField] Animator hurtEffectAnimator;
+
+    int arrowDmg = 5;
+    float arrowSpeed = 25f;
+    GameObject arrowPrefab;
+    StatsManager stats;
 
     // for colour change
     [SerializeField] SpriteRenderer bodyRenderer;
@@ -49,7 +52,10 @@ public class Player : MonoBehaviour
     // Message then methods
     void Start()
     {
+        stats = FindObjectOfType<StatsManager>();
         myRidigidBody = GetComponent<Rigidbody2D>();
+        arrowPrefab = stats.GetArrowPrefab();
+        arrowPrefab.GetComponent<Arrow>().SetInitialDamage(arrowDmg);
 
         myAnimator = GetComponentInChildren<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
@@ -198,7 +204,7 @@ public class Player : MonoBehaviour
                 arrowPrefab,
                 shootPoint.position,
                 Quaternion.identity) as GameObject;
-        arrow.GetComponent<Rigidbody2D>().velocity = new Vector2(-arrowSpeed * transform.localScale.x, 0);
+        arrow.GetComponent<Rigidbody2D>().velocity = new Vector2(-stats.GetArrowSpeed() * transform.localScale.x, 0);
         arrow.GetComponent<Transform>().localScale = new Vector2(-Mathf.Sign(transform.localScale.x), 1f);
     }
 
@@ -276,4 +282,5 @@ public class Player : MonoBehaviour
         myAnimator.SetBool("controllable", true);
 
     }
+
 }

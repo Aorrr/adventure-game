@@ -16718,7 +16718,7 @@ MonoBehaviour:
 
 
     Increase arrow travel speed
-    by 10% and damage by 3. For each level, further increase damage by 1 and speed
+    by 10% and damage by 4. For each level, further increase damage by 1 and speed
     by 2%.'
   maxLevel: 5
   tree: {fileID: 5697903750595388753}
@@ -16727,6 +16727,10 @@ MonoBehaviour:
   vertex: {fileID: 5697903749627904343}
   UnlockSkillPoints: 10
   LevelUpSkillPoints: 5
+  UnlockArrowSpeedBoost: 10
+  UnlockArrowDmg: 3
+  UpgradeArrowSpeedBoost: 2
+  UpgradeArrowDmg: 1
 --- !u!114 &5697903751132386150
 MonoBehaviour:
   m_ObjectHideFlags: 0
