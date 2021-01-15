@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    [SerializeField] int damage = 100;
+    [SerializeField] int damage = 10;
 
     private bool isHitted = false;
     private float timeToDestroy = 0;
 
     Coroutine shakeIdle;
     Coroutine shakeRun;
+
+    StatsManager stats;
+
+    private void Start()
+    {
+        stats = FindObjectOfType<StatsManager>();
+    }
 
     public int GetDamage()
     {
@@ -31,6 +38,16 @@ public class Arrow : MonoBehaviour
                 shakeRun = StartCoroutine(controller.ShakeRun(0.3f, 3f, 2f));
             }
             enemy.Hurt(damage, "physical");
+
+            if(stats.IfExecutionUnlocked() && enemy.GetComponentInParent<Enemy>()
+                .GetHealthPercentage()*100 <= stats.GetExecutionThreshold())
+            {
+                enemy.GetComponentInParent<Enemy>().Execute();
+                shakeIdle = StartCoroutine(controller.ShakeIdle(0.2f, 6f, 3f));
+                shakeRun = StartCoroutine(controller.ShakeRun(0.2f, 6f, 3f));
+                Debug.Log("Execute");
+            }
+
             isHitted = true;
             GetComponent<SpriteRenderer>().enabled = false;
         } 
@@ -43,5 +60,16 @@ public class Arrow : MonoBehaviour
             }
             Destroy(gameObject);
         }
+    }
+
+    public void IncreaseDamage(int amount)
+    {
+        if(amount < 0) { return; }
+        damage += amount;
+    }
+
+    public void SetInitialDamage(int initialDmg)
+    {
+        damage = initialDmg;
     }
 }

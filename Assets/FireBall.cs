@@ -26,7 +26,7 @@ public class FireBall : MonoBehaviour
         {
             if(player.CouldHurt())
             {
-                
+
                 if (controller != null)
                 {
                     controller.ShakeIdleAtController(0.3f, 3f, 2f);
@@ -34,9 +34,9 @@ public class FireBall : MonoBehaviour
                 }
                 GameObject exp = Instantiate(explosion, transform.position, transform.rotation);
                 Destroy(exp, 1.8f);
-                player.Hurt(damage);
+                player.Hurt(damage, "magical");
                 Destroy(gameObject);
-            } 
+            }
         }
         else
         {

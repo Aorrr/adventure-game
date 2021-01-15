@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class StatsManager : MonoBehaviour
 {
-    [SerializeField] int meleeDamage;
-    [SerializeField] int arrowDamage;
-    [SerializeField] int magicalPower;
-    [SerializeField] int armor;
-    [SerializeField] int magicalResistance;
-    [SerializeField] int armorPenetration;
+    [Header("Melee Stats")]
+    [SerializeField] int meleeDamage = 10;
+    [SerializeField] int armor = 50;
     [SerializeField] int MeleeLifeSteal;
 
+    [Header("Arrow Stats")]
+    [SerializeField] int arrowDamage = 5;
+    [SerializeField] int armorPenetration = 0;
+    [SerializeField] GameObject arrowPrefab;
+    [SerializeField] float arrowSpeed = 25f;
+
+
+    [Header("Magical Stats")]
+    [SerializeField] int magicalPower = 0;
+    [SerializeField] int magicalResistance = 20;
+
     int skillPts = 100;
+    int executionThreshold = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -87,7 +96,6 @@ public class StatsManager : MonoBehaviour
     }
 
 
-
     public void SpendSkillPt(int amount)
     {
         if(amount > skillPts)
@@ -98,5 +106,66 @@ public class StatsManager : MonoBehaviour
             skillPts -= amount;
         }
     }
+
+
+    /* settings in regards to arrows */
+    public GameObject GetArrowPrefab()
+    {
+        return arrowPrefab;
+    }
+
+    public float GetArrowSpeed()
+    {
+        return arrowSpeed;
+    }
+
+    public void IncreaseArrowVelocity(int percent)
+    {
+        if (percent < 1) { return; }
+        arrowSpeed += arrowSpeed * percent / 100;
+    }
+
+    public void IncreaseArrowDmg(int amount)
+    {
+        arrowDamage += amount;
+        arrowPrefab.GetComponent<Arrow>().IncreaseDamage(amount);
+    }
+
+    /* Formulas for taking damage */
+     
+    public int TakePhysicalDamage(int IniDmg)
+    {
+        float reduction = (float)armor / ((float)armor + 100);
+        reduction = 1 - reduction;
+        return (int)Mathf.Round(reduction * IniDmg);
+
+        // calculate maginal damage with MR
+    }
+
+    public int TakeMagicalDamage(int IniDmg)
+    {
+        float reduction = (float)magicalResistance / ((float)magicalResistance + 100);
+        reduction = 1 - reduction;
+        return (int)Mathf.Round(reduction * IniDmg);
+    }
+
+    public int GetExecutionThreshold() 
+    {
+        return executionThreshold;
+    }
+
+    public bool IfExecutionUnlocked()
+    {
+        return executionThreshold > 0;
+    }
+
+    public void IncreaseExecutionThreshold(int amount)
+    {
+        if(amount > 0)
+        {
+            executionThreshold += amount;
+        }
+    }
+
 }
 

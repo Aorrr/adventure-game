@@ -16,9 +16,15 @@ public class TheExecutioner : Skill
         SetColorToGrey();
     }
 
-
     public override void TakeEffect()
     {
-       
+        if (!this.IfUnlocked())
+        {
+            stats.IncreaseExecutionThreshold(UnlockLifeThreshold);
+        }
+        else
+        {
+            stats.IncreaseExecutionThreshold(UpgradeLifeThreshold);
+        }
     }
 }
