@@ -18,6 +18,8 @@ public class Enemy: MonoBehaviour
     [SerializeField] protected DamagePopUp popUpObject;
     [SerializeField] protected int exp;
 
+    //[SerializeField] GameObject ExecutionEffect;
+
     protected bool inRage = false;
     protected bool canDamage = true;
     protected int maxHealth;
@@ -79,12 +81,13 @@ public class Enemy: MonoBehaviour
         (popUpObject.gameObject, transform.position, Quaternion.identity);
 
         Destroy(popUp, 2f);
+
         GameObject blood = Instantiate(hurtEffect, transform.position, transform.rotation);
-        hp -= damage;
         Destroy(blood, 1f);
+
+        hp -= damage;
         if (hp <= 0)
             Die();
-        Debug.Log("hello from parent");
     }
 
 public void Die()
@@ -111,5 +114,12 @@ public void Die()
     public bool CouldDamage()
     {
         return myAnimator.GetBool("Fire");
+    }
+
+    public void Execute()
+    {
+        Destroy(gameObject);
+        //GameObject execution = Instantiate(ExecutionEffect, transform.position, transform.rotation);
+        //Destroy(execution, 1f);
     }
 }

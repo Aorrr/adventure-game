@@ -1224,7 +1224,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706876163
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7772291832998693849, guid: fc125cd2b902af1428138adb4c7f6ec4,
     type: 3}
@@ -5275,7 +5275,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706876163
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7772291832998693849, guid: fc125cd2b902af1428138adb4c7f6ec4,
     type: 3}
@@ -7741,6 +7741,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2985093519963232689, guid: d2ca2b418552141fc8f7c3bbb1ad29ea,
+        type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 5593614822031056931, guid: 7687db0c35d7c8646bda5172514f1884,
+        type: 3}
     - target: {fileID: 2985093519963232703, guid: d2ca2b418552141fc8f7c3bbb1ad29ea,
         type: 3}
       propertyPath: m_Name
@@ -9403,6 +9409,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1510748600}
     m_Modifications:
+    - target: {fileID: 1416255794, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
+      propertyPath: hp
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8310011842806876051, guid: 8eb9ea673e91a4a7b873e49aea067fe5,
         type: 3}
       propertyPath: m_Name
@@ -11542,7 +11552,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706876163
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7772291832998693849, guid: fc125cd2b902af1428138adb4c7f6ec4,
     type: 3}
@@ -11624,7 +11634,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706876163
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7772291832998693849, guid: fc125cd2b902af1428138adb4c7f6ec4,
     type: 3}
@@ -12499,7 +12509,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706876163
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7772291832998693849, guid: fc125cd2b902af1428138adb4c7f6ec4,
     type: 3}
@@ -12747,7 +12757,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706876163
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7772291832998693849, guid: fc125cd2b902af1428138adb4c7f6ec4,
     type: 3}
@@ -16223,7 +16233,7 @@ MonoBehaviour:
   LowerlevelSkill: {fileID: 5697903751132386149}
   LowerSkillLvRequirement: 3
   vertex: {fileID: 5697903749677610260}
-  UnlockSkillPoints: 0
+  UnlockSkillPoints: 10
   LevelUpSkillPoints: 5
   UnlockLifeThreshold: 5
   UpgradeLifeThreshold: 1
@@ -16718,8 +16728,8 @@ MonoBehaviour:
 
 
     Increase arrow travel speed
-    by 10% and damage by 4. For each level, further increase damage by 1 and speed
-    by 2%.'
+    by 20% and damage by 5. For each level, further increase damage by 1 and speed
+    by 5%.'
   maxLevel: 5
   tree: {fileID: 5697903750595388753}
   LowerlevelSkill: {fileID: 5697903751696509919}
@@ -16727,9 +16737,9 @@ MonoBehaviour:
   vertex: {fileID: 5697903749627904343}
   UnlockSkillPoints: 10
   LevelUpSkillPoints: 5
-  UnlockArrowSpeedBoost: 10
-  UnlockArrowDmg: 3
-  UpgradeArrowSpeedBoost: 2
+  UnlockArrowSpeedBoost: 20
+  UnlockArrowDmg: 5
+  UpgradeArrowSpeedBoost: 5
   UpgradeArrowDmg: 1
 --- !u!114 &5697903751132386150
 MonoBehaviour:
