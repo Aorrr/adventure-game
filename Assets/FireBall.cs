@@ -24,7 +24,7 @@ public class FireBall : MonoBehaviour
                     controller.ShakeIdleAtController(0.3f, 3f, 2f);
                     controller.ShakeRunAtController(0.3f, 3f, 2f);
                 }
-                player.Hurt(damage);
+                player.Hurt(damage, "magical");
                 Destroy(gameObject);
             } 
         }

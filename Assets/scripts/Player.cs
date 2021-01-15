@@ -143,16 +143,26 @@ public class Player : MonoBehaviour
         }
     }
 
-
-    public void Hurt(int amount)
+    public void Hurt(int damage, string type)
     {
-        if (couldHurt) {
-            FindObjectOfType<Sanity>().LoseSanity(amount);
-            myAnimator.SetTrigger("hurt");
-            couldHurt = false;
-            StartCoroutine(InvulnerableTime(invulnerableTime));
-            hurtEffectAnimator.SetTrigger("hurt");
+
+        if(type.ToLower() == "magical")
+        {
+            damage =stats.TakeMagicalDamage(damage);
+        } else if(type.ToLower() == "physical")
+        {
+            damage = stats.TakePhysicalDamage(damage);
+        } else if(type.ToLower() != "true")
+        {
+            damage = 0;
+            Debug.Log("wrong damage type provided");
         }
+
+        FindObjectOfType<Sanity>().LoseSanity(damage);
+        myAnimator.SetTrigger("hurt");
+        couldHurt = false;
+        StartCoroutine(InvulnerableTime(invulnerableTime));
+        hurtEffectAnimator.SetTrigger("hurt");
     }
 
     public bool CouldHurt()
@@ -280,7 +290,6 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(duration);
         myAnimator.SetBool("controllable", true);
-
     }
 
 }

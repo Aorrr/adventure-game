@@ -23,7 +23,7 @@ public class Seeker : Enemy
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackMask);
         foreach(Collider2D obj in hitEnemies)
         {
-            obj.GetComponent<Player>().Hurt(attackDamage);
+            obj.GetComponent<Player>().Hurt(attackDamage, "physical");
         }
     }
 

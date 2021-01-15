@@ -21,6 +21,7 @@ public class StatsManager : MonoBehaviour
     [SerializeField] int magicalResistance = 20;
 
     int skillPts = 100;
+    int executionThreshold = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -126,9 +127,45 @@ public class StatsManager : MonoBehaviour
 
     public void IncreaseArrowDmg(int amount)
     {
+        arrowDamage += amount;
         arrowPrefab.GetComponent<Arrow>().IncreaseDamage(amount);
     }
 
+    /* Formulas for taking damage */
+     
+    public int TakePhysicalDamage(int IniDmg)
+    {
+        float reduction = (float)armor / ((float)armor + 100);
+        reduction = 1 - reduction;
+        return (int)Mathf.Round(reduction * IniDmg);
+
+        // calculate maginal damage with MR
+    }
+
+    public int TakeMagicalDamage(int IniDmg)
+    {
+        float reduction = (float)magicalResistance / ((float)magicalResistance + 100);
+        reduction = 1 - reduction;
+        return (int)Mathf.Round(reduction * IniDmg);
+    }
+
+    public int GetExecutionThreshold() 
+    {
+        return executionThreshold;
+    }
+
+    public bool IfExecutionUnlocked()
+    {
+        return executionThreshold > 0;
+    }
+
+    public void IncreaseExecutionThreshold(int amount)
+    {
+        if(amount > 0)
+        {
+            executionThreshold += amount;
+        }
+    }
 
 }
 
