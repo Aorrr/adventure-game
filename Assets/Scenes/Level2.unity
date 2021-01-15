@@ -1284,7 +1284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390318904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -7.85, z: -1.0996094}
+  m_LocalPosition: {x: -6.1, y: -7.85, z: -1.0996094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1099158595}
@@ -1361,11 +1361,15 @@ MonoBehaviour:
   popUpObject: {fileID: 3884357209951137487, guid: 0e9783bd4d2dc4bcdbadeb825fe44fa2,
     type: 3}
   exp: 0
-  projectile: {fileID: 2019282021376011255, guid: c507b3c3dab212a4d9826d0b6de702f0,
+  projectile1: {fileID: 2019282021376011255, guid: c507b3c3dab212a4d9826d0b6de702f0,
+    type: 3}
+  projectile2: {fileID: 3390010977135100368, guid: eaced14bb9bc93348a0c25840c5daebe,
     type: 3}
   shootPoint: {fileID: 1099158594}
   projectileSpeed: 5
   shootInterval: 2
+  rangeShootInterval: 3
+  fireInterval: 2.5
   scream: {fileID: 8300000, guid: d08d0cc5551943b4fa47d5e46e621117, type: 3}
   camShakeController: {fileID: 1222186577}
   ripple: {fileID: 8395950757987443395, guid: 7663a62e15086014e89ff938472caef1, type: 3}
@@ -1473,7 +1477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551ab3132631543cc8b1986f40324bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanity: 999
+  sanity: 9999
   sanityLossSpeed: 3
   light: {fileID: 780009135}
 --- !u!4 &1476377308
@@ -1729,6 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d224cf16e4cd3048adc144f57fd9285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 50
 --- !u!61 &1811543740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19012,7 +19017,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: c98d0e8ed2d2d4cfaab84aa370266e4f, type: 3}
     - target: {fileID: 987072448, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
       propertyPath: baseDamage
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1029373660, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
       propertyPath: DieEffect

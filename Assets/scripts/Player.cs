@@ -276,9 +276,9 @@ public class Player : MonoBehaviour
         jumpSpeed = initialJumpSpeed;
     }
 
-    public void PushBack(float velocity, int duration)
+    public void PushBack(float xVelocity, float yVelocity, int duration)
     {
-        myRidigidBody.velocity = new Vector2(velocity, myRidigidBody.velocity.y);
+        myRidigidBody.velocity = new Vector2(xVelocity,  yVelocity);
         StartCoroutine(Uncontrollable(duration));
     }
 

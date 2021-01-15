@@ -34,7 +34,7 @@ public class kingScream : MonoBehaviour
             {
                 Debug.Log("triggers push function");
                 float sign = Mathf.Sign(player.transform.position.x - circle.transform.position.x);
-                player.PushBack(sign *10, 1);
+                player.PushBack(sign *10, 0f, 1);
                 sinceLastPushBack = 0;
             }
         }
