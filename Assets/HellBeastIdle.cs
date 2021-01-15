@@ -6,7 +6,6 @@ using System;
 public class HellBeastIdle : StateMachineBehaviour
 {
     public float attackRange = 5;
-    public float breathInterval = 2.5f;
 
     Transform player;
     HellBeast beast;
@@ -25,7 +24,6 @@ public class HellBeastIdle : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        breathInterval -= Time.deltaTime;
         if (beast.GetShootCountDown() <= 0 && couldShoot)
         {
             animator.SetTrigger("breath");

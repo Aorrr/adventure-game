@@ -1284,7 +1284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390318904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -7.85, z: -1.0996094}
+  m_LocalPosition: {x: -6.1, y: -7.85, z: -1.0996094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1099158595}
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  hp: 10
+  hp: 100
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
   armour: 0
@@ -1361,7 +1361,9 @@ MonoBehaviour:
   popUpObject: {fileID: 3884357209951137487, guid: 0e9783bd4d2dc4bcdbadeb825fe44fa2,
     type: 3}
   exp: 0
-  projectile: {fileID: 2019282021376011255, guid: c507b3c3dab212a4d9826d0b6de702f0,
+  projectile1: {fileID: 2019282021376011255, guid: c507b3c3dab212a4d9826d0b6de702f0,
+    type: 3}
+  projectile2: {fileID: 3390010977135100368, guid: eaced14bb9bc93348a0c25840c5daebe,
     type: 3}
   shootPoint: {fileID: 1099158594}
   projectileSpeed: 5
@@ -19012,7 +19014,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: c98d0e8ed2d2d4cfaab84aa370266e4f, type: 3}
     - target: {fileID: 987072448, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
       propertyPath: baseDamage
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1029373660, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
       propertyPath: DieEffect

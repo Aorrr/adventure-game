@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HellBeast : Enemy
 {
-    [SerializeField] GameObject projectile;
+    [SerializeField] GameObject projectile1;
+    [SerializeField] GameObject projectile2;
     [SerializeField] GameObject shootPoint;
     [SerializeField] float projectileSpeed;
     [SerializeField] float shootInterval = 2.5f;
@@ -48,14 +49,34 @@ public class HellBeast : Enemy
         camShakeController.ShakeRunAtController(2f, 4f, 3f);
     }
 
-    public void Shoot()
+    public void Shoot1()
     {
         GameObject fireBall = Instantiate(
-                projectile,
+                projectile1,
                 shootPoint.transform.position,
                 Quaternion.identity) as GameObject;
         fireBall.GetComponent<Rigidbody2D>().velocity = new Vector2(-projectileSpeed * transform.localScale.x, 0);
         fireBall.GetComponent<Transform>().localScale = new Vector2(Mathf.Sign(transform.localScale.x), 1f);
+        shootCountDown = shootInterval;
+    }
+
+    public void Shoot2()
+    {
+        
+        GameObject fireBall1 = Instantiate(
+                projectile2,
+                shootPoint.transform.position,
+                Quaternion.identity) as GameObject;
+        GameObject fireBall2 = Instantiate(
+                projectile2,
+                shootPoint.transform.position,
+                Quaternion.identity) as GameObject;
+        fireBall1.GetComponent<Rigidbody2D>().velocity = new Vector2(-projectileSpeed * transform.localScale.x, 0);
+        fireBall1.GetComponent<Transform>().localScale = new Vector2(Mathf.Sign(transform.localScale.x), 1f);
+        fireBall1.GetComponent<Transform>().Rotate(new Vector3(0, 0, 0));
+        fireBall2.GetComponent<Rigidbody2D>().velocity = new Vector2(-projectileSpeed * transform.localScale.x, projectileSpeed * 0.34f);
+        fireBall2.GetComponent<Transform>().localScale = new Vector2(Mathf.Sign(transform.localScale.x), 1f);
+        fireBall2.GetComponent<Transform>().Rotate(new Vector3(0, 0, -20 * Mathf.Sign(transform.localScale.x)));
         shootCountDown = shootInterval;
     }
     
@@ -66,13 +87,17 @@ public class HellBeast : Enemy
         camShakeController.ShakeRunAtController(1.3f, 2f, 2f);
         GameObject myRipple = Instantiate(ripple, shootPoint.transform.position, shootPoint.transform.rotation);
         Destroy(myRipple, 1f);
+        FindObjectOfType<Player>().PushBack(-7.5f * transform.localScale.x , 10f, 1);
     }
 
     public void LookAtPlayer()
     {
-        if(FindObjectOfType<Player>().transform.position.x - transform.position.x > 0)
+        if (FindObjectOfType<Player>().transform.position.x - transform.position.x > 0)
         {
             transform.localScale = new Vector2(-1f, 1f);
+        } else
+        {
+            transform.localScale = new Vector2(1f, 1f);
         }
     }
 
