@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  hp: 100
+  hp: 10
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
   armour: 0
@@ -1368,6 +1368,8 @@ MonoBehaviour:
   shootPoint: {fileID: 1099158594}
   projectileSpeed: 5
   shootInterval: 2
+  rangeShootInterval: 3
+  fireInterval: 2.5
   scream: {fileID: 8300000, guid: d08d0cc5551943b4fa47d5e46e621117, type: 3}
   camShakeController: {fileID: 1222186577}
   ripple: {fileID: 8395950757987443395, guid: 7663a62e15086014e89ff938472caef1, type: 3}
@@ -1475,7 +1477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551ab3132631543cc8b1986f40324bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanity: 999
+  sanity: 9999
   sanityLossSpeed: 3
   light: {fileID: 780009135}
 --- !u!4 &1476377308
@@ -1731,6 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d224cf16e4cd3048adc144f57fd9285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 50
 --- !u!61 &1811543740
 BoxCollider2D:
   m_ObjectHideFlags: 0

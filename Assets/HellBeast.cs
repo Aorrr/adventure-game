@@ -9,11 +9,16 @@ public class HellBeast : Enemy
     [SerializeField] GameObject shootPoint;
     [SerializeField] float projectileSpeed;
     [SerializeField] float shootInterval = 2.5f;
+    [SerializeField] int rangeShootInterval = 3;
+    [SerializeField] float fireInterval = 2.5f;
     [SerializeField] AudioClip scream;
     [SerializeField] CamShakeController camShakeController;
     [SerializeField] GameObject ripple;
 
     private float shootCountDown;
+    private int rangeCountDown;
+    private float fireCountDown;
+    private GameObject fire;
 
     public void Start()
     {
@@ -21,11 +26,17 @@ public class HellBeast : Enemy
         ccollider = GetComponent<BoxCollider2D>();
         myAnimator = GetComponent<Animator>();
         shootCountDown = shootInterval;
+        rangeCountDown = rangeShootInterval;
+        fireCountDown = fireInterval;
+
+        fire = transform.GetChild(2).gameObject;
+        fire.SetActive(false);
     }
 
     public void Update()
     {
         shootCountDown -= Time.deltaTime;
+        fireCountDown -= Time.deltaTime;
         ActivateBurnt();
         LookAtPlayer();
     }
@@ -33,6 +44,15 @@ public class HellBeast : Enemy
     public float GetShootCountDown()
     {
         return shootCountDown;
+    }
+
+    public int GetRangeCountDown()
+    {
+        return rangeCountDown;
+    }
+    public float GetFireCountDown()
+    {
+        return fireCountDown;
     }
 
     public void ActivateBurnt()
@@ -47,6 +67,13 @@ public class HellBeast : Enemy
     {
         camShakeController.ShakeIdleAtController(2f, 4f, 3f);
         camShakeController.ShakeRunAtController(2f, 4f, 3f);
+        fire.SetActive(true);
+    }
+
+    public void DisableFire()
+    {
+        fire.SetActive(false);
+        fireCountDown = fireInterval;
     }
 
     public void Shoot1()
@@ -58,11 +85,11 @@ public class HellBeast : Enemy
         fireBall.GetComponent<Rigidbody2D>().velocity = new Vector2(-projectileSpeed * transform.localScale.x, 0);
         fireBall.GetComponent<Transform>().localScale = new Vector2(Mathf.Sign(transform.localScale.x), 1f);
         shootCountDown = shootInterval;
+        rangeCountDown -= 1;
     }
 
     public void Shoot2()
-    {
-        
+    {      
         GameObject fireBall1 = Instantiate(
                 projectile2,
                 shootPoint.transform.position,
@@ -78,8 +105,29 @@ public class HellBeast : Enemy
         fireBall2.GetComponent<Transform>().localScale = new Vector2(Mathf.Sign(transform.localScale.x), 1f);
         fireBall2.GetComponent<Transform>().Rotate(new Vector3(0, 0, -20 * Mathf.Sign(transform.localScale.x)));
         shootCountDown = shootInterval;
+        rangeCountDown -= 1;
     }
-    
+
+    public void RangeShoot()
+    {
+        GameObject[] fireBalls = new GameObject[7];
+        float[] xCoefficients = { -1, -0.87f, -0.5f, 0, 0.5f, 0.87f, 1};
+        float[] yCoefficients = { 0, 0.5f, 0.87f, 1, 0.87f, 0.5f, 0 };
+        float[] rotation = { 0, -30f, -60f, -90f, -120f, -150f, -180f };
+        for (int i = 0; i < 7; i++)
+        {
+            
+            fireBalls[i] = Instantiate(
+                projectile2,
+                shootPoint.transform.position,
+                Quaternion.identity) as GameObject;
+            fireBalls[i].GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed * xCoefficients[i], projectileSpeed * yCoefficients[i]);
+            fireBalls[i].GetComponent<Transform>().Rotate(new Vector3(0, 0, rotation[i]));
+        }
+        shootCountDown = shootInterval;
+        rangeCountDown = rangeShootInterval;
+    }
+
     public void Scream()
     {
         AudioSource.PlayClipAtPoint(scream, transform.position);
