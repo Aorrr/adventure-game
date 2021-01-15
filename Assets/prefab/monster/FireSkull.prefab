@@ -586,3 +586,5 @@ MonoBehaviour:
   popUpObject: {fileID: 3884357209951137487, guid: 0e9783bd4d2dc4bcdbadeb825fe44fa2,
     type: 3}
   exp: 20
+  ExecutionEffect: {fileID: 8702457976570948853, guid: 956c2310231c44d3f9decd59b290a5e1,
+    type: 3}

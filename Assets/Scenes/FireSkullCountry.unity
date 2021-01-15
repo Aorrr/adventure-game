@@ -209,6 +209,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2020698889}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &22008263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 221901505, guid: 27584a87b416b44ec8647bd3fe0efc5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1134347575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b782c72eface6d249af0f9cff4d63981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &24436192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8836023176940684757, guid: 01b22ddf7407f4bb2a8b87b4c36ef2a6,
@@ -2316,6 +2328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 987072448, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
+      propertyPath: shaker
+      value: 
+      objectReference: {fileID: 22008263}
     - target: {fileID: 1029373660, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
       propertyPath: hurtEffectAnimator
       value: 
@@ -9409,10 +9425,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1510748600}
     m_Modifications:
-    - target: {fileID: 1416255794, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
-      propertyPath: hp
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 8310011842806876051, guid: 8eb9ea673e91a4a7b873e49aea067fe5,
         type: 3}
       propertyPath: m_Name
@@ -16235,8 +16247,8 @@ MonoBehaviour:
   vertex: {fileID: 5697903749677610260}
   UnlockSkillPoints: 10
   LevelUpSkillPoints: 5
-  UnlockLifeThreshold: 5
-  UpgradeLifeThreshold: 1
+  UnlockLifeThreshold: 20
+  UpgradeLifeThreshold: 10
 --- !u!114 &5697903750706970356
 MonoBehaviour:
   m_ObjectHideFlags: 0

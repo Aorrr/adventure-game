@@ -18,7 +18,7 @@ public class Enemy: MonoBehaviour
     [SerializeField] protected DamagePopUp popUpObject;
     [SerializeField] protected int exp;
 
-    //[SerializeField] GameObject ExecutionEffect;
+    [SerializeField] GameObject ExecutionEffect;
 
     protected bool inRage = false;
     protected bool canDamage = true;
@@ -119,7 +119,8 @@ public void Die()
     public void Execute()
     {
         Destroy(gameObject);
-        //GameObject execution = Instantiate(ExecutionEffect, transform.position, transform.rotation);
-        //Destroy(execution, 1f);
+        GameObject execution = Instantiate(ExecutionEffect, transform.position + new Vector3(2.3f, -1.29f, 0f),
+            transform.rotation);
+        Destroy(execution, 3f);
     }
 }
