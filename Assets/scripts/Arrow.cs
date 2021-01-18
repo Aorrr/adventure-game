@@ -37,7 +37,7 @@ public class Arrow : MonoBehaviour
                 shakeIdle = StartCoroutine(controller.ShakeIdle(0.3f, 3f, 2f));
                 shakeRun = StartCoroutine(controller.ShakeRun(0.3f, 3f, 2f));
             }
-            enemy.Hurt(damage, "physical");
+            enemy.Hurt(damage, "physical", "arrow");
 
             if(stats.IfExecutionUnlocked() && enemy.GetComponentInParent<Enemy>()
                 .GetHealthPercentage()*100 <= stats.GetExecutionThreshold())

@@ -2584,46 +2584,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1000816218846735709, guid: cbb1e982ffb6b45b48f07829d650a5cf,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 1000816218846735709, guid: cbb1e982ffb6b45b48f07829d650a5cf,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000816218846735711, guid: cbb1e982ffb6b45b48f07829d650a5cf,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000816218846735711, guid: cbb1e982ffb6b45b48f07829d650a5cf,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2456243435899655034, guid: cbb1e982ffb6b45b48f07829d650a5cf,
-        type: 3}
-      propertyPath: m_PointLightInnerRadius
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2456243435899655034, guid: cbb1e982ffb6b45b48f07829d650a5cf,
-        type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177663173715260131, guid: cbb1e982ffb6b45b48f07829d650a5cf,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.048839092
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177663173715260131, guid: cbb1e982ffb6b45b48f07829d650a5cf,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.4849348
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
 --- !u!1 &371031757

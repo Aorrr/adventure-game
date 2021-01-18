@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
-public class HellBeastIdle : StateMachineBehaviour
+public class HellBeastBurntIdle : StateMachineBehaviour
 {
     public float attackRange = 5;
 
@@ -27,10 +26,26 @@ public class HellBeastIdle : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (beast.GetShootCountDown() <= 0 && couldShoot)
-        {    
-            animator.SetTrigger("breath");
-            couldShoot = false;
-        }         
+        {
+            Debug.Log(beast.GetRangeCountDown());
+            if (beast.GetRangeCountDown() <= 0)
+            {
+                animator.SetTrigger("range");
+                couldShoot = false;
+            }
+            else
+            {
+                animator.SetTrigger("breath");
+                couldShoot = false;
+            }
+        }
+        else if(System.Math.Abs(player.transform.position.x - beast.transform.position.x) < 1.5f && beast.GetFireCountDown() <= 0 && couldFire) 
+        {
+            Debug.Log(beast.GetFireCountDown());
+
+            animator.SetTrigger("burnt");
+            couldFire = false;
+        }
         else
         {
             animator.SetTrigger("walk");

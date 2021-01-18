@@ -175,20 +175,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c952a1c611b564a9e98e77cfe2dbef06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slideCD: 1
   runSpeed: 4
   jumpSpeed: 17
-  deathKick: {x: 10, y: 15}
-  attackSpeed: 0.2
   attackRange: 2
-  arrowSpeed: 25
   DieEffect: {fileID: 7435521277183601780, guid: eaf2e6274ef534d12af9e2b62d862e57,
     type: 3}
   invulnerableTime: 3
   attackPoint: {fileID: 2068480808}
   shootPoint: {fileID: 2068480808}
-  arrowPrefab: {fileID: 5593614822031056931, guid: 7687db0c35d7c8646bda5172514f1884,
-    type: 3}
-  slideCD: 1
   hurtEffectAnimator: {fileID: 0}
   bodyRenderer: {fileID: 1000816218846735709}
 --- !u!70 &8177663173715260131
@@ -204,8 +199,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02312851, y: -0.5037203}
-  m_Size: {x: 0.5329132, y: 1.0482111}
+  m_Offset: {x: -0.048839092, y: -0.5037203}
+  m_Size: {x: 0.4849348, y: 1.0482111}
   m_Direction: 0
 --- !u!1 &1000816218846735706
 GameObject:
@@ -234,7 +229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000816218846735706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 0.07, z: 0}
+  m_LocalPosition: {x: -0.13, y: -0.01, z: 0}
   m_LocalScale: {x: 0.85010034, y: 0.9398779, z: 1}
   m_Children: []
   m_Father: {fileID: 1000816217385713666}
@@ -277,7 +272,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -296,8 +291,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -991923437
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayer: 7
+  m_SortingOrder: 3
   m_Sprite: {fileID: -6721135113665879219, guid: e5dd7180f191247b59a637ace0f81187,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -342,12 +337,12 @@ PrefabInstance:
     - target: {fileID: 3455889739145575114, guid: cdd6598aafdeb9540b74fdc4910e0b4c,
         type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3455889739145575114, guid: cdd6598aafdeb9540b74fdc4910e0b4c,
         type: 3}
       propertyPath: m_PointLightInnerRadius
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3455889739145575115, guid: cdd6598aafdeb9540b74fdc4910e0b4c,
         type: 3}
