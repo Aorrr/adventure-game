@@ -27,7 +27,7 @@ public class Seeker : Enemy
         }
     }
 
-    public override void Hurt(int damage, string type)
+    public override void Hurt(int damage, string type, string method)
     {
         if (hp <= 0) { return; }
         float reduction = 1;

@@ -68,7 +68,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (!isAlive) { return; }
-
         if(myAnimator.GetBool("controllable"))
         {
             Run();
@@ -78,7 +77,6 @@ public class Player : MonoBehaviour
             BowLight();
             Slide();
         }
-
     }
 
     private void OnDrawGizmosSelected()
@@ -106,7 +104,8 @@ public class Player : MonoBehaviour
                 myAnimator.SetTrigger("startSlide");
                 sinceLastSlide = 0;
             }
-        } else
+        } 
+        else
         {
             myAnimator.SetBool("slide", false);
         }
@@ -168,6 +167,11 @@ public class Player : MonoBehaviour
     public bool CouldHurt()
     {
         return couldHurt;
+    }
+
+    public void SetCouldHurt(bool state)
+    {
+        couldHurt = state;
     }
 
    IEnumerator InvulnerableTime(float invulnerableDuration)

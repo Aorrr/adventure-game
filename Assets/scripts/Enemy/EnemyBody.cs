@@ -17,9 +17,9 @@ public class EnemyBody : MonoBehaviour
         
     }
 
-    public void Hurt(int amount, string type)
+    public void Hurt(int amount, string type, string method)
     {
-        enemy.Hurt(amount, type);
+        enemy.Hurt(amount, type, method);
         enemy.GetComponent<Animator>().SetTrigger("TakeDamage");
     }
 }

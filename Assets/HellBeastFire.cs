@@ -13,7 +13,7 @@ public class HellBeastFire : MonoBehaviour
         {
             Debug.Log("okkkk!!!");
             player.PushBack(5f, 5f, 0);
-            player.Hurt(damage);
+            player.Hurt(damage, "magical");
         }
     }
 
@@ -23,7 +23,7 @@ public class HellBeastFire : MonoBehaviour
         if (player != null)
         {
             player.PushBack(5f, 5f, 0);
-            player.Hurt(damage);
+            player.Hurt(damage, "magical");
         }
     }
 }

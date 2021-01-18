@@ -54,7 +54,7 @@ public class Enemy: MonoBehaviour
         return;
     }
 
-    public virtual void Hurt(int damage, string type)
+    public virtual void Hurt(int damage, string type, string method)
     {
         if (hp <= 0) { return; }
         float reduction = 1;

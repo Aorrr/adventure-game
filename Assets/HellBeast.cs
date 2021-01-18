@@ -19,6 +19,7 @@ public class HellBeast : Enemy
     private int rangeCountDown;
     private float fireCountDown;
     private GameObject fire;
+    private bool isBurnt = false;
 
     public void Start()
     {
@@ -57,9 +58,10 @@ public class HellBeast : Enemy
 
     public void ActivateBurnt()
     {
-        if(GetHealthPercentage() <= 0.5)
+        if(GetHealthPercentage() <= 0.5 && !isBurnt)
         {
             myAnimator.SetTrigger("burnt");
+            isBurnt = true;
         }
     }
 
@@ -149,14 +151,24 @@ public class HellBeast : Enemy
         }
     }
 
-    public override void Hurt(int damage, string type)
+    public override void Hurt(int damage, string type, string method)
     {
         if (hp <= 0) { return; }
+        Debug.Log(isBurnt);
+        Debug.Log(method);
+        if(isBurnt && method == "arrow")
+        {
+            damage = 0;
+            popUpObject.SetDamage(damage);
+            GameObject pop = Instantiate<GameObject>
+            (popUpObject.gameObject, shootPoint.transform.position, Quaternion.identity);
+            Destroy(pop, 2f);
+            return;
+        } 
         float reduction = 1;
         // calculate physical damage with armour
         if (type.ToLower() == "physical")
         {
-
             reduction = (float)armour / ((float)armour + 100);
             reduction = 1 - reduction;
             damage = (int)Mathf.Round(reduction * damage);
