@@ -14,12 +14,14 @@ public class Spike : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("in");
         myAnimator.SetBool("out", true);
         causeDamage = StartCoroutine(CauseDamage(collision.gameObject));
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("ok");
         myAnimator.SetBool("out", false);
         StopCoroutine(causeDamage);
     }

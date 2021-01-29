@@ -58,8 +58,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024795532, y: -1.107554}
-  m_Size: {x: 0.54959106, y: 1.033061}
+  m_Offset: {x: 0.088232994, y: -2.19867}
+  m_Size: {x: 0.9555874, y: 1.8450537}
   m_Direction: 0
 --- !u!1 &4312533556103140579
 GameObject:
@@ -85,7 +85,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4312533556103140579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: -0.94, z: 0}
+  m_LocalPosition: {x: -0.43, y: -1.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4312533556355853767}
@@ -151,9 +151,9 @@ MonoBehaviour:
   projectile: {fileID: 448539034374960906, guid: b057780ce0057ce4db6327735fab49b9,
     type: 3}
   shootPoint: {fileID: 4312533556103140579}
-  projectileSpeed: 3
-  shootInterval: 2.5
-  detectRangeX: 5
+  projectileSpeed: 9
+  shootInterval: 2
+  detectRangeX: 20
   detectRangeY: 3
 --- !u!50 &4312533556355853764
 Rigidbody2D:
