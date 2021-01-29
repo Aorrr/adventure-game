@@ -58,7 +58,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030000687, y: 0}
+  m_Offset: {x: -0.030000687, y: 0.008115292}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -69,7 +69,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7799969, y: 1}
+  m_Size: {x: 0.7799969, y: 1.1027956}
   m_EdgeRadius: 0
 --- !u!1 &1789326658
 GameObject:
@@ -96,7 +96,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789326658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.001, y: 0.5025, z: 0}
+  m_LocalPosition: {x: 0.042, y: 0.711, z: 0}
   m_LocalScale: {x: 0.9965472, y: 1.1968912, z: 0.9198195}
   m_Children:
   - {fileID: 15223218348114175}
@@ -199,7 +199,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.53747654, y: -0.07626057}
+  m_Offset: {x: -0.6150329, y: -0.07626057}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -210,7 +210,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47917175, y: 0.17638588}
+  m_Size: {x: 0.6342845, y: 0.17638588}
   m_EdgeRadius: 0
 --- !u!70 &5256785183214436112
 CapsuleCollider2D:
@@ -225,8 +225,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0473907, y: -0.40329528}
-  m_Size: {x: 0.13757086, y: 0.56255674}
+  m_Offset: {x: -0.3201313, y: -0.4720397}
+  m_Size: {x: 0.09561062, y: 0.7000456}
   m_Direction: 0
 --- !u!114 &6061676175036664893
 MonoBehaviour:
@@ -552,18 +552,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0059813857, y: 0}
+  m_Offset: {x: -0.007544279, y: -0.10450554}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5714286, y: 0.78571427}
+    oldSize: {x: 0.8, y: 1.1}
     newSize: {x: 0.5714286, y: 0.78571427}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5833913, y: 0.78571427}
+  m_Size: {x: 0.621263, y: 1.1137524}
   m_EdgeRadius: 0
 --- !u!114 &1416255794
 MonoBehaviour:
