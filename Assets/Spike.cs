@@ -9,21 +9,28 @@ public class Spike : MonoBehaviour
 
     private void Start()
     {
-        myAnimator = GetComponent<Animator>();   
+        myAnimator = GetComponent<Animator>();
+        causeDamage = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("in");
         myAnimator.SetBool("out", true);
-        causeDamage = StartCoroutine(CauseDamage(collision.gameObject));
+        if(causeDamage == null)
+            causeDamage = StartCoroutine(CauseDamage(collision.gameObject));
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("ok");
         myAnimator.SetBool("out", false);
-        StopCoroutine(causeDamage);
+        if(causeDamage != null)
+        {
+            StopCoroutine(causeDamage);
+            causeDamage = null;
+        }
+            
     }
 
     IEnumerator CauseDamage(GameObject obj)
