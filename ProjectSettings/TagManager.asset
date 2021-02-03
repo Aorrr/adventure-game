@@ -49,9 +49,6 @@ TagManager:
   - name: hazards
     uniqueID: 3588091133
     locked: 0
-  - name: Foreground
-    uniqueID: 77852303
-    locked: 0
   - name: Interactable
     uniqueID: 492043173
     locked: 0
@@ -63,6 +60,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3303043859
+    locked: 0
+  - name: Foreground
+    uniqueID: 77852303
     locked: 0
   - name: Particles
     uniqueID: 2216699141

@@ -90,7 +90,7 @@ public class Enemy: MonoBehaviour
             Die();
     }
 
-public void Die()
+    public void Die()
     {
         FindObjectOfType<Exp>().GainExp(exp);
         Destroy(gameObject);

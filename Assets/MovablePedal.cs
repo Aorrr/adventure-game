@@ -49,10 +49,19 @@ public class MovablePedal : MonoBehaviour
         
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
+        Debug.Log("nice");
         GameObject obj = collision.gameObject;
-        Vector2 target = new Vector2(xRight, obj.transform.position.y);
+        Vector2 target;
+        if (dir == 1)
+        {
+            target = new Vector2(xRight, obj.transform.position.y);
+        }
+        else
+        {
+            target = new Vector2(xLeft, obj.transform.position.y);
+        }
         obj.transform.position = Vector2.MoveTowards(obj.transform.position, target, speed * Time.deltaTime);
     }
 
