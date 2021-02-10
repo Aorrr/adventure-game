@@ -51,7 +51,6 @@ public class MovablePedal : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log("nice");
         GameObject obj = collision.gameObject;
         Vector2 target;
         if (dir == 1)

@@ -20,7 +20,6 @@ public class FireBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         Player player = collision.GetComponent<Player>();
         if (player != null)
         {
