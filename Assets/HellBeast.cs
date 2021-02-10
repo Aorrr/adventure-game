@@ -86,6 +86,7 @@ public class HellBeast : Enemy
                 Quaternion.identity) as GameObject;
         fireBall.GetComponent<Rigidbody2D>().velocity = new Vector2(-projectileSpeed * transform.localScale.x, 0);
         fireBall.GetComponent<Transform>().localScale = new Vector2(Mathf.Sign(transform.localScale.x), 1f);
+        fireBall.GetComponent<Transform>().Rotate(new Vector3(0, 0, 0));
         shootCountDown = shootInterval;
         rangeCountDown -= 1;
     }
