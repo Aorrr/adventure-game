@@ -28,7 +28,6 @@ public class MovablePedal : MonoBehaviour
         Vector2 target;
         if (dir == 0)
         {
-            Debug.Log("ok");
             target = new Vector2(xLeft, transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
         } 

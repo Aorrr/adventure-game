@@ -18,6 +18,11 @@ public class Enemy: MonoBehaviour
     [SerializeField] protected DamagePopUp popUpObject;
     [SerializeField] protected int exp;
 
+    //Drop item settings
+    [SerializeField] protected GameObject dropItem;
+    [SerializeField] protected GameObject dropPosition;
+
+
     //[SerializeField] GameObject ExecutionEffect;
 
     protected bool inRage = false;
@@ -93,6 +98,8 @@ public class Enemy: MonoBehaviour
     public void Die()
     {
         FindObjectOfType<Exp>().GainExp(exp);
+        if(dropItem != null && dropPosition != null)
+            Instantiate(dropItem, dropPosition.transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

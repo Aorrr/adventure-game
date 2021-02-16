@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     bool couldHurt = true;
     float attackInterval;
     float initialSpeed;
+    List<string> bag;
 
     // cached component references
     Rigidbody2D myRidigidBody;
@@ -56,6 +57,7 @@ public class Player : MonoBehaviour
         myRidigidBody = GetComponent<Rigidbody2D>();
         arrowPrefab = stats.GetArrowPrefab();
         arrowPrefab.GetComponent<Arrow>().SetInitialDamage(arrowDmg);
+        bag = new List<string>();
 
         myAnimator = GetComponentInChildren<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
@@ -294,6 +296,28 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(duration);
         myAnimator.SetBool("controllable", true);
+    }
+
+    public void ReceiveItem(string itemName)
+    {
+        bag.Add(itemName);
+        foreach(string item in bag)
+        {
+            Debug.Log(item);
+        }
+        
+    }
+
+    public bool HasItem(string itemName)
+    {
+        foreach(string item in bag)
+        {
+            if(item.Equals(itemName))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
