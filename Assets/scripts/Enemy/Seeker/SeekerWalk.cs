@@ -11,7 +11,6 @@ public class SeekerWalk : StateMachineBehaviour
 
     Transform player;
     Rigidbody2D rb;
-    float walkCountDown;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -23,12 +22,6 @@ public class SeekerWalk : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        walkCountDown -= Time.deltaTime;
-        if (walkCountDown <= 0)
-        {
-            animator.SetBool("isWalking", false);
-            return;
-        }
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
         if (player.transform.position.x < range[0] || player.transform.position.x > range[1] || player.transform.position.y > range[2] || player.transform.position.y < range[3])

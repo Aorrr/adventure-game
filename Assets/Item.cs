@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] Player player;
     [SerializeField] string itemName;
     [SerializeField] GameObject pickupEffect;
     [SerializeField] float animationDuration;
+
+    Player player;
+
+    private void Start()
+    {
+        player = FindObjectOfType<Player>();
+    }
 
     // Start is called before the first frame update
     public void OnTriggerEnter2D(Collider2D collision)
