@@ -56,6 +56,7 @@ public class Seeker : Enemy
         Destroy(popUp, 2f);
 
         // blood effect
+        Debug.Log("blood!");
         GameObject blood = Instantiate(hurtEffect, transform.position, transform.rotation);
         hp -= damage;
         Destroy(blood, 1f);
