@@ -36,16 +36,16 @@ public class MeleeAttack : MonoBehaviour
         }
         Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackPos.position
             , attackRange, enemyLayer);
-
-        if(enemiesInRange.Length > 0)
+        if (enemiesInRange.Length > 0)
         {
             AudioSource.PlayClipAtPoint(clip, Camera.main.gameObject.transform.position);
+
         }
 
         for(int i = 0; i < enemiesInRange.Length; i++)
         {
+
             enemiesInRange[i].GetComponent<EnemyBody>().Hurt(baseDamage * DamageFactor, "physical", "sword");
-            Debug.Log(enemiesInRange[i].name);
             StartCoroutine(shaker.ShakeIdle(0.3f, 3f, 2f));
             StartCoroutine(shaker.ShakeRun(0.3f, 3f, 2f));
         }
