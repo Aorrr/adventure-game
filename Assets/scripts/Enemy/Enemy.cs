@@ -36,6 +36,13 @@ public class Enemy: MonoBehaviour
         myAnimator = GetComponent<Animator>();
     }
 
+    public void PrepareStats()
+    {
+        maxHealth = hp;
+        ccollider = GetComponent<BoxCollider2D>();
+        myAnimator = GetComponent<Animator>();
+    }
+
 
     public void ToggleRage(bool status)
     {
@@ -61,8 +68,9 @@ public class Enemy: MonoBehaviour
 
     public virtual void Hurt(int damage, string type, string method)
     {
+        Debug.Log("hurt" + " hp: " + hp);
         if (hp <= 0) { return; }
-        float reduction = 1;
+        float reduction = 0;
         // calculate physical damage with armour
         if(type.ToLower() == "physical")
         {
@@ -80,6 +88,7 @@ public class Enemy: MonoBehaviour
             damage = (int)Mathf.Round(reduction * damage);
         }
 
+        Debug.Log("damage dealt: " + damage);
         popUpObject.SetDamage(damage);
         
         GameObject popUp = Instantiate<GameObject>
@@ -89,7 +98,7 @@ public class Enemy: MonoBehaviour
 
         GameObject blood = Instantiate(hurtEffect, transform.position, transform.rotation);
         Destroy(blood, 1f);
-
+        Debug.Log("health points: " + hp);
         hp -= damage;
         if (hp <= 0)
             Die();

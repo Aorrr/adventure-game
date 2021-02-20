@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkullKing : MonoBehaviour
+
+public class SkullKing : Enemy
 {
     [SerializeField] Player player;
     [SerializeField] FireSkull skull;
@@ -11,14 +12,13 @@ public class SkullKing : MonoBehaviour
     [SerializeField] float SpawnSkullCD = 10f;
     [SerializeField] Fire iceFire;
     [SerializeField] kingScream scream;
+    [SerializeField] GameObject HealthBar;
 
     Sanity sanity;
-
-    Enemy enemy;
     bool SummonSkull = true;
     List<Transform> wayPoints;
     bool canMove = true;
-    Rigidbody2D body;
+    //Rigidbody2D body;
     Animator animator;
     EnemyBody enemyBody;
 
@@ -44,12 +44,14 @@ public class SkullKing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HealthBar.SetActive(true);
+        PrepareStats();
+        Debug.Log(hp);
         sanity = FindObjectOfType<Sanity>();
         enemyBody = GetComponentInChildren<EnemyBody>();
         animator = GetComponent<Animator>();
-        enemy = GetComponent < Enemy > ();
         wayPoints = new List<Transform>();
-        body = GetComponent<Rigidbody2D>();
+        //body = GetComponent<Rigidbody2D>();
         foreach(Transform child in skullKingPath.transform)
         {
             wayPoints.Add(child);
@@ -59,9 +61,8 @@ public class SkullKing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
-
-            if (enemy.GetHealthPercentage() >= 0.6)
+        Debug.Log(IfRage());
+        if (GetHealthPercentage() >= 0.6)
             {
 
                 if (canMove)
@@ -69,7 +70,7 @@ public class SkullKing : MonoBehaviour
                     MoveToNextLocation();
                 }
 
-            if (enemy.IfRage())
+            if (IfRage())
             {
                 if (SummonSkull)
                 {
@@ -77,7 +78,7 @@ public class SkullKing : MonoBehaviour
                 }
             }
 
-            } else if(enemy.GetHealthPercentage() > 0)
+            } else if(GetHealthPercentage() > 0)
             {
                 nextPosIndex = 5;
                 if(currentPosIndex != 5)
@@ -139,7 +140,8 @@ public class SkullKing : MonoBehaviour
             (transform.position, targetPosition, movementThisFrame);
             if (enemyBody.GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player")))
             {
-                sanity.LoseSanity(enemy.GetDamage());
+                player.Hurt(GetDamage(), "MAGICAL");
+  
                 couldDamage = false;
                 attacking = false;
                 animator.SetBool("Fire", false);
@@ -202,5 +204,20 @@ public class SkullKing : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x)
     , transform.localScale.y);
         }
+    }
+
+    public override void PlayerDetected()
+    {
+        ToggleRage(true);
+    }
+
+    public override void PlayerNotDetected()
+    {
+        base.PlayerNotDetected();
+    }
+    
+    public override void Hurt(int damage, string type, string method)
+    {
+        base.Hurt(damage, type, method);
     }
 }

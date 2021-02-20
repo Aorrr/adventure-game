@@ -26,9 +26,6 @@ public class PlayerDetection : MonoBehaviour
         if(box.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
             enemy.PlayerDetected();
-        } else if (!box.IsTouchingLayers(LayerMask.GetMask("Player")))
-        {
-            enemy.PlayerNotDetected();
-        }
+        } 
     }
 }

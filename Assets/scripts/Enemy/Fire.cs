@@ -25,13 +25,14 @@ public class Fire : MonoBehaviour
         if (box.IsTouchingLayers(LayerMask.GetMask("Player")) ||
             circle.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
-            FindObjectOfType<Sanity>().LoseSanity(damage);
+            FindObjectOfType<Player>().Hurt(damage, "magical");
             FindObjectOfType<Player>().SlowDown(slowFactor, frostDuration);
         }
     }
 
     public void StartFire()
     {
+
         animator.SetTrigger("Fire");
     }
 }
