@@ -17,10 +17,6 @@ public class SeekerAttack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(player.position, rb.transform.position) > attackRange)
-        {
-            animator.SetBool("isAttacking", false);
-        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

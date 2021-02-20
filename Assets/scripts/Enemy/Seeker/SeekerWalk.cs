@@ -23,7 +23,7 @@ public class SeekerWalk : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Vector2 target = new Vector2(player.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
+        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         if (player.transform.position.x < range[0] || player.transform.position.x > range[1] || player.transform.position.y > range[2] || player.transform.position.y < range[3])
             animator.SetBool("isActive", false);
 
@@ -46,9 +46,9 @@ public class SeekerWalk : StateMachineBehaviour
         }
             
 
-        if(Vector2.Distance(player.position, rb.transform.position) <= attackRange)
+        if(Mathf.Abs(player.transform.position.x - rb.transform.position.x) <= attackRange)
         {
-            animator.SetBool("isAttacking", true);
+            animator.SetBool("isWalking", false);
         }
 
         

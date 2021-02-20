@@ -96,7 +96,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7053914796379933042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.94, y: -0.64, z: 0}
+  m_LocalPosition: {x: 0.95, y: -1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7053914796683165129}
@@ -243,8 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ea3b3b3375e574a93851110f58376a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0
-  hp: 1000
+  Damage: 18
+  hp: 100
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
   armour: 0
@@ -255,13 +255,13 @@ MonoBehaviour:
   dropItem: {fileID: 0}
   dropPosition: {fileID: 0}
   attackPoint: {fileID: 7053914796379933037}
-  attackRange: 1.24
+  attackRange: 2.28
   attackMask:
     serializedVersion: 2
     m_Bits: 1024
-  x_left: 0.8
+  x_left: 0
   x_right: 16
-  y_up: -4
+  y_up: 0
   y_down: -11
 --- !u!1 &7809300903559989589
 GameObject:
