@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -13,6 +14,7 @@ public class SkullKing : Enemy
     [SerializeField] Fire iceFire;
     [SerializeField] kingScream scream;
     [SerializeField] GameObject HealthBar;
+    [SerializeField] summon icyPortal;
 
     Sanity sanity;
     bool SummonSkull = true;
@@ -46,7 +48,6 @@ public class SkullKing : Enemy
     {
         HealthBar.SetActive(true);
         PrepareStats();
-        Debug.Log(hp);
         sanity = FindObjectOfType<Sanity>();
         enemyBody = GetComponentInChildren<EnemyBody>();
         animator = GetComponent<Animator>();
@@ -61,23 +62,27 @@ public class SkullKing : Enemy
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(IfRage());
-        if (GetHealthPercentage() >= 0.6)
+        if (GetHealthPercentage() >= 0.5)
             {
-
-                if (canMove)
-                {
-                    MoveToNextLocation();
-                }
+            if (canMove)
+            {
+                MoveToNextLocation();
+            }
 
             if (IfRage())
             {
                 if (SummonSkull)
                 {
-                    StartCoroutine(SummonSkulls());
+                    nextPosIndex = 0;
+                    if (currentPosIndex == 0)
+                    {
+                        canMove = false;
+                        StartCoroutine(StayForSeconds(2));
+                        StartCoroutine(SummonSkulls());
+                    }  
+                    
                 }
-            }
-
+            } 
             } else if(GetHealthPercentage() > 0)
             {
                 nextPosIndex = 5;
@@ -97,10 +102,36 @@ public class SkullKing : Enemy
     IEnumerator SummonSkulls()
     {
         SummonSkull = false;
-        Instantiate(skull, transform.position, Quaternion.identity);
+
+        int num = Random.Range(2, wayPoints.Count);
+        List<int> indexes = new List<int>();
+        var numberList = Enumerable.Range(0, wayPoints.Count).ToList();
+
+        scream.StartScream();
+
+        while (indexes.Count < num)
+        {
+            int index = Random.Range(0, numberList.Count);
+            indexes.Add(index);
+            numberList.Remove(index);
+   
+        }
+
+        foreach(int index in indexes)
+        {
+            Debug.Log(index);
+            Instantiate(icyPortal, wayPoints[index].position, Quaternion.identity);
+        }
 
         yield return new WaitForSeconds(SpawnSkullCD);
         SummonSkull = true;
+    }
+
+    IEnumerator StayForSeconds(int interval)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(interval);
+        canMove = true;
     }
 
     public void MoveToNextLocation()

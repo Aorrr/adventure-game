@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     Rigidbody2D myRigidBody;
     Transform parentTransform;
     [SerializeField] Enemy enemy;
+    bool isStatic = false;
 
     float unStuckTime = 0;
     float minUnStuckTime = 1f;
@@ -34,6 +35,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isStatic) { return; }
         if(!enemy.CouldDamage())
         {
             checkCollision();
@@ -64,6 +66,17 @@ public class EnemyMovement : MonoBehaviour
     public void changeMoveSpeed(float speed)
     {
         moveSpeed = speed;
+    }
+
+    public void StopForSeconds(int interval) {
+        StartCoroutine(Stop(interval));
+    }
+
+    IEnumerator Stop(int interval)
+    {
+        isStatic = true;
+        yield return new WaitForSeconds(interval);
+        isStatic = false;
     }
 
 }

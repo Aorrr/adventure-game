@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1416255794}
+  hurtFactor: 1
 --- !u!61 &1047564595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,7 +141,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1628628131
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: cabd88c70c8c24aa4b3045efecbc967a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -311,7 +312,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1628628131
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: bc8a0c8995be94e81ac700f31393a7ea, type: 3}
   m_Color: {r: 1, g: 0.2028302, b: 0.2028302, a: 1}
@@ -439,7 +440,7 @@ Transform:
   m_GameObject: {fileID: 8310011842806876051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.01, y: 7.58, z: -2.07812}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 8310011842425568858}
   - {fileID: 1789326659}
@@ -485,7 +486,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1628628131
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: 4265933498905476162, guid: 115ce5ec07e8649c4a754eaabd68b96e,
     type: 3}
@@ -578,7 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 5
-  hp: 150
+  hp: 50
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
   armour: 25
@@ -586,3 +587,5 @@ MonoBehaviour:
   popUpObject: {fileID: 3884357209951137487, guid: 0e9783bd4d2dc4bcdbadeb825fe44fa2,
     type: 3}
   exp: 20
+  dropItem: {fileID: 0}
+  dropPosition: {fileID: 0}

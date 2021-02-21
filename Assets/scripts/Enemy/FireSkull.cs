@@ -92,4 +92,17 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
     {
         ToggleRage(false);
     }
+
+    public void BeStatic(int interval)
+    {
+        if(myAnimator != null)
+        {
+            myAnimator.SetTrigger("idle");
+        } else
+        {
+            Start();
+            myAnimator.SetTrigger("idle");
+        }
+        GetComponentInChildren<EnemyMovement>().StopForSeconds(interval);
+    }
  }
