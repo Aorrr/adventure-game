@@ -77,7 +77,7 @@ public class SkullKing : Enemy
                     if (currentPosIndex == 0)
                     {
                         canMove = false;
-                        StartCoroutine(StayForSeconds(2));
+                        StartCoroutine(StayForSeconds(4));
                         StartCoroutine(SummonSkulls());
                     }  
                     

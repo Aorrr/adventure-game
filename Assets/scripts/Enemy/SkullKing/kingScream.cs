@@ -6,6 +6,8 @@ public class kingScream : MonoBehaviour
 {
     CircleCollider2D circle;
     Player player;
+    CamShakeController shaker;
+
     // Start is called before the first frame update
 
     float sinceLastPushBack = 4f;
@@ -13,8 +15,8 @@ public class kingScream : MonoBehaviour
     Animator animator;
 
     void Start()
-    { 
-
+    {
+        shaker = FindObjectOfType<CamShakeController>();
         circle = GetComponent<CircleCollider2D>();
         player = FindObjectOfType<Player>();
         animator = GetComponent<Animator>();
@@ -43,5 +45,7 @@ public class kingScream : MonoBehaviour
     public void StartScream()
     {
         animator.SetTrigger("Scream");
+        shaker.ShakeIdleAtController(3.5f, 1f, 1.5f);
+        shaker.ShakeRunAtController(3.5f, 1.5f, 1f);
     }
 }
