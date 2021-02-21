@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Seeker : Enemy
 {
-    public int attackDamage = 20;
 
     public Transform attackPoint;
     public float attackRange = 1f;
@@ -23,7 +22,9 @@ public class Seeker : Enemy
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackMask);
         foreach(Collider2D obj in hitEnemies)
         {
-            obj.GetComponent<Player>().Hurt(attackDamage, "physical");
+            obj.GetComponent<Player>().Hurt(Damage, "physical");
+            shaker.ShakeIdleAtController(0.3f, 3f, 2f);
+            shaker.ShakeRunAtController(0.3f, 3f, 2f);
         }
     }
 
@@ -56,7 +57,6 @@ public class Seeker : Enemy
         Destroy(popUp, 2f);
 
         // blood effect
-        Debug.Log("blood!");
         GameObject blood = Instantiate(hurtEffect, transform.position, transform.rotation);
         hp -= damage;
         Destroy(blood, 1f);

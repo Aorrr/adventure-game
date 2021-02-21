@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBody : MonoBehaviour
 {
     [SerializeField] Enemy enemy;
+    [SerializeField] int hurtFactor = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class EnemyBody : MonoBehaviour
 
     public void Hurt(int amount, string type, string method)
     {
-        enemy.Hurt(amount, type, method);
+        enemy.Hurt(amount * hurtFactor, type, method);
         enemy.GetComponent<Animator>().SetTrigger("TakeDamage");
     }
 }
