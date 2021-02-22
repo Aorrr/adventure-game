@@ -119,7 +119,6 @@ public class SkullKing : Enemy
 
         foreach(int index in indexes)
         {
-            Debug.Log(index);
             Instantiate(icyPortal, wayPoints[index].position, Quaternion.identity);
         }
 
@@ -130,8 +129,10 @@ public class SkullKing : Enemy
     IEnumerator StayForSeconds(int interval)
     {
         canMove = false;
+        myAnimator.SetBool("Fire", true);
         yield return new WaitForSeconds(interval);
         canMove = true;
+        myAnimator.SetBool("Fire", false);
     }
 
     public void MoveToNextLocation()

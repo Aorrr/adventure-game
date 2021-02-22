@@ -13,11 +13,13 @@ public class Fire : MonoBehaviour
     Animator animator;
     BoxCollider2D box;
     CircleCollider2D circle;
+    Player player;
     void Start()
     {
         box = GetComponent<BoxCollider2D>();
         circle = GetComponent<CircleCollider2D>();
         animator = GetComponent<Animator>();
+        player = FindObjectOfType<Player>();
     }
 
     public void CheckPlayerCollision()
@@ -25,6 +27,7 @@ public class Fire : MonoBehaviour
         if (box.IsTouchingLayers(LayerMask.GetMask("Player")) ||
             circle.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
+            if(!player.CouldHurt()) { return; }
             FindObjectOfType<Player>().Hurt(damage, "magical");
             FindObjectOfType<Player>().SlowDown(slowFactor, frostDuration);
         }

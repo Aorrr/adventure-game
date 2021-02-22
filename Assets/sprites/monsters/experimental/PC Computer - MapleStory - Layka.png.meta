@@ -1,0 +1,4712 @@
+fileFormatVersion: 2
+guid: dc21251b1adc14b0daa0d6c3dd227114
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2970307649813159706
+    second: PC Computer - MapleStory - Layka_0
+  - first:
+      213: 3612293440789627881
+    second: PC Computer - MapleStory - Layka_1
+  - first:
+      213: -7210244713299698860
+    second: PC Computer - MapleStory - Layka_2
+  - first:
+      213: 3282732836051277719
+    second: PC Computer - MapleStory - Layka_3
+  - first:
+      213: -3697462079688207496
+    second: PC Computer - MapleStory - Layka_4
+  - first:
+      213: 1102784442820054342
+    second: PC Computer - MapleStory - Layka_5
+  - first:
+      213: -5391908264138589053
+    second: PC Computer - MapleStory - Layka_6
+  - first:
+      213: 1623266512519528514
+    second: PC Computer - MapleStory - Layka_7
+  - first:
+      213: -1569619608381030935
+    second: PC Computer - MapleStory - Layka_8
+  - first:
+      213: 2792925399041393382
+    second: PC Computer - MapleStory - Layka_9
+  - first:
+      213: 5545172426623233863
+    second: PC Computer - MapleStory - Layka_10
+  - first:
+      213: -4033729067051315329
+    second: PC Computer - MapleStory - Layka_11
+  - first:
+      213: 5811862671878534350
+    second: PC Computer - MapleStory - Layka_12
+  - first:
+      213: 8455535982632196014
+    second: PC Computer - MapleStory - Layka_13
+  - first:
+      213: 6057615564090220675
+    second: PC Computer - MapleStory - Layka_14
+  - first:
+      213: -7818207392619214951
+    second: PC Computer - MapleStory - Layka_15
+  - first:
+      213: -3365794397027591770
+    second: PC Computer - MapleStory - Layka_16
+  - first:
+      213: 2335873125993045068
+    second: PC Computer - MapleStory - Layka_17
+  - first:
+      213: 5765642125957612070
+    second: PC Computer - MapleStory - Layka_18
+  - first:
+      213: -5258419747824857045
+    second: PC Computer - MapleStory - Layka_19
+  - first:
+      213: -8584657977114063340
+    second: PC Computer - MapleStory - Layka_20
+  - first:
+      213: -6307187944640633798
+    second: PC Computer - MapleStory - Layka_21
+  - first:
+      213: -7961205228253939683
+    second: PC Computer - MapleStory - Layka_22
+  - first:
+      213: -231882183278237423
+    second: PC Computer - MapleStory - Layka_23
+  - first:
+      213: -2008174019441833094
+    second: PC Computer - MapleStory - Layka_24
+  - first:
+      213: -9210071168865729984
+    second: PC Computer - MapleStory - Layka_25
+  - first:
+      213: -2297366161442083179
+    second: PC Computer - MapleStory - Layka_26
+  - first:
+      213: 7493457546585932911
+    second: PC Computer - MapleStory - Layka_27
+  - first:
+      213: 8042099571074113941
+    second: PC Computer - MapleStory - Layka_28
+  - first:
+      213: 4462625184829636848
+    second: PC Computer - MapleStory - Layka_29
+  - first:
+      213: -4678251339938806655
+    second: PC Computer - MapleStory - Layka_30
+  - first:
+      213: -5959107642459216546
+    second: PC Computer - MapleStory - Layka_31
+  - first:
+      213: 8233784746473479007
+    second: PC Computer - MapleStory - Layka_32
+  - first:
+      213: 7688224809262240289
+    second: PC Computer - MapleStory - Layka_33
+  - first:
+      213: -7122683834544457996
+    second: PC Computer - MapleStory - Layka_34
+  - first:
+      213: 3799671736281049641
+    second: PC Computer - MapleStory - Layka_35
+  - first:
+      213: -1028965304636422179
+    second: PC Computer - MapleStory - Layka_36
+  - first:
+      213: -5968031660275114450
+    second: PC Computer - MapleStory - Layka_37
+  - first:
+      213: -3756932974130331738
+    second: PC Computer - MapleStory - Layka_38
+  - first:
+      213: 5364063678161055966
+    second: PC Computer - MapleStory - Layka_39
+  - first:
+      213: -435979915782048745
+    second: PC Computer - MapleStory - Layka_40
+  - first:
+      213: 6303887315599389993
+    second: PC Computer - MapleStory - Layka_41
+  - first:
+      213: -2299650807121578042
+    second: PC Computer - MapleStory - Layka_42
+  - first:
+      213: 9148112241596568705
+    second: PC Computer - MapleStory - Layka_43
+  - first:
+      213: -2654658815886766636
+    second: PC Computer - MapleStory - Layka_44
+  - first:
+      213: 8412772137514307101
+    second: PC Computer - MapleStory - Layka_45
+  - first:
+      213: -6917915419732863253
+    second: PC Computer - MapleStory - Layka_46
+  - first:
+      213: 626262084833038557
+    second: PC Computer - MapleStory - Layka_47
+  - first:
+      213: 841775601193268473
+    second: PC Computer - MapleStory - Layka_48
+  - first:
+      213: -8228621242665381143
+    second: PC Computer - MapleStory - Layka_49
+  - first:
+      213: -5213892557454038017
+    second: PC Computer - MapleStory - Layka_50
+  - first:
+      213: -4184039113270642433
+    second: PC Computer - MapleStory - Layka_51
+  - first:
+      213: -3054543761034596803
+    second: PC Computer - MapleStory - Layka_52
+  - first:
+      213: 5319448029351394392
+    second: PC Computer - MapleStory - Layka_53
+  - first:
+      213: 8891096833812057443
+    second: PC Computer - MapleStory - Layka_54
+  - first:
+      213: -2792468327620682736
+    second: PC Computer - MapleStory - Layka_55
+  - first:
+      213: -3995837107711531221
+    second: PC Computer - MapleStory - Layka_56
+  - first:
+      213: -210392070244718585
+    second: PC Computer - MapleStory - Layka_57
+  - first:
+      213: -4611555299683532190
+    second: PC Computer - MapleStory - Layka_58
+  - first:
+      213: -8308891519528427220
+    second: PC Computer - MapleStory - Layka_59
+  - first:
+      213: -8228366307535655767
+    second: PC Computer - MapleStory - Layka_60
+  - first:
+      213: 1634085368599579065
+    second: PC Computer - MapleStory - Layka_61
+  - first:
+      213: 2775903229887135322
+    second: PC Computer - MapleStory - Layka_62
+  - first:
+      213: 8293148858842799272
+    second: PC Computer - MapleStory - Layka_63
+  - first:
+      213: -6928046457636598482
+    second: PC Computer - MapleStory - Layka_64
+  - first:
+      213: -4493913011199090248
+    second: PC Computer - MapleStory - Layka_65
+  - first:
+      213: -4440632975181068770
+    second: PC Computer - MapleStory - Layka_66
+  - first:
+      213: 8255877138041159087
+    second: PC Computer - MapleStory - Layka_67
+  - first:
+      213: 8508539716150050483
+    second: PC Computer - MapleStory - Layka_68
+  - first:
+      213: 3503144074742241321
+    second: PC Computer - MapleStory - Layka_69
+  - first:
+      213: 2950584138969989292
+    second: PC Computer - MapleStory - Layka_70
+  - first:
+      213: 4716856092907946241
+    second: PC Computer - MapleStory - Layka_71
+  - first:
+      213: 7870464626317479496
+    second: PC Computer - MapleStory - Layka_72
+  - first:
+      213: -113628052441070244
+    second: PC Computer - MapleStory - Layka_73
+  - first:
+      213: 5787201330558776792
+    second: PC Computer - MapleStory - Layka_74
+  - first:
+      213: 2085813230493443872
+    second: PC Computer - MapleStory - Layka_75
+  - first:
+      213: -3694820062556101211
+    second: PC Computer - MapleStory - Layka_76
+  - first:
+      213: -2815111067712155143
+    second: PC Computer - MapleStory - Layka_77
+  - first:
+      213: 1461507290299861205
+    second: PC Computer - MapleStory - Layka_78
+  - first:
+      213: 2351459849451976931
+    second: PC Computer - MapleStory - Layka_79
+  - first:
+      213: -8638305769869393286
+    second: PC Computer - MapleStory - Layka_80
+  - first:
+      213: 9172506508461964110
+    second: PC Computer - MapleStory - Layka_81
+  - first:
+      213: -3328493046505062686
+    second: PC Computer - MapleStory - Layka_82
+  - first:
+      213: 8890293965048548328
+    second: PC Computer - MapleStory - Layka_83
+  - first:
+      213: -561145656110804286
+    second: PC Computer - MapleStory - Layka_84
+  - first:
+      213: 5429613933070932612
+    second: PC Computer - MapleStory - Layka_85
+  - first:
+      213: 7430263075177707311
+    second: PC Computer - MapleStory - Layka_86
+  - first:
+      213: -1834502043173854810
+    second: PC Computer - MapleStory - Layka_87
+  - first:
+      213: 311747748897801693
+    second: PC Computer - MapleStory - Layka_88
+  - first:
+      213: -8570597720749764527
+    second: PC Computer - MapleStory - Layka_89
+  - first:
+      213: -7873266944817666949
+    second: PC Computer - MapleStory - Layka_90
+  - first:
+      213: -3445037082913547768
+    second: PC Computer - MapleStory - Layka_91
+  - first:
+      213: 8457418137120231931
+    second: PC Computer - MapleStory - Layka_92
+  - first:
+      213: 811257833037905507
+    second: PC Computer - MapleStory - Layka_93
+  - first:
+      213: -5444839657492485389
+    second: PC Computer - MapleStory - Layka_94
+  - first:
+      213: -3588835149865620520
+    second: PC Computer - MapleStory - Layka_95
+  - first:
+      213: 1366019040390822037
+    second: PC Computer - MapleStory - Layka_96
+  - first:
+      213: 2552785980213952718
+    second: PC Computer - MapleStory - Layka_97
+  - first:
+      213: 2503052020947690509
+    second: PC Computer - MapleStory - Layka_98
+  - first:
+      213: 8243874962838325935
+    second: PC Computer - MapleStory - Layka_99
+  - first:
+      213: 7228100973346664563
+    second: PC Computer - MapleStory - Layka_100
+  - first:
+      213: -5609491849502321220
+    second: PC Computer - MapleStory - Layka_101
+  - first:
+      213: -5476133820920766555
+    second: PC Computer - MapleStory - Layka_102
+  - first:
+      213: 2780727086957118721
+    second: PC Computer - MapleStory - Layka_103
+  - first:
+      213: 7217141729862567139
+    second: PC Computer - MapleStory - Layka_104
+  - first:
+      213: 1250243704343378207
+    second: PC Computer - MapleStory - Layka_105
+  - first:
+      213: -5464479343633664667
+    second: PC Computer - MapleStory - Layka_106
+  - first:
+      213: -2414254578851088811
+    second: PC Computer - MapleStory - Layka_107
+  - first:
+      213: -3387471329029431201
+    second: PC Computer - MapleStory - Layka_108
+  - first:
+      213: -2299637210239021599
+    second: PC Computer - MapleStory - Layka_109
+  - first:
+      213: -8754171253746680360
+    second: PC Computer - MapleStory - Layka_110
+  - first:
+      213: -109771852974246514
+    second: PC Computer - MapleStory - Layka_111
+  - first:
+      213: -5764272770182039034
+    second: PC Computer - MapleStory - Layka_112
+  - first:
+      213: 2859543839972821276
+    second: PC Computer - MapleStory - Layka_113
+  - first:
+      213: -8440695094687950664
+    second: PC Computer - MapleStory - Layka_114
+  - first:
+      213: 4162605798885596449
+    second: PC Computer - MapleStory - Layka_115
+  - first:
+      213: 8569848058506966500
+    second: PC Computer - MapleStory - Layka_116
+  - first:
+      213: -7830558856572504029
+    second: PC Computer - MapleStory - Layka_117
+  - first:
+      213: -7008498725991710468
+    second: PC Computer - MapleStory - Layka_118
+  - first:
+      213: -7294034330627341033
+    second: PC Computer - MapleStory - Layka_119
+  - first:
+      213: -8056385881503966914
+    second: PC Computer - MapleStory - Layka_120
+  - first:
+      213: 5407623109312023851
+    second: PC Computer - MapleStory - Layka_121
+  - first:
+      213: 7206887683180602348
+    second: PC Computer - MapleStory - Layka_122
+  - first:
+      213: 7353826420798872728
+    second: PC Computer - MapleStory - Layka_123
+  - first:
+      213: -5120154937541191485
+    second: PC Computer - MapleStory - Layka_124
+  - first:
+      213: 7179712880017887674
+    second: PC Computer - MapleStory - Layka_125
+  - first:
+      213: -647763023466412078
+    second: PC Computer - MapleStory - Layka_126
+  - first:
+      213: -4536852599582953187
+    second: PC Computer - MapleStory - Layka_127
+  - first:
+      213: 876020519950629714
+    second: PC Computer - MapleStory - Layka_128
+  - first:
+      213: -2216048804901064369
+    second: PC Computer - MapleStory - Layka_129
+  - first:
+      213: 6919824333515583459
+    second: PC Computer - MapleStory - Layka_130
+  - first:
+      213: 6974508498917351265
+    second: PC Computer - MapleStory - Layka_131
+  - first:
+      213: 5697088262034097340
+    second: PC Computer - MapleStory - Layka_132
+  - first:
+      213: -7560789106949672386
+    second: PC Computer - MapleStory - Layka_133
+  - first:
+      213: -977121364908971214
+    second: PC Computer - MapleStory - Layka_134
+  - first:
+      213: -1931980938101516357
+    second: PC Computer - MapleStory - Layka_135
+  - first:
+      213: -1292863462770371987
+    second: PC Computer - MapleStory - Layka_136
+  - first:
+      213: 2705273684029440867
+    second: PC Computer - MapleStory - Layka_137
+  - first:
+      213: 8873504421994318134
+    second: PC Computer - MapleStory - Layka_138
+  - first:
+      213: -5957837620389691581
+    second: PC Computer - MapleStory - Layka_139
+  - first:
+      213: 1757337911393171321
+    second: PC Computer - MapleStory - Layka_140
+  - first:
+      213: -6510477802382665377
+    second: PC Computer - MapleStory - Layka_141
+  - first:
+      213: -1128851776222087289
+    second: PC Computer - MapleStory - Layka_142
+  - first:
+      213: -7902531155247535022
+    second: PC Computer - MapleStory - Layka_143
+  - first:
+      213: -6836007469768167803
+    second: PC Computer - MapleStory - Layka_144
+  - first:
+      213: 6723136152326227747
+    second: PC Computer - MapleStory - Layka_145
+  - first:
+      213: 6760144752751325782
+    second: PC Computer - MapleStory - Layka_146
+  - first:
+      213: 2362285464847561101
+    second: PC Computer - MapleStory - Layka_147
+  - first:
+      213: -8615271862066850905
+    second: PC Computer - MapleStory - Layka_148
+  - first:
+      213: -8983479491802362206
+    second: PC Computer - MapleStory - Layka_149
+  - first:
+      213: -2619212361450925909
+    second: PC Computer - MapleStory - Layka_150
+  - first:
+      213: -6028259115416035484
+    second: PC Computer - MapleStory - Layka_151
+  - first:
+      213: -224518311845407819
+    second: PC Computer - MapleStory - Layka_152
+  - first:
+      213: 1359478596498773619
+    second: PC Computer - MapleStory - Layka_153
+  - first:
+      213: -5135311488671645554
+    second: PC Computer - MapleStory - Layka_154
+  - first:
+      213: -2945049374797408232
+    second: PC Computer - MapleStory - Layka_155
+  - first:
+      213: 2564594001542633057
+    second: PC Computer - MapleStory - Layka_156
+  - first:
+      213: 3495530994885550239
+    second: PC Computer - MapleStory - Layka_157
+  - first:
+      213: 9178849234973525226
+    second: PC Computer - MapleStory - Layka_158
+  - first:
+      213: 3616429746711213814
+    second: PC Computer - MapleStory - Layka_159
+  - first:
+      213: -706209449616336192
+    second: PC Computer - MapleStory - Layka_160
+  - first:
+      213: 3196397700488018637
+    second: PC Computer - MapleStory - Layka_161
+  - first:
+      213: -3185766170375484500
+    second: PC Computer - MapleStory - Layka_162
+  - first:
+      213: 5343541625400937649
+    second: PC Computer - MapleStory - Layka_163
+  - first:
+      213: 7295344737937499207
+    second: PC Computer - MapleStory - Layka_164
+  - first:
+      213: 8137440029904652882
+    second: PC Computer - MapleStory - Layka_165
+  - first:
+      213: -804257693378768913
+    second: PC Computer - MapleStory - Layka_166
+  - first:
+      213: -7971110031933093045
+    second: PC Computer - MapleStory - Layka_167
+  - first:
+      213: 5080403574365407887
+    second: PC Computer - MapleStory - Layka_168
+  - first:
+      213: 5047053907337844420
+    second: PC Computer - MapleStory - Layka_169
+  - first:
+      213: -2085865818396078655
+    second: PC Computer - MapleStory - Layka_170
+  - first:
+      213: -4346864316994362690
+    second: PC Computer - MapleStory - Layka_171
+  - first:
+      213: 5961216030935283459
+    second: PC Computer - MapleStory - Layka_172
+  - first:
+      213: 6629840185678259344
+    second: PC Computer - MapleStory - Layka_173
+  - first:
+      213: -5953770334443637557
+    second: PC Computer - MapleStory - Layka_174
+  - first:
+      213: -8776102475064092466
+    second: PC Computer - MapleStory - Layka_175
+  - first:
+      213: -8381442791144364161
+    second: PC Computer - MapleStory - Layka_176
+  - first:
+      213: 2778610755364584174
+    second: PC Computer - MapleStory - Layka_177
+  - first:
+      213: -8851598589013469413
+    second: PC Computer - MapleStory - Layka_178
+  - first:
+      213: -2973231093361696764
+    second: PC Computer - MapleStory - Layka_179
+  - first:
+      213: 5684366104181795340
+    second: PC Computer - MapleStory - Layka_180
+  - first:
+      213: 3240183068272327208
+    second: PC Computer - MapleStory - Layka_181
+  - first:
+      213: 450422112001371376
+    second: PC Computer - MapleStory - Layka_182
+  - first:
+      213: -1327953450129151206
+    second: PC Computer - MapleStory - Layka_183
+  - first:
+      213: 7782895381884704256
+    second: PC Computer - MapleStory - Layka_184
+  - first:
+      213: 1559205560063977896
+    second: PC Computer - MapleStory - Layka_185
+  - first:
+      213: -860928127356548244
+    second: PC Computer - MapleStory - Layka_186
+  - first:
+      213: 3678901809921908109
+    second: PC Computer - MapleStory - Layka_187
+  - first:
+      213: 7463450931741244240
+    second: PC Computer - MapleStory - Layka_188
+  - first:
+      213: -6133386576243669990
+    second: PC Computer - MapleStory - Layka_189
+  - first:
+      213: -2579436511033134441
+    second: PC Computer - MapleStory - Layka_190
+  - first:
+      213: 8601766730766867115
+    second: PC Computer - MapleStory - Layka_191
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 2170
+        width: 248
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0e24b0ee857c6d0800000000000000
+      internalID: -2970307649813159706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 2170
+        width: 227
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e34db2eeb1712230800000000000000
+      internalID: 3612293440789627881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_2
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 2170
+        width: 230
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b122082a010fb90800000000000000
+      internalID: -7210244713299698860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_3
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 2170
+        width: 238
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797d8592f1c9e8d20800000000000000
+      internalID: 3282732836051277719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_4
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 2170
+        width: 242
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87315b914d9ffacc0800000000000000
+      internalID: -3697462079688207496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_5
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 2170
+        width: 254
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dcd12ab90ed4f00800000000000000
+      internalID: 1102784442820054342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_6
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 2170
+        width: 258
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cb68650081c25b0800000000000000
+      internalID: -5391908264138589053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_7
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 2170
+        width: 266
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240838eea40078610800000000000000
+      internalID: 1623266512519528514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_8
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 2245
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edf5f94847973ae0800000000000000
+      internalID: -1569619608381030935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_9
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 2170
+        width: 251
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e247065ad672c620800000000000000
+      internalID: 2792925399041393382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_10
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 2170
+        width: 226
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f2b2341f864fc40800000000000000
+      internalID: 5545172426623233863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_11
+      rect:
+        serializedVersion: 2
+        x: 2613
+        y: 2170
+        width: 232
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f0d3ef8c05508c0800000000000000
+      internalID: -4033729067051315329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_12
+      rect:
+        serializedVersion: 2
+        x: 2866
+        y: 2170
+        width: 238
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec43ca8be42e7a050800000000000000
+      internalID: 5811862671878534350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_13
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2170
+        width: 243
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea753564d29185570800000000000000
+      internalID: 8455535982632196014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_14
+      rect:
+        serializedVersion: 2
+        x: 3381
+        y: 2170
+        width: 255
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380a97bc249f01450800000000000000
+      internalID: 6057615564090220675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_15
+      rect:
+        serializedVersion: 2
+        x: 3647
+        y: 2170
+        width: 261
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997499e8cc5208390800000000000000
+      internalID: -7818207392619214951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_16
+      rect:
+        serializedVersion: 2
+        x: 3921
+        y: 2170
+        width: 266
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a99b2224db4a41d0800000000000000
+      internalID: -3365794397027591770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_17
+      rect:
+        serializedVersion: 2
+        x: 4199
+        y: 2245
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c523b6b30ba6020800000000000000
+      internalID: 2335873125993045068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1945
+        width: 249
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6224bb347fca30050800000000000000
+      internalID: 5765642125957612070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_19
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1945
+        width: 228
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20100389175607b0800000000000000
+      internalID: -5258419747824857045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_20
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1945
+        width: 232
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e84e3ad0b2dd880800000000000000
+      internalID: -8584657977114063340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_21
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1945
+        width: 235
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34a1143bfd5878a0800000000000000
+      internalID: -6307187944640633798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_22
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 1945
+        width: 243
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18f0f1760e148190800000000000000
+      internalID: -7961205228253939683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_23
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 1945
+        width: 254
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11965f3026038ccf0800000000000000
+      internalID: -231882183278237423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_24
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1945
+        width: 258
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b400c7e588124e0800000000000000
+      internalID: -2008174019441833094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_25
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1945
+        width: 266
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04201b7a1114f2080800000000000000
+      internalID: -9210071168865729984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_26
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1702
+        width: 253
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59eed3ce5ad1e10e0800000000000000
+      internalID: -2297366161442083179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_27
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1702
+        width: 240
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6489b3cfeb1ef760800000000000000
+      internalID: 7493457546585932911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_28
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1702
+        width: 248
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591a13673f64b9f60800000000000000
+      internalID: 8042099571074113941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_29
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1702
+        width: 255
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f08b7b26fd6eed30800000000000000
+      internalID: 4462625184829636848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_30
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 1702
+        width: 260
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184c3f85133831fb0800000000000000
+      internalID: -4678251339938806655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_31
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1702
+        width: 273
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5527e00c2ffc4da0800000000000000
+      internalID: -5959107642459216546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_32
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 1702
+        width: 279
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5bd49a3a97444270800000000000000
+      internalID: 8233784746473479007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_33
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 1702
+        width: 288
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122db65eabf02ba60800000000000000
+      internalID: 7688224809262240289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_34
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 1702
+        width: 268
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f67f824ac4272d90800000000000000
+      internalID: -7122683834544457996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_35
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 1702
+        width: 247
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92aaf1800552bb430800000000000000
+      internalID: 3799671736281049641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_36
+      rect:
+        serializedVersion: 2
+        x: 2769
+        y: 1702
+        width: 250
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7c1f2d18168b1f0800000000000000
+      internalID: -1028965304636422179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_37
+      rect:
+        serializedVersion: 2
+        x: 3038
+        y: 1702
+        width: 252
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e540133da4d2da0800000000000000
+      internalID: -5968031660275114450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_38
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 1702
+        width: 248
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af72087d51bcdbc0800000000000000
+      internalID: -3756932974130331738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_39
+      rect:
+        serializedVersion: 2
+        x: 3565
+        y: 1702
+        width: 253
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed07d59ce7bf07a40800000000000000
+      internalID: 5364063678161055966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_40
+      rect:
+        serializedVersion: 2
+        x: 3829
+        y: 1702
+        width: 261
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7143b96939613f9f0800000000000000
+      internalID: -435979915782048745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_41
+      rect:
+        serializedVersion: 2
+        x: 4108
+        y: 1702
+        width: 266
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92574663d18eb7750800000000000000
+      internalID: 6303887315599389993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_42
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1684
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7f31666cff510e0800000000000000
+      internalID: -2299650807121578042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_43
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 1684
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18414cd6d9f94fe70800000000000000
+      internalID: 9148112241596568705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_44
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 1684
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ddc5373fd1c82bd0800000000000000
+      internalID: -2654658815886766636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_45
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 1684
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e08d0bfab20c470800000000000000
+      internalID: 8412772137514307101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_46
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 1684
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be610a41490aeff90800000000000000
+      internalID: -6917915419732863253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_47
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 1684
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0d4ce4c0ee0b800800000000000000
+      internalID: 626262084833038557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_48
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 1684
+        width: 45
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f437b903769eab00800000000000000
+      internalID: 841775601193268473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_49
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 1684
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e252bfa3901ecd80800000000000000
+      internalID: -8228621242665381143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_50
+      rect:
+        serializedVersion: 2
+        x: 2329
+        y: 1684
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb26e7e75884a7b0800000000000000
+      internalID: -5213892557454038017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_51
+      rect:
+        serializedVersion: 2
+        x: 2621
+        y: 1684
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8b92f289e4fe5c0800000000000000
+      internalID: -4184039113270642433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_52
+      rect:
+        serializedVersion: 2
+        x: 2892
+        y: 1684
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ea5ac02a41c95d0800000000000000
+      internalID: -3054543761034596803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_53
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1636
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c34ae8cc972d940800000000000000
+      internalID: 5319448029351394392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_54
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1645
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36dc7fa9675836b70800000000000000
+      internalID: 8891096833812057443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_55
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 1637
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cd3a5e9d82f39d0800000000000000
+      internalID: -2792468327620682736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_56
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1651
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27a786425feb88c0800000000000000
+      internalID: -3995837107711531221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_57
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 1643
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708218dd689841df0800000000000000
+      internalID: -210392070244718585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_58
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1476
+        width: 123
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2620b4453e67000c0800000000000000
+      internalID: -4611555299683532190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_59
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 1476
+        width: 125
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21a0457f23e0bc80800000000000000
+      internalID: -8308891519528427220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_60
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 1476
+        width: 128
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac6b856078fecd80800000000000000
+      internalID: -8228366307535655767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_61
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 1564
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b98a082cff6da610800000000000000
+      internalID: 1634085368599579065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_62
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1618
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e384cb74df58620800000000000000
+      internalID: 2775903229887135322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_63
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1594
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acd2c8b2fe271370800000000000000
+      internalID: 8293148858842799272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_64
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 1618
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dca210472aadf90800000000000000
+      internalID: -6928046457636598482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_65
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 1615
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1e8f31de962a1c0800000000000000
+      internalID: -4493913011199090248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_66
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 1597
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16427826d3bf52c0800000000000000
+      internalID: -4440632975181068770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_67
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 1617
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad363af384c29270800000000000000
+      internalID: 8255877138041159087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_68
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 1476
+        width: 72
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be3d6aaac7641670800000000000000
+      internalID: 8508539716150050483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_69
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 1594
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928960cb9faad9030800000000000000
+      internalID: 3503144074742241321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_70
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 1571
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0453b34a492f820800000000000000
+      internalID: 2950584138969989292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_71
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1599
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1014a6220a3a57140800000000000000
+      internalID: 4716856092907946241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_72
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 1594
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e4eecc0e1893d60800000000000000
+      internalID: 7870464626317479496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_73
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1476
+        width: 103
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c550bb963ef4c6ef0800000000000000
+      internalID: -113628052441070244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_74
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1476
+        width: 115
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5bf9fb2f4405050800000000000000
+      internalID: 5787201330558776792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_75
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1477
+        width: 105
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0272f5ff41c42fc10800000000000000
+      internalID: 2085813230493443872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_76
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1476
+        width: 93
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a56b56aabc59bcc0800000000000000
+      internalID: -3694820062556101211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_77
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1579
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f11fb52667bee8d0800000000000000
+      internalID: -2815111067712155143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_78
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1561
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d887fa1321584410800000000000000
+      internalID: 1461507290299861205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_79
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 1566
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8bd26464012a020800000000000000
+      internalID: 2351459849451976931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_80
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1566
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a724ab58ba29e1880800000000000000
+      internalID: -8638305769869393286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_81
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1559
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b75d8421a4b4f70800000000000000
+      internalID: 9172506508461964110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_82
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 1570
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee35b59531dec1d0800000000000000
+      internalID: -3328493046505062686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_83
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 1476
+        width: 131
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb8487224ba06b70800000000000000
+      internalID: 8890293965048548328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_84
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 1554
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c21344bff86638f0800000000000000
+      internalID: -561145656110804286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_85
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 1574
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a5434da1dd95b40800000000000000
+      internalID: 5429613933070932612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_86
+      rect:
+        serializedVersion: 2
+        x: 2259
+        y: 1566
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f273baf46e89d1760800000000000000
+      internalID: 7430263075177707311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_87
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1476
+        width: 79
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1e4e08c1a8a86e0800000000000000
+      internalID: -1834502043173854810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_88
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1476
+        width: 84
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5c4980dec835400800000000000000
+      internalID: 311747748897801693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_89
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 1553
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15010fd28ce1f0980800000000000000
+      internalID: -8570597720749764527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_90
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 1556
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7461549d698cb290800000000000000
+      internalID: -7873266944817666949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_91
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 1551
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ad3e29605c030d0800000000000000
+      internalID: -3445037082913547768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_92
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 1538
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf15ff38cf8ce5570800000000000000
+      internalID: 8457418137120231931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_93
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 1556
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e3a7f63ba224b00800000000000000
+      internalID: 811257833037905507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_94
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1559
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa6334fd2b0074b0800000000000000
+      internalID: -5444839657492485389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_95
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 1548
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbe2d61275e13ec0800000000000000
+      internalID: -3588835149865620520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_96
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1476
+        width: 70
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5983aea641315f210800000000000000
+      internalID: 1366019040390822037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_97
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 1526
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec00042e2515d6320800000000000000
+      internalID: 2552785980213952718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_98
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 1477
+        width: 131
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0429e22d80acb220800000000000000
+      internalID: 2503052020947690509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_99
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 1523
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa07bcc990286270800000000000000
+      internalID: 8243874962838325935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_100
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 1510
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370bbf40a8f5f4460800000000000000
+      internalID: 7228100973346664563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_101
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 1517
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb517fb12e41722b0800000000000000
+      internalID: -5609491849502321220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_102
+      rect:
+        serializedVersion: 2
+        x: 2370
+        y: 1515
+        width: 53
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afd38dbd4dd004b0800000000000000
+      internalID: -5476133820920766555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_103
+      rect:
+        serializedVersion: 2
+        x: 2227
+        y: 1476
+        width: 12
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105c26b7d80279620800000000000000
+      internalID: 2780727086957118721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_104
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 1487
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e44b1e4a20782460800000000000000
+      internalID: 7217141729862567139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_105
+      rect:
+        serializedVersion: 2
+        x: 2487
+        y: 1484
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f193e086602c95110800000000000000
+      internalID: 1250243704343378207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_106
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1341
+        width: 104
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56571403df44a24b0800000000000000
+      internalID: -5464479343633664667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_107
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1341
+        width: 86
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55678367048de7ed0800000000000000
+      internalID: -2414254578851088811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_108
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1105
+        width: 252
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50616a16c84df0d0800000000000000
+      internalID: -3387471329029431201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_109
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1211
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edce6b242c0610e0800000000000000
+      internalID: -2299637210239021599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_110
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1105
+        width: 307
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd3e7550afe28680800000000000000
+      internalID: -8754171253746680360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_111
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1105
+        width: 337
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e853221d4130a7ef0800000000000000
+      internalID: -109771852974246514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_112
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1105
+        width: 338
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ab7d8b4703100b0800000000000000
+      internalID: -5764272770182039034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_113
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1105
+        width: 338
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c198c31d8f32fa720800000000000000
+      internalID: 2859543839972821276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_114
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1105
+        width: 348
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b81eb73880acda80800000000000000
+      internalID: -8440695094687950664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_115
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 1105
+        width: 357
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d9e8e6beb84c930800000000000000
+      internalID: 4162605798885596449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_116
+      rect:
+        serializedVersion: 2
+        x: 2434
+        y: 1105
+        width: 363
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5f06a77673ee670800000000000000
+      internalID: 8569848058506966500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_117
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1105
+        width: 342
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328f4314534445390800000000000000
+      internalID: -7830558856572504029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_118
+      rect:
+        serializedVersion: 2
+        x: 3177
+        y: 1105
+        width: 319
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf08c749a8fccbe90800000000000000
+      internalID: -7008498725991710468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_119
+      rect:
+        serializedVersion: 2
+        x: 3509
+        y: 1105
+        width: 319
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7150477fb6266ca90800000000000000
+      internalID: -7294034330627341033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_120
+      rect:
+        serializedVersion: 2
+        x: 3835
+        y: 1105
+        width: 302
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39db7fa9b7f13090800000000000000
+      internalID: -8056385881503966914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_121
+      rect:
+        serializedVersion: 2
+        x: 4146
+        y: 1105
+        width: 248
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d8cbd219cbb0b40800000000000000
+      internalID: 5407623109312023851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_122
+      rect:
+        serializedVersion: 2
+        x: 4402
+        y: 1105
+        width: 253
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce32e140a22040460800000000000000
+      internalID: 7206887683180602348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_123
+      rect:
+        serializedVersion: 2
+        x: 4671
+        y: 1105
+        width: 258
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c599fda2a0e0660800000000000000
+      internalID: 7353826420798872728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_124
+      rect:
+        serializedVersion: 2
+        x: 4947
+        y: 1105
+        width: 267
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c815e8463e81f8b0800000000000000
+      internalID: -5120154937541191485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_125
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 869
+        width: 97
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab153ca13d673a360800000000000000
+      internalID: 7179712880017887674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_126
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 870
+        width: 96
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7c6af46fea207f0800000000000000
+      internalID: -647763023466412078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_127
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 870
+        width: 94
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11fc83199cd901c0800000000000000
+      internalID: -4536852599582953187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_128
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 870
+        width: 96
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b3c938500482c00800000000000000
+      internalID: 876020519950629714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_129
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1015
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4171f26a530f31e0800000000000000
+      internalID: -2216048804901064369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_130
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1035
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efec4b8197280060800000000000000
+      internalID: 6919824333515583459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_131
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1017
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f59e8f68e6ac060800000000000000
+      internalID: 6974508498917351265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_132
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1019
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb40790079f101f40800000000000000
+      internalID: 5697088262034097340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_133
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1019
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e323f92bd5ea21790800000000000000
+      internalID: -7560789106949672386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_134
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1018
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23be72eab419072f0800000000000000
+      internalID: -977121364908971214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_135
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 870
+        width: 69
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb712a7a2993035e0800000000000000
+      internalID: -1931980938101516357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_136
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 998
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d629d7ec783de0ee0800000000000000
+      internalID: -1292863462770371987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_137
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1003
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36389cc15101b8520800000000000000
+      internalID: 2705273684029440867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_138
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1008
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63944d90245052b70800000000000000
+      internalID: 8873504421994318134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_139
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 963
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fb63f0042815da0800000000000000
+      internalID: -5957837620389691581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_140
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 998
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977bae60581536810800000000000000
+      internalID: 1757337911393171321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_141
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 978
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f595ae6cee226a5a0800000000000000
+      internalID: -6510477802382665377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_142
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 870
+        width: 90
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787b63a5a438550f0800000000000000
+      internalID: -1128851776222087289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_143
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 909
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c6301a8c1945290800000000000000
+      internalID: -7902531155247535022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_144
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 916
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e2d8acc6f9121a0800000000000000
+      internalID: -6836007469768167803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_145
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 924
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327cdf7b5b06d4d50800000000000000
+      internalID: 6723136152326227747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_146
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 875
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652b6f9f5dbd0dd50800000000000000
+      internalID: 6760144752751325782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_147
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 629
+        width: 249
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81be464d1688c020800000000000000
+      internalID: 2362285464847561101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_148
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 629
+        width: 228
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3561a13e7607880800000000000000
+      internalID: -8615271862066850905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_149
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 629
+        width: 238
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae0d1caff4445380800000000000000
+      internalID: -8983479491802362206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_150
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 629
+        width: 246
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0d7640c30b6abd0800000000000000
+      internalID: -2619212361450925909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_151
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 629
+        width: 253
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fdd9b0642575ca0800000000000000
+      internalID: -6028259115416035484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_152
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 629
+        width: 263
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b352e0f8c952ecf0800000000000000
+      internalID: -224518311845407819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_153
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 629
+        width: 271
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3765e08a496ddd210800000000000000
+      internalID: 1359478596498773619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_154
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 629
+        width: 278
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e808ebab865bbb8b0800000000000000
+      internalID: -5135311488671645554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_155
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 629
+        width: 263
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818d63972351127d0800000000000000
+      internalID: -2945049374797408232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_156
+      rect:
+        serializedVersion: 2
+        x: 2421
+        y: 629
+        width: 243
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166db0718a4479320800000000000000
+      internalID: 2564594001542633057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_157
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 629
+        width: 248
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9065837bee928030800000000000000
+      internalID: 3495530994885550239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_158
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 629
+        width: 250
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae486716fb2d16f70800000000000000
+      internalID: 9178849234973525226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_159
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 629
+        width: 256
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6b0e7a1b3203230800000000000000
+      internalID: 3616429746711213814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_160
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 629
+        width: 266
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca189a4f3a0336f0800000000000000
+      internalID: -706209449616336192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_161
+      rect:
+        serializedVersion: 2
+        x: 3747
+        y: 629
+        width: 258
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcab67af5c2eb5c20800000000000000
+      internalID: 3196397700488018637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_162
+      rect:
+        serializedVersion: 2
+        x: 4026
+        y: 629
+        width: 266
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab00550c82e9c3d0800000000000000
+      internalID: -3185766170375484500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_163
+      rect:
+        serializedVersion: 2
+        x: 4303
+        y: 703
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc49880cc2182a40800000000000000
+      internalID: 5343541625400937649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_164
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 380
+        width: 248
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744a7c203654e3560800000000000000
+      internalID: 7295344737937499207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_165
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 381
+        width: 239
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ac28bd79efde070800000000000000
+      internalID: 8137440029904652882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_166
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 381
+        width: 245
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef884693e3b6d4f0800000000000000
+      internalID: -804257693378768913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_167
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 380
+        width: 257
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b4311a8ade06190800000000000000
+      internalID: -7971110031933093045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_168
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 380
+        width: 260
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8accad3228318640800000000000000
+      internalID: 5080403574365407887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_169
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 380
+        width: 266
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c69e1dc9ccba0640800000000000000
+      internalID: 5047053907337844420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_170
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 380
+        width: 274
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd4f5de6148d03e0800000000000000
+      internalID: -2085865818396078655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_171
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 380
+        width: 278
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2eab23fe5dca3c0800000000000000
+      internalID: -4346864316994362690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_172
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 380
+        width: 262
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307f241756e7ab250800000000000000
+      internalID: 5961216030935283459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_173
+      rect:
+        serializedVersion: 2
+        x: 2459
+        y: 380
+        width: 241
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09466f0c58ce10c50800000000000000
+      internalID: 6629840185678259344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_174
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 380
+        width: 245
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc47a3ddc65ff5da0800000000000000
+      internalID: -5953770334443637557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_175
+      rect:
+        serializedVersion: 2
+        x: 2981
+        y: 380
+        width: 248
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8d065fb45053680800000000000000
+      internalID: -8776102475064092466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_176
+      rect:
+        serializedVersion: 2
+        x: 3255
+        y: 380
+        width: 251
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77e49030322fab80800000000000000
+      internalID: -8381442791144364161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_177
+      rect:
+        serializedVersion: 2
+        x: 3524
+        y: 380
+        width: 258
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeaf592a2cb9f8620800000000000000
+      internalID: 2778610755364584174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_178
+      rect:
+        serializedVersion: 2
+        x: 3813
+        y: 380
+        width: 261
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17d0872bfdc82580800000000000000
+      internalID: -8851598589013469413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_179
+      rect:
+        serializedVersion: 2
+        x: 4105
+        y: 378
+        width: 266
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400a70dc216fcb6d0800000000000000
+      internalID: -2973231093361696764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_180
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 137
+        width: 244
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ae60dcadce2ee40800000000000000
+      internalID: 5684366104181795340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_181
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 137
+        width: 248
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a7b97555177fc20800000000000000
+      internalID: 3240183068272327208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_182
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 137
+        width: 253
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fca2d04688304600800000000000000
+      internalID: 450422112001371376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_183
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 137
+        width: 259
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b2cc67f59229de0800000000000000
+      internalID: -1327953450129151206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_184
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 209
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00614414d16620c60800000000000000
+      internalID: 7782895381884704256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_185
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 137
+        width: 248
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a96d63223963a510800000000000000
+      internalID: 1559205560063977896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_186
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 137
+        width: 230
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b45c7fd6e5d04f0800000000000000
+      internalID: -860928127356548244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_187
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 137
+        width: 237
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ddfe754b51e0330800000000000000
+      internalID: 3678901809921908109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_188
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 137
+        width: 244
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bbef05411839760800000000000000
+      internalID: 7463450931741244240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_189
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 58
+        width: 151
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14c8dca765d1eaa0800000000000000
+      internalID: -6133386576243669990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_190
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 65
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792723fd820043cd0800000000000000
+      internalID: -2579436511033134441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Layka_191
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 37
+        width: 43
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baad12c744d9f5770800000000000000
+      internalID: 8601766730766867115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

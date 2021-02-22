@@ -9,6 +9,7 @@ public class FireSkull : Enemy
     Player player;
     bool couldDamage = false;
     EnemyBody body;
+    bool isStatic = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +19,15 @@ public class FireSkull : Enemy
         myAnimator = GetComponent<Animator>();
         player = FindObjectOfType<Player>();
         timeAfterLastAttack = timeInterval;
-        timeInterval = 2f;
+        timeInterval = 4f;
         body = GetComponentInChildren<EnemyBody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeAfterLastAttack += Time.deltaTime;
+        if(isStatic) { return; }
+        if(!couldDamage) { timeAfterLastAttack += Time.deltaTime; }
         if (IfRage())
         {
             if (timeAfterLastAttack >= timeInterval)
@@ -50,6 +52,7 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
 
         yield return new WaitForSeconds(2);
         couldDamage = true;
+        myAnimator.SetBool("Fire", true);
         GetComponent<Rigidbody2D>().velocity = direction;
         StartCoroutine(StopRage());
     }
@@ -63,7 +66,6 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
             timeAfterLastAttack = 0;
             couldDamage = false;
         }
-
     }
 
     public void DamagePlayer()
@@ -95,6 +97,8 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
 
     public void BeStatic(int interval)
     {
+        isStatic = true;
+        
         if(myAnimator != null)
         {
             myAnimator.SetTrigger("idle");
@@ -104,5 +108,13 @@ Mathf.Abs(transform.localScale.x), transform.localScale.y);
             myAnimator.SetTrigger("idle");
         }
         GetComponentInChildren<EnemyMovement>().StopForSeconds(interval);
+        StartCoroutine(Wait());
+        
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(4);
+        isStatic = false;
     }
  }

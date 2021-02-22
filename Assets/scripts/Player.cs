@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
 
     // for colour change
     [SerializeField] SpriteRenderer bodyRenderer;
+    bool sliding = false;
 
 
     // Message then methods
@@ -113,6 +114,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void SetSlidingStatus(bool state)
+    {
+        sliding = state;
+    }
+
     private void Jump()
     {
         if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
@@ -146,6 +152,7 @@ public class Player : MonoBehaviour
 
     public void Hurt(int damage, string type)
     {
+        if(sliding) { return; }
 
         if(type.ToLower() == "magical")
         {
@@ -161,19 +168,13 @@ public class Player : MonoBehaviour
 
         FindObjectOfType<Sanity>().LoseSanity(damage);
         myAnimator.SetTrigger("hurt");
-        couldHurt = false;
         StartCoroutine(InvulnerableTime(invulnerableTime));
         hurtEffectAnimator.SetTrigger("hurt");
     }
 
     public bool CouldHurt()
     {
-        return couldHurt;
-    }
-
-    public void SetCouldHurt(bool state)
-    {
-        couldHurt = state;
+        return !sliding;
     }
 
    IEnumerator InvulnerableTime(float invulnerableDuration)

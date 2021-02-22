@@ -24,7 +24,6 @@ public class body : MonoBehaviour
 
     public void SpeedUp(float amount)
     {
-        player.SetCouldHurt(false);
         if(amount > 1)
         {
             player.SetSpeed(player.GetSpeed() * amount);
@@ -41,7 +40,6 @@ public class body : MonoBehaviour
 
     public void ResetSpeed()
     {
-        player.SetCouldHurt(true);
         player.SetDefaultSpeed();
     }
 

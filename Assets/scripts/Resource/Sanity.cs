@@ -11,7 +11,6 @@ public class Sanity : MonoBehaviour
 
     Light2D light2d;
     float initialSanity;
-    bool invulnerable = false;
 
     public void SetSanityLossSpeed(float amount)
     {
@@ -33,13 +32,8 @@ public class Sanity : MonoBehaviour
         return sanityLossSpeed;
     }
 
-    public void ToggleInvulnerability(bool invulState)
-    {
-        invulnerable = invulState;
-    }
     public void LoseSanity(float amount)
     {
-        if(invulnerable) { return; }
         if(sanity > 0)
         {
             sanity = Mathf.Max(0, sanity - amount);
@@ -58,13 +52,13 @@ public class Sanity : MonoBehaviour
     void Start()
     {
         initialSanity = sanity;
-        light2d = light.GetComponent<Light2D>();
+        light2d = GetComponent<Light>().GetComponent<Light2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(light2d.pointLightOuterRadius <= light.GetMinimalRadius())
+        if(light2d.pointLightOuterRadius <= GetComponentInChildren<Light>().GetMinimalRadius())
             sanity -= Time.deltaTime * sanityLossSpeed;
         if(sanity <= 0)
         {
