@@ -22198,6 +22198,10 @@ PrefabInstance:
       propertyPath: invulnerableTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1029373660, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
+      propertyPath: slideCD
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1000816217385713666, guid: cbb1e982ffb6b45b48f07829d650a5cf,
         type: 3}
       propertyPath: m_LocalPosition.x
