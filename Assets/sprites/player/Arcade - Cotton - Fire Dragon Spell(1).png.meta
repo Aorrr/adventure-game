@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: 067ebeff6ec3d484a9bfbbb33daf358a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6582025691401933389
+    second: Arcade - Cotton - Fire Dragon Spell(1)_0
+  - first:
+      213: 7245831834409541081
+    second: Arcade - Cotton - Fire Dragon Spell(1)_1
+  - first:
+      213: 6004645395340854485
+    second: Arcade - Cotton - Fire Dragon Spell(1)_2
+  - first:
+      213: -3055406120609394445
+    second: Arcade - Cotton - Fire Dragon Spell(1)_3
+  - first:
+      213: -1857911934739081064
+    second: Arcade - Cotton - Fire Dragon Spell(1)_4
+  - first:
+      213: -4282112120878470951
+    second: Arcade - Cotton - Fire Dragon Spell(1)_5
+  - first:
+      213: 4252696614163818907
+    second: Arcade - Cotton - Fire Dragon Spell(1)_6
+  - first:
+      213: -4927202620476103816
+    second: Arcade - Cotton - Fire Dragon Spell(1)_7
+  - first:
+      213: -5536869213947470396
+    second: Arcade - Cotton - Fire Dragon Spell(1)_8
+  - first:
+      213: -13219249544648725
+    second: Arcade - Cotton - Fire Dragon Spell(1)_9
+  - first:
+      213: -4388510738968775968
+    second: Arcade - Cotton - Fire Dragon Spell(1)_10
+  - first:
+      213: 5059672587007775715
+    second: Arcade - Cotton - Fire Dragon Spell(1)_11
+  - first:
+      213: -5678338540658943756
+    second: Arcade - Cotton - Fire Dragon Spell(1)_12
+  - first:
+      213: -5463287119853230681
+    second: Arcade - Cotton - Fire Dragon Spell(1)_13
+  - first:
+      213: 4268325508204557248
+    second: Arcade - Cotton - Fire Dragon Spell(1)_14
+  - first:
+      213: 488663722071037748
+    second: Arcade - Cotton - Fire Dragon Spell(1)_15
+  - first:
+      213: 1690223382468520917
+    second: Arcade - Cotton - Fire Dragon Spell(1)_16
+  - first:
+      213: -1879636247974998593
+    second: Arcade - Cotton - Fire Dragon Spell(1)_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 183
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd2e79b182f7a4a0800000000000000
+      internalID: -6582025691401933389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 187
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd9230d9ad5e8460800000000000000
+      internalID: 7245831834409541081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 185
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d40a7f4c29c45350800000000000000
+      internalID: 6004645395340854485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_3
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 184
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0d58052540995d0800000000000000
+      internalID: -3055406120609394445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 178
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8981be160fe5736e0800000000000000
+      internalID: -1857911934739081064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 176
+        width: 50
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8e4a2b6b1e294c0800000000000000
+      internalID: -4282112120878470951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_6
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 163
+        width: 52
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99adb0f90d940b30800000000000000
+      internalID: 4252696614163818907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_7
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 152
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873e526725f0f9bb0800000000000000
+      internalID: -4927202620476103816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_8
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 147
+        width: 77
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd5dd619c61923b0800000000000000
+      internalID: -5536869213947470396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_9
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 150
+        width: 77
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7a1be992901dff0800000000000000
+      internalID: -13219249544648725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_10
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 152
+        width: 104
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e277c6fbb0e813c0800000000000000
+      internalID: -4388510738968775968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_11
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 95
+        width: 134
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3516c1961973640800000000000000
+      internalID: 5059672587007775715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_12
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 90
+        width: 152
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f81d91be2d7231b0800000000000000
+      internalID: -5678338540658943756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_13
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 88
+        width: 170
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a56e2b6f418e24b0800000000000000
+      internalID: -5463287119853230681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 34
+        width: 224
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c375466f632c3b30800000000000000
+      internalID: 4268325508204557248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_15
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 44
+        width: 263
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4371aa0f01518c600800000000000000
+      internalID: 488663722071037748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 6
+        width: 253
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db681f0631e47710800000000000000
+      internalID: 1690223382468520917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - Cotton - Fire Dragon Spell(1)_17
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 9
+        width: 255
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd808c8ac03ae5e0800000000000000
+      internalID: -1879636247974998593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
