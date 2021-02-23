@@ -256,8 +256,16 @@ public class Player : MonoBehaviour
             isAlive = false;
             myAnimator.SetTrigger("die");
             FindObjectOfType<Light>().SetFadeSpeed(3f);
-            Time.timeScale = 0.5f;
+            //Time.timeScale = 0.5f;
+            GameObject.Find("SceneFade").GetComponent<Animator>().SetTrigger("fade");
+            StartCoroutine(ShowGameOverCanvas());
         }
+    }
+
+    IEnumerator ShowGameOverCanvas()
+    {
+        yield return new WaitForSeconds(3);
+        GameObject.Find("UI").transform.GetChild(2).gameObject.SetActive(true);
     }
 
     public void SlowDown(float slowFactor, int duration)

@@ -7,6 +7,7 @@ public class kingScream : MonoBehaviour
     CircleCollider2D circle;
     Player player;
     CamShakeController shaker;
+    [SerializeField] AudioClip clip;
 
     // Start is called before the first frame update
 
@@ -44,6 +45,7 @@ public class kingScream : MonoBehaviour
 
     public void StartScream()
     {
+        AudioSource.PlayClipAtPoint(clip, transform.position);
         animator.SetTrigger("Scream");
         shaker.ShakeIdleAtController(3.5f, 1f, 1.5f);
         shaker.ShakeRunAtController(3.5f, 1.5f, 1f);

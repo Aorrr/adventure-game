@@ -18,4 +18,9 @@ public class BossHealthBar : MonoBehaviour
     {
         slider.value = boss.GetHealthPercentage();
     }
+
+    public float GetValue()
+    {
+        return slider.value;
+    } 
 }
