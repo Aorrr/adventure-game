@@ -43,6 +43,8 @@ public class SkullKing : Enemy
     float fireCD = 6f;
     float sinceLastFireAttack = 0f;
 
+    bool songPlayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,6 +83,11 @@ public class SkullKing : Enemy
                         StartCoroutine(SummonSkulls());
                     }  
                     
+                }
+
+                if(!songPlayed)
+                {
+                    FindObjectOfType<LevelMusicPlayer>().SwitchSong();
                 }
             } 
             } else if(GetHealthPercentage() > 0)

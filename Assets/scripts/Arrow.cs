@@ -72,4 +72,9 @@ public class Arrow : MonoBehaviour
     {
         damage = initialDmg;
     }
+
+    public void DestroyThis()
+    {
+        Destroy(gameObject);
+    }
 }
