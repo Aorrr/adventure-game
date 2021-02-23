@@ -7,9 +7,9 @@ public class menu : MonoBehaviour
 {
     public Animator transition;
     public float transition_time;
-    public void StartFirstLevel()
+    public void StartLevel(int level)
     {
-        StartCoroutine(LoadLevelWithCrossFade(2));
+        StartCoroutine(LoadLevelWithCrossFade(level + 1));
     }
 
     public void LoadLevelSelection()
