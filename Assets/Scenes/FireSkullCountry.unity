@@ -22167,7 +22167,7 @@ PrefabInstance:
     - target: {fileID: 1029373660, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
       propertyPath: hurtEffectAnimator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 751475345}
     - target: {fileID: 1029373660, guid: cbb1e982ffb6b45b48f07829d650a5cf, type: 3}
       propertyPath: runSpeed
       value: 5
@@ -27727,6 +27727,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &751475345 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3143661408009703115, guid: c7aeec2b4ac3eb748b8f0a5e6a226ad6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690242667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &752041482
 GameObject:
   m_ObjectHideFlags: 0
@@ -39987,6 +39993,12 @@ Transform:
   m_Father: {fileID: 110852689}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1095739382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3143661407778430314, guid: c7aeec2b4ac3eb748b8f0a5e6a226ad6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690242667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1100800185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010631193931833228, guid: 4efed9cbbe59a4611940b22a7225da3c,
@@ -61645,6 +61657,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3143661407778430312, guid: c7aeec2b4ac3eb748b8f0a5e6a226ad6,
+        type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 3024036006779262682}
     - target: {fileID: 3143661408151386312, guid: c7aeec2b4ac3eb748b8f0a5e6a226ad6,
         type: 3}
       propertyPath: m_Name
@@ -79606,7 +79623,7 @@ MonoBehaviour:
   SpawnSkullCD: 25
   iceFire: {fileID: 1532705153}
   scream: {fileID: 6531520216046470275}
-  HealthBar: {fileID: 0}
+  HealthBar: {fileID: 1095739382}
   icyPortal: {fileID: 6959577095262022206, guid: 972e52a67e2c64602868cd4fa0143a67,
     type: 3}
   sprintCD: 7
