@@ -14741,6 +14741,11 @@ PrefabInstance:
       propertyPath: light
       value:
       objectReference: {fileID: 1115160101}
+    - target: {fileID: 2128495706570903883, guid: a0ca6fefb34ed49ba9e8f32be870fa08,
+        type: 3}
+      propertyPath: sanity
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2128495706570903884, guid: a0ca6fefb34ed49ba9e8f32be870fa08,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41520,7 +41525,7 @@ PrefabInstance:
     - target: {fileID: 2985093519963232689, guid: d2ca2b418552141fc8f7c3bbb1ad29ea,
         type: 3}
       propertyPath: arrowSpeed
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2985093519963232703, guid: d2ca2b418552141fc8f7c3bbb1ad29ea,
         type: 3}
@@ -85629,6 +85634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38368d0d66914890b90f8081fa542f4, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  clip: {fileID: 8300000, guid: ba6aeaae6414e4e1eacc2f7c8be142ec, type: 3}
 --- !u!212 &6531520216046470278
 SpriteRenderer:
   m_ObjectHideFlags: 0
