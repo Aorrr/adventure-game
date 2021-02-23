@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class StatsManager : MonoBehaviour
 {
+    [Header("Game Stats")]
+    public int gameLevel = 1;
+
+    [Header("Level Stats")]
+    public int playerLevel = 1;
+    public int currentExp = 0;
+    public int expToNextLevel;
+
     [Header("Melee Stats")]
-    [SerializeField] int meleeDamage = 10;
-    [SerializeField] int armor = 50;
-    [SerializeField] int MeleeLifeSteal;
+    public int meleeDamage = 10;
+    public int armor = 50;
+    public int MeleeLifeSteal;
 
     [Header("Arrow Stats")]
-    [SerializeField] int arrowDamage = 5;
-    [SerializeField] int armorPenetration = 0;
-    [SerializeField] GameObject arrowPrefab;
-    [SerializeField] float arrowSpeed = 25f;
+    public int arrowDamage = 5;
+    public int armorPenetration = 0;
+    public GameObject arrowPrefab;
+    public float arrowSpeed = 25f;
 
 
     [Header("Magical Stats")]
-    [SerializeField] int magicalPower = 0;
-    [SerializeField] int magicalResistance = 20;
+    public int magicalPower = 0;
+    public int magicalResistance = 20;
 
     int skillPts = 100;
     int executionThreshold = 0;
@@ -26,13 +34,13 @@ public class StatsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ModifyMeleeDamage(int amount)
@@ -63,7 +71,7 @@ public class StatsManager : MonoBehaviour
     public void CalculateFinalDamage(int amount, string type)
     {
         int resistance;
-       switch(type)
+        switch (type)
         {
             case "physical": resistance = armor; return;
 
@@ -89,19 +97,13 @@ public class StatsManager : MonoBehaviour
         return skillPts;
     }
 
-    public void GainSkillPt(int amount)
-    {
-        if(amount < 0) { return;}
-        skillPts += amount;
-    }
-
-
     public void SpendSkillPt(int amount)
     {
-        if(amount > skillPts)
+        if (amount > skillPts)
         {
             Debug.Log("Not enough skillPts");
-        } else
+        }
+        else
         {
             skillPts -= amount;
         }
@@ -132,7 +134,7 @@ public class StatsManager : MonoBehaviour
     }
 
     /* Formulas for taking damage */
-     
+
     public int TakePhysicalDamage(int IniDmg)
     {
         float reduction = (float)armor / ((float)armor + 100);
@@ -149,7 +151,7 @@ public class StatsManager : MonoBehaviour
         return (int)Mathf.Round(reduction * IniDmg);
     }
 
-    public int GetExecutionThreshold() 
+    public int GetExecutionThreshold()
     {
         return executionThreshold;
     }
@@ -161,11 +163,23 @@ public class StatsManager : MonoBehaviour
 
     public void IncreaseExecutionThreshold(int amount)
     {
-        if(amount > 0)
+        if (amount > 0)
         {
             executionThreshold += amount;
         }
     }
 
+    public void GainExp(int amount)
+    {
+        currentExp += amount;
+    }
+
+    public void PlayerLevelUp(int skillPt)
+    {
+        if (skillPt < 0) { return; }
+        skillPts += skillPt;
+        playerLevel++;
+        currentExp = 0;
+    }
 }
 

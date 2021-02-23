@@ -52,6 +52,6 @@ public class Exp : MonoBehaviour
 
     public void GainSkillPtn()
     {
-        stats.GainSkillPt(skillPtPerLevel + currentLevel/skillPtGainIncrement);
+        stats.PlayerLevelUp(skillPtPerLevel + currentLevel/skillPtGainIncrement);
     }
 }
