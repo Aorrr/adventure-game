@@ -14,12 +14,22 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] CamShakeController shaker;
     [SerializeField] AudioClip clip;
 
+
+    [SerializeField] Lightening ltn;
+    bool charged = false;
+    bool IfSummonLightening;
+    int chargeGauge = 100;
+    float ltnDuration = 20f;
+    float timer = 0;
+    int gaugeFill = 0;
+
     Player player;
 
     private void Start()
     {
         player = FindObjectOfType<Player>();
         enemyLayer = LayerMask.GetMask("Enemy");
+
     }
 
     public int GetBaseDamage()
@@ -36,10 +46,15 @@ public class MeleeAttack : MonoBehaviour
         }
         Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackPos.position
             , attackRange, enemyLayer);
+
         if (enemiesInRange.Length > 0)
         {
             AudioSource.PlayClipAtPoint(clip, Camera.main.gameObject.transform.position);
 
+            if(charged)
+            {
+                Instantiate(ltn, attackPos.position + new Vector3(0f, 6f, 0f), Quaternion.identity);
+            }
         }
 
         for(int i = 0; i < enemiesInRange.Length; i++)
@@ -48,6 +63,13 @@ public class MeleeAttack : MonoBehaviour
             enemiesInRange[i].GetComponent<EnemyBody>().Hurt(baseDamage * DamageFactor, "physical", "sword");
             StartCoroutine(shaker.ShakeIdle(0.3f, 3f, 2f));
             StartCoroutine(shaker.ShakeRun(0.3f, 3f, 2f));
+
+            // lightening related
+            gaugeFill += baseDamage * DamageFactor;
+            if(gaugeFill >= chargeGauge)
+            {
+                charged = true;
+            }
         }
     }
 
@@ -55,5 +77,19 @@ public class MeleeAttack : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
+    private void Update()
+    {
+       if(charged)
+        {
+            timer += Time.deltaTime;
+            if(timer >= ltnDuration)
+            {
+                charged = false;
+                gaugeFill = 0;
+                timer = 0;
+            }
+        }   
     }
 }
