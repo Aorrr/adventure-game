@@ -11,8 +11,8 @@ public class kingScream : MonoBehaviour
 
     // Start is called before the first frame update
 
-    float sinceLastPushBack = 4f;
-    float pushCD = 4f;
+    float sinceLastPushBack = 5f;
+    float pushCD = 5f;
     Animator animator;
 
     void Start()

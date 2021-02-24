@@ -115,7 +115,7 @@ public class SkullKing : Enemy
     {
         SummonSkull = false;
 
-        int num = Random.Range(2, wayPoints.Count);
+        int num = Random.Range(3, wayPoints.Count);
         List<int> indexes = new List<int>();
         var numberList = Enumerable.Range(0, wayPoints.Count).ToList();
 
