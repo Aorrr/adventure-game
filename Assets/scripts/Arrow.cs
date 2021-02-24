@@ -35,8 +35,9 @@ public class Arrow : MonoBehaviour
             CamShakeController controller = FindObjectOfType<CamShakeController>();
             if(controller != null)
             {
-                shakeIdle = StartCoroutine(controller.ShakeIdle(0.3f, 3f, 2f));
-                shakeRun = StartCoroutine(controller.ShakeRun(0.3f, 3f, 2f));
+                /*
+                shakeIdle = StartCoroutine(controller.ShakeIdle(0.3f, 2f, 2f));
+                shakeRun = StartCoroutine(controller.ShakeRun(0.3f, 2f, 2f));*/
             }
             enemy.Hurt(damage, "magical", "arrow");
 

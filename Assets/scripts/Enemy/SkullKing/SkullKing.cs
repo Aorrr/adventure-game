@@ -49,6 +49,7 @@ public class SkullKing : Enemy
     bool ifShouldStopFire = true;
 
     bool songPlayed = false;
+    bool fixDirection = false;
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +71,7 @@ public class SkullKing : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (GetHealthPercentage() >= 0.5)
+        if (GetHealthPercentage() >= 0.35)
             {
             if (canMove)
             {
@@ -101,27 +102,33 @@ public class SkullKing : Enemy
             } 
             } else if(GetHealthPercentage() > 0)
             {
-                if(!ultimateSummon)
+                if(SummonSkull)
             {
                 StartCoroutine(StayForSeconds(3));
                 StartCoroutine(SummonSkulls());
                 ultimateSummon = true;
                 FindObjectOfType<LevelMusicPlayer>().FinalStage();
+                SpawnSkullCD += 5;
                 ArmorUp();
-            }
-
+            }   else
+            {
                 nextPosIndex = 5;
-                if(currentPosIndex != 5)
+                if (currentPosIndex != 5)
                 {
                     MoveToNextLocation();
-                } else
+                }
+                else
                 {
                     Sprint();
                 }
             }
+            }
         UpdateLightStatus();
         FireAttack();
-        CorrectRotation();
+        if(!fixDirection)
+        {
+            CorrectRotation();
+        }
     }
 
     IEnumerator SummonSkulls()
@@ -257,6 +264,9 @@ public class SkullKing : Enemy
             {
                 myAnimator.SetBool("Fire", true);
                 ifShouldStopFire = true;
+
+                fixDirection = true;
+                StartCoroutine(BreathFixDirection());
             }
         }
 
@@ -270,6 +280,12 @@ public class SkullKing : Enemy
             sinceLastFireAttack = 0;
             GetComponent<SpriteRenderer>().color = Color.white;
         }
+    }
+
+    IEnumerator BreathFixDirection()
+    {
+        yield return new WaitForSeconds(1);
+        fixDirection = false;
     }
 
     private void CorrectRotation()
@@ -316,8 +332,8 @@ public class SkullKing : Enemy
 
         int num = FindObjectsOfType<FireSkull>().Count();
 
-        int amrInc = num * 4;
-        int mrInc = num * 2;
+        int amrInc = num * 2;
+        int mrInc = num * 1;
         int dmgInc = num;
         armour += amrInc;
         magicalResistance += mrInc;

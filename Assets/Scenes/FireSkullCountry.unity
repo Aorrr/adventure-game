@@ -74347,7 +74347,7 @@ PrefabInstance:
     - target: {fileID: 569502448307822456, guid: e0ec61f4b462d4d179311a94faa617ca,
         type: 3}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 569502448307822457, guid: e0ec61f4b462d4d179311a94faa617ca,
         type: 3}
@@ -83365,8 +83365,8 @@ MonoBehaviour:
   hp: 2500
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
-  armour: 0
-  magicalResistance: 0
+  armour: -50
+  magicalResistance: -25
   popUpObject: {fileID: 3884357209951137487, guid: 8a065255c1b7449dd83098fcf891defa,
     type: 3}
   exp: 200
@@ -83376,7 +83376,7 @@ MonoBehaviour:
   skull: {fileID: 1416255794, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
   skullKingPath: {fileID: 6531520215998022883}
   moveSpeed: 6
-  SpawnSkullCD: 20
+  SpawnSkullCD: 25
   iceFire: {fileID: 1532705153}
   scream: {fileID: 6531520216046470275}
   icyPortal: {fileID: 6959577095262022206, guid: 972e52a67e2c64602868cd4fa0143a67,
