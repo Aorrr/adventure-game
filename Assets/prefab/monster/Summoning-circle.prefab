@@ -116,6 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSummon: {fileID: 1416255794, guid: 8eb9ea673e91a4a7b873e49aea067fe5, type: 3}
+  SummonIn: {fileID: 8784954353441985842, guid: e6d86bc159f314e46bdee978129f54e5,
+    type: 3}
 --- !u!114 &254808542
 MonoBehaviour:
   m_ObjectHideFlags: 0

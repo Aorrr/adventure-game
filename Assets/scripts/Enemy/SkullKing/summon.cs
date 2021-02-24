@@ -5,12 +5,18 @@ using UnityEngine;
 public class summon : MonoBehaviour
 {
     [SerializeField] Enemy toSummon;
+    [SerializeField] GameObject SummonIn;
+    
 
     FireSkull summoned;
     // Start is called before the first frame update
     void Start()
     {
         summoned = (FireSkull)Instantiate(toSummon, transform.position, Quaternion.identity);
+        if(SummonIn)
+        {
+            summoned.transform.parent = SummonIn.transform;
+        }
         summoned.BeStatic(2);
     }
 

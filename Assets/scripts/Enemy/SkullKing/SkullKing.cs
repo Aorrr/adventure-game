@@ -14,7 +14,6 @@ public class SkullKing : Enemy
     [SerializeField] Fire iceFire;
     [SerializeField] kingScream scream;
     [SerializeField] summon icyPortal;
-    [SerializeField] protected DamagePopUp popUpObject;
 
 
     [SerializeField] GameObject BossHealthBar;
@@ -316,12 +315,12 @@ public class SkullKing : Enemy
 
         int num = FindObjectsOfType<FireSkull>().Count();
 
-        int amrInc = 10 + num * 2;
-        int mrInc = 5 + num * 4;
+        int amrInc = num * 4;
+        int mrInc = num * 2;
         int dmgInc = num;
         armour += amrInc;
         magicalResistance += mrInc;
-        Damage += num/5;
+        Damage += num/2;
 
         popUpObject.SetText("ARMOR + " + amrInc);
 

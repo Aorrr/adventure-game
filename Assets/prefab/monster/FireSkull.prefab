@@ -579,11 +579,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  hp: 30
+  hp: 50
   hurtEffect: {fileID: 825321377830938943, guid: e3d6bd8d09ebedf44a7dc14889867857,
     type: 3}
-  armour: 10
-  magicalResistance: 0
+  armour: 50
+  magicalResistance: -20
   popUpObject: {fileID: 3884357209951137487, guid: 0e9783bd4d2dc4bcdbadeb825fe44fa2,
     type: 3}
   exp: 20

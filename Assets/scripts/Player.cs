@@ -42,7 +42,6 @@ public class Player : MonoBehaviour
     [SerializeField] Animator hurtEffectAnimator;
     [SerializeField] AudioClip shootSFX;
 
-    int arrowDmg = 5;
     float arrowSpeed = 25f;
     GameObject arrowPrefab;
     StatsManager stats;
@@ -59,7 +58,6 @@ public class Player : MonoBehaviour
         stats = FindObjectOfType<StatsManager>();
         myRidigidBody = GetComponent<Rigidbody2D>();
         arrowPrefab = stats.GetArrowPrefab();
-        arrowPrefab.GetComponent<Arrow>().SetInitialDamage(arrowDmg);
         bag = new List<string>();
 
         myAnimator = GetComponentInChildren<Animator>();
