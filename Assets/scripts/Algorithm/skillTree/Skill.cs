@@ -8,6 +8,7 @@ public abstract class Skill : MonoBehaviour
 {
     [Header("Skill Information")]
     [SerializeField] string skillName;
+    [SerializeField] string skillType;
     [SerializeField] [TextArea(3,6)] public string description;
 
     [Header("Skill Setting")]
@@ -33,6 +34,11 @@ public abstract class Skill : MonoBehaviour
     public string GetName()
     {
         return skillName;
+    }
+
+    public string GetSkillType()
+    {
+        return skillType;
     }
 
     public int GetCurrentLevel()

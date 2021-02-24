@@ -12,6 +12,10 @@ public class StatsManager : MonoBehaviour
     public int currentExp = 0;
     public int expToNextLevel;
 
+    [Header("Skills Stats")]
+    public List<Skill> dominationSkills;
+    public int skillPts;
+
     [Header("Melee Stats")]
     public int meleeDamage = 10;
     public int armor = 50;
@@ -28,21 +32,35 @@ public class StatsManager : MonoBehaviour
     public int magicalPower = 0;
     public int magicalResistance = 20;
 
-    int skillPts = 100;
     int executionThreshold = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        StatsManager[] sms = FindObjectsOfType<StatsManager>();
+        dominationSkills = new List<Skill>();
+        if (sms.Length > 1)
+            Destroy(gameObject);
+        else
+        {
+            DontDestroyOnLoad(this);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    /* save & load stats data */
+    public void LoadStatsData()
     {
-
+        //not yet implemented
+        return;
     }
 
+    public void SaveStatsData()
+    {
+        //not yet implemented
+        return;
+    }
+
+    /* melee & magical stats */
     public void ModifyMeleeDamage(int amount)
     {
         meleeDamage = Mathf.Max(0, meleeDamage += amount);
@@ -92,6 +110,7 @@ public class StatsManager : MonoBehaviour
         MeleeLifeSteal = Mathf.Max(0, MeleeLifeSteal += amount);
     }
 
+    /* skills stats */
     public int GetSkillPtsRemaining()
     {
         return skillPts;
@@ -109,6 +128,24 @@ public class StatsManager : MonoBehaviour
         }
     }
 
+    public void UnlockSkill(Skill skill)
+    {
+        string type = skill.GetSkillType();
+        switch(type)
+        {
+            case "Domination": dominationSkills.Add(skill); return;
+            default: return;
+        }
+    }
+
+    public List<Skill> GetUnlockedSkills(string type)
+    {
+        switch (type)
+        {
+            case "Domination": return dominationSkills;
+            default: return null;
+        }
+    }
 
     /* settings in regards to arrows */
     public GameObject GetArrowPrefab()

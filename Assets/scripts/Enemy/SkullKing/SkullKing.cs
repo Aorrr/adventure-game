@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class SkullKing : Enemy
 {
@@ -13,8 +13,9 @@ public class SkullKing : Enemy
     [SerializeField] float SpawnSkullCD = 10f;
     [SerializeField] Fire iceFire;
     [SerializeField] kingScream scream;
-    [SerializeField] GameObject HealthBar;
     [SerializeField] summon icyPortal;
+
+    [SerializeField] GameObject BossHealthBar;
 
     Sanity sanity;
     bool SummonSkull = true;
@@ -23,6 +24,7 @@ public class SkullKing : Enemy
     //Rigidbody2D body;
     Animator animator;
     EnemyBody enemyBody;
+    Light2D bossLight;
 
 
     // index for controlling king movement
@@ -48,7 +50,6 @@ public class SkullKing : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        HealthBar.SetActive(true);
         PrepareStats();
         sanity = FindObjectOfType<Sanity>();
         enemyBody = GetComponentInChildren<EnemyBody>();
@@ -59,12 +60,14 @@ public class SkullKing : Enemy
         {
             wayPoints.Add(child);
         }
+        bossLight = GetComponent<Light2D>();
+        bossLight.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GetHealthPercentage() >= 0.5)
+        if (GetHealthPercentage() >= 0.9)
             {
             if (canMove)
             {
@@ -88,6 +91,8 @@ public class SkullKing : Enemy
                 if(!songPlayed)
                 {
                     FindObjectOfType<LevelMusicPlayer>().SwitchSong();
+                    songPlayed  = true;
+                    BossHealthBar.SetActive(true);
                 }
             } 
             } else if(GetHealthPercentage() > 0)
@@ -101,7 +106,7 @@ public class SkullKing : Enemy
                     Sprint();
                 }
             }
-
+        UpdateLightStatus();
         FireAttack();
         CorrectRotation();
     }
@@ -110,7 +115,7 @@ public class SkullKing : Enemy
     {
         SummonSkull = false;
 
-        int num = Random.Range(2, wayPoints.Count);
+        int num = Random.Range(3, wayPoints.Count);
         List<int> indexes = new List<int>();
         var numberList = Enumerable.Range(0, wayPoints.Count).ToList();
 
@@ -161,6 +166,11 @@ public class SkullKing : Enemy
             transform.position = Vector2.MoveTowards
                 (transform.position, targetPosition, movementThisFrame);
         }
+    }
+
+    public void UpdateLightStatus()
+    {
+        bossLight.enabled = myAnimator.GetBool("Fire");
     }
 
     public void Sprint()
@@ -225,7 +235,6 @@ public class SkullKing : Enemy
 
         if(sinceLastFireAttack > fireCD)
         {
-            Debug.Log("Fire");
             iceFire.StartFire();
             sinceLastFireAttack = 0;
             GetComponent<SpriteRenderer>().color = Color.white;
