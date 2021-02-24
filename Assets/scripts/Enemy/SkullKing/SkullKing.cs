@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class SkullKing : Enemy
 {
@@ -24,6 +24,7 @@ public class SkullKing : Enemy
     //Rigidbody2D body;
     Animator animator;
     EnemyBody enemyBody;
+    Light2D bossLight;
 
 
     // index for controlling king movement
@@ -59,12 +60,14 @@ public class SkullKing : Enemy
         {
             wayPoints.Add(child);
         }
+        bossLight = GetComponent<Light2D>();
+        bossLight.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GetHealthPercentage() >= 0.5)
+        if (GetHealthPercentage() >= 0.9)
             {
             if (canMove)
             {
@@ -103,7 +106,7 @@ public class SkullKing : Enemy
                     Sprint();
                 }
             }
-
+        UpdateLightStatus();
         FireAttack();
         CorrectRotation();
     }
@@ -163,6 +166,11 @@ public class SkullKing : Enemy
             transform.position = Vector2.MoveTowards
                 (transform.position, targetPosition, movementThisFrame);
         }
+    }
+
+    public void UpdateLightStatus()
+    {
+        bossLight.enabled = myAnimator.GetBool("Fire");
     }
 
     public void Sprint()
@@ -227,7 +235,6 @@ public class SkullKing : Enemy
 
         if(sinceLastFireAttack > fireCD)
         {
-            Debug.Log("Fire");
             iceFire.StartFire();
             sinceLastFireAttack = 0;
             GetComponent<SpriteRenderer>().color = Color.white;

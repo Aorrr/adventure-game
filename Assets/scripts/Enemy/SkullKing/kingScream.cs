@@ -49,5 +49,8 @@ public class kingScream : MonoBehaviour
         animator.SetTrigger("Scream");
         shaker.ShakeIdleAtController(3.5f, 1f, 1.5f);
         shaker.ShakeRunAtController(3.5f, 1.5f, 1f);
+
+        
     }
+
 }
