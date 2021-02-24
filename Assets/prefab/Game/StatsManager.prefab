@@ -43,10 +43,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d73d2bff319411c9ca0a1dbc9b34bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameLevel: 1
+  playerLevel: 1
+  currentExp: 0
+  expToNextLevel: 0
+  DominationSkills:
+  - {fileID: 0}
+  - {fileID: 0}
+  skillPts: 0
   meleeDamage: 30
-  arrowDamage: 5
-  magicalPower: 10
   armor: 50
-  magicalResistance: 50
-  armorPenetration: 0
   MeleeLifeSteal: 0
+  arrowDamage: 5
+  armorPenetration: 0
+  arrowPrefab: {fileID: 5593614822031056931, guid: 28c6a3072f56a4aaa9bcd1752ea31539,
+    type: 3}
+  arrowSpeed: 17
+  magicalPower: 10
+  magicalResistance: 50

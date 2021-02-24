@@ -30,9 +30,17 @@ public class SkillTree : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        unlockedSkills = new List<Skill>();
         currentSkill = defaultSkill;
         stats = FindObjectOfType<StatsManager>();
+
+        /* setup unlocked skills */
+        unlockedSkills = stats.GetUnlockedSkills("Domination");
+        if(unlockedSkills == null)
+        {
+            unlockedSkills = new List<Skill>();
+        }
+
+        Debug.Log(unlockedSkills[0].GetName());
     }
 
     // Update is called once per frame
@@ -56,7 +64,9 @@ public class SkillTree : MonoBehaviour
         if (!currentSkill.IfUnlocked())
         {
             AddToSkillList(currentSkill);
+            stats.SpendSkillPt(currentSkill.AmountOfSkillPtsNeeded());
             currentSkill.ToggleUnlockStatus(true);
+            stats.UnlockSkill(currentSkill);
         } else if(currentSkill.GetCurrentLevel() < currentSkill.GetMaxLevel())
         {
             stats.SpendSkillPt(currentSkill.AmountOfSkillPtsNeeded());
