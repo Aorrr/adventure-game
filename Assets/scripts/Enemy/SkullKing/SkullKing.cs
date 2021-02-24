@@ -13,8 +13,9 @@ public class SkullKing : Enemy
     [SerializeField] float SpawnSkullCD = 10f;
     [SerializeField] Fire iceFire;
     [SerializeField] kingScream scream;
-    [SerializeField] GameObject HealthBar;
     [SerializeField] summon icyPortal;
+
+    [SerializeField] GameObject BossHealthBar;
 
     Sanity sanity;
     bool SummonSkull = true;
@@ -48,7 +49,6 @@ public class SkullKing : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        HealthBar.SetActive(true);
         PrepareStats();
         sanity = FindObjectOfType<Sanity>();
         enemyBody = GetComponentInChildren<EnemyBody>();
@@ -88,6 +88,8 @@ public class SkullKing : Enemy
                 if(!songPlayed)
                 {
                     FindObjectOfType<LevelMusicPlayer>().SwitchSong();
+                    songPlayed  = true;
+                    BossHealthBar.SetActive(true);
                 }
             } 
             } else if(GetHealthPercentage() > 0)
