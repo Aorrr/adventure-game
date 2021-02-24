@@ -130,10 +130,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.703
+  m_FalloffIntensity: 0.737
   m_Color: {r: 0.58406013, g: 0.807902, b: 0.990566, a: 1}
   m_Intensity: 1
-  m_LightVolumeOpacity: 0.151
+  m_LightVolumeOpacity: 0.075
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 3
+  m_PointLightOuterRadius: 5
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5

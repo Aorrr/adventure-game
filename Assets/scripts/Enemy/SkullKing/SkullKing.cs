@@ -14,6 +14,8 @@ public class SkullKing : Enemy
     [SerializeField] Fire iceFire;
     [SerializeField] kingScream scream;
     [SerializeField] summon icyPortal;
+    [SerializeField] protected DamagePopUp popUpObject;
+
 
     [SerializeField] GameObject BossHealthBar;
 
@@ -25,7 +27,7 @@ public class SkullKing : Enemy
     Animator animator;
     EnemyBody enemyBody;
     Light2D bossLight;
-
+    bool ultimateSummon = false;
 
     // index for controlling king movement
     int nextPosIndex = 5;
@@ -44,6 +46,8 @@ public class SkullKing : Enemy
     // timer for fire attack;
     float fireCD = 6f;
     float sinceLastFireAttack = 0f;
+
+    bool ifShouldStopFire = true;
 
     bool songPlayed = false;
 
@@ -67,7 +71,7 @@ public class SkullKing : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (GetHealthPercentage() >= 0.9)
+        if (GetHealthPercentage() >= 0.4)
             {
             if (canMove)
             {
@@ -83,6 +87,7 @@ public class SkullKing : Enemy
                     {
                         canMove = false;
                         StartCoroutine(StayForSeconds(4));
+                        ArmorUp();
                         StartCoroutine(SummonSkulls());
                     }  
                     
@@ -97,6 +102,14 @@ public class SkullKing : Enemy
             } 
             } else if(GetHealthPercentage() > 0)
             {
+                if(!ultimateSummon)
+            {
+                StartCoroutine(StayForSeconds(3));
+                StartCoroutine(SummonSkulls());
+                ultimateSummon = true;
+                ArmorUp();
+            }
+
                 nextPosIndex = 5;
                 if(currentPosIndex != 5)
                 {
@@ -115,16 +128,19 @@ public class SkullKing : Enemy
     {
         SummonSkull = false;
 
-        int num = Random.Range(3, wayPoints.Count);
+        int minSummon = 1 + ((int)((1 - GetHealthPercentage()) * 100)) / 10;
+        minSummon = Mathf.Max(6, minSummon);
+
+        int num = Random.Range(minSummon, wayPoints.Count);
         List<int> indexes = new List<int>();
         var numberList = Enumerable.Range(0, wayPoints.Count).ToList();
 
         scream.StartScream();
 
-        while (indexes.Count < num)
+        while (indexes.Count <= num)
         {
             int index = Random.Range(0, numberList.Count);
-            indexes.Add(index);
+            indexes.Add(numberList[index]);
             numberList.Remove(index);
    
         }
@@ -141,10 +157,10 @@ public class SkullKing : Enemy
     IEnumerator StayForSeconds(int interval)
     {
         canMove = false;
-        myAnimator.SetBool("Fire", true);
+        OnFire();
         yield return new WaitForSeconds(interval);
         canMove = true;
-        myAnimator.SetBool("Fire", false);
+        Extinguish();
     }
 
     public void MoveToNextLocation()
@@ -172,16 +188,18 @@ public class SkullKing : Enemy
     {
         bossLight.enabled = myAnimator.GetBool("Fire");
     }
-
+    
     public void Sprint()
     {
         sinceLastSprint += Time.deltaTime;
-        if (sinceLastSprint < sprintCD) { animator.SetBool("Fire", false);  return; }
+        if (sinceLastSprint < sprintCD) { Extinguish();  return; }
 
         if(!attacking && !ifPrep)
         {
             scream.StartScream();
-            animator.SetBool("Fire", true);
+            ArmorUp();
+            OnFire();
+
             StartCoroutine(PrepareFireAttack());
         } else if(attacking)
         {
@@ -193,14 +211,14 @@ public class SkullKing : Enemy
   
                 couldDamage = false;
                 attacking = false;
-                animator.SetBool("Fire", false);
+                Extinguish();
                 sinceLastSprint = 0;
             }
             else if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)
             {
                 attacking = false;
                 couldDamage = false;
-                animator.SetBool("Fire", false);
+                Extinguish();
                 sinceLastSprint = 0;
             }
         } 
@@ -233,8 +251,21 @@ public class SkullKing : Enemy
             GetComponent<SpriteRenderer>().color = new Color(62 / 255f, 133 / 255f, 255 / 255f);
         }
 
+        if(fireCD - sinceLastFireAttack < 0.6)
+        {
+            if(!myAnimator.GetBool("Fire"))
+            {
+                myAnimator.SetBool("Fire", true);
+                ifShouldStopFire = true;
+            }
+        }
+
         if(sinceLastFireAttack > fireCD)
         {
+            if(ifShouldStopFire)
+            {
+                Extinguish();
+            }
             iceFire.StartFire();
             sinceLastFireAttack = 0;
             GetComponent<SpriteRenderer>().color = Color.white;
@@ -267,5 +298,48 @@ public class SkullKing : Enemy
     public override void Hurt(int damage, string type, string method)
     {
         base.Hurt(damage, type, method);
+    }
+
+    public void OnFire()
+    {
+        myAnimator.SetBool("Fire", true);
+        ifShouldStopFire = false;
+    }
+
+    public void Extinguish()
+    {
+        myAnimator.SetBool("Fire", false);
+    }
+
+    public void ArmorUp()
+    {
+
+        int num = FindObjectsOfType<FireSkull>().Count();
+
+        int amrInc = 10 + num * 2;
+        int mrInc = 5 + num * 4;
+        int dmgInc = num;
+        armour += amrInc;
+        magicalResistance += mrInc;
+        Damage += num/5;
+
+        popUpObject.SetText("ARMOR + " + amrInc);
+
+        GameObject popUpAmr = Instantiate<GameObject>
+        (popUpObject.gameObject, transform.position + new Vector3(0f, 2f, 0f), Quaternion.identity);
+
+
+        popUpObject.SetText("MAGICAL RESISTANCE + " + mrInc);
+
+        GameObject popUpMr = Instantiate<GameObject>
+        (popUpObject.gameObject, transform.position, Quaternion.identity);
+
+        Destroy(popUpAmr, 2f);
+        Destroy(popUpMr, 2f);
+    }
+
+    public int GetDmg()
+    {
+        return Damage;
     }
 }

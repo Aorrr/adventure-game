@@ -88,7 +88,7 @@ public class Enemy: MonoBehaviour
         }
 
         popUpObject.SetDamage(damage);
-        
+
         GameObject popUp = Instantiate<GameObject>
         (popUpObject.gameObject, transform.position, Quaternion.identity);
 
