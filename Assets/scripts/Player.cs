@@ -40,11 +40,13 @@ public class Player : MonoBehaviour
     [SerializeField] Transform attackPoint;
     [SerializeField] Transform shootPoint;
     [SerializeField] Animator hurtEffectAnimator;
+    [SerializeField] AudioClip shootSFX;
 
     int arrowDmg = 5;
     float arrowSpeed = 25f;
     GameObject arrowPrefab;
     StatsManager stats;
+    ProjectileManager projManager;
 
     // for colour change
     [SerializeField] SpriteRenderer bodyRenderer;
@@ -65,6 +67,7 @@ public class Player : MonoBehaviour
         myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRidigidBody.gravityScale;
         initialSpeed = runSpeed;
+        projManager = FindObjectOfType<ProjectileManager>();
     }
 
     // Update is called once per frame
@@ -211,18 +214,29 @@ public class Player : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButtonDown("Fire3"))
         {
-            myAnimator.SetTrigger("bowLight");
+            if (projManager.UseArrow(2))
+            {
+                myAnimator.SetTrigger("bowLight");
+            } else
+            {
+                projManager.AllRed();
+            }
         }
     }
 
     public void BowLightShoot()
     {
-        GameObject arrow = Instantiate(
-                arrowPrefab,
-                shootPoint.position,
-                Quaternion.identity) as GameObject;
-        arrow.GetComponent<Rigidbody2D>().velocity = new Vector2(-stats.GetArrowSpeed() * transform.localScale.x, 0);
-        arrow.GetComponent<Transform>().localScale = new Vector2(-Mathf.Sign(transform.localScale.x), 1f);
+        if(shootSFX)
+        {
+            AudioSource.PlayClipAtPoint(shootSFX, Camera.main.transform.position);
+        }
+            GameObject arrow = Instantiate(
+        arrowPrefab,
+        shootPoint.position,
+        Quaternion.identity) as GameObject;
+            arrow.GetComponent<Rigidbody2D>().velocity = new Vector2(-stats.GetArrowSpeed() * transform.localScale.x, 0);
+            arrow.GetComponent<Transform>().localScale = new Vector2(-Mathf.Sign(transform.localScale.x), 1f);
+
     }
 
 

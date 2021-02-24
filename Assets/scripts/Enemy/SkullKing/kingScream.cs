@@ -11,8 +11,8 @@ public class kingScream : MonoBehaviour
 
     // Start is called before the first frame update
 
-    float sinceLastPushBack = 4f;
-    float pushCD = 4f;
+    float sinceLastPushBack = 5f;
+    float pushCD = 5f;
     Animator animator;
 
     void Start()
@@ -45,9 +45,12 @@ public class kingScream : MonoBehaviour
 
     public void StartScream()
     {
-        AudioSource.PlayClipAtPoint(clip, transform.position);
+        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
         animator.SetTrigger("Scream");
         shaker.ShakeIdleAtController(3.5f, 1f, 1.5f);
         shaker.ShakeRunAtController(3.5f, 1.5f, 1f);
+
+        
     }
+
 }
