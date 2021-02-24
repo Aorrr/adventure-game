@@ -70,7 +70,7 @@ public class SkullKing : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (GetHealthPercentage() >= 0.4)
+        if (GetHealthPercentage() >= 0.5)
             {
             if (canMove)
             {
@@ -106,6 +106,7 @@ public class SkullKing : Enemy
                 StartCoroutine(StayForSeconds(3));
                 StartCoroutine(SummonSkulls());
                 ultimateSummon = true;
+                FindObjectOfType<LevelMusicPlayer>().FinalStage();
                 ArmorUp();
             }
 

@@ -7,6 +7,7 @@ public class LevelMusicPlayer : MonoBehaviour
 
     AudioSource audioSource;
     [SerializeField] AudioClip BossBGM;
+    [SerializeField] AudioClip FinalBGM;
 
     BoxCollider2D box;
 
@@ -32,10 +33,20 @@ public class LevelMusicPlayer : MonoBehaviour
     {
         if(audioSource.clip != BossBGM)
         {
-            Debug.Log("Switching!!");
             audioSource.clip = BossBGM;
             audioSource.Play();
         }
+    }
+
+    public void FinalStage()
+    {
+        if (audioSource.clip != FinalBGM)
+        {
+            audioSource.clip = FinalBGM;
+            audioSource.Play();
+        }
+
+        SetVolume(0.85f);
     }
 
 

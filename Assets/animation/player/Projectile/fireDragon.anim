@@ -579,7 +579,7 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 20
+    intParameter: 25
     messageOptions: 0
   - time: 0.4
     functionName: IncreaseDamage
@@ -600,7 +600,7 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 45
+    intParameter: 80
     messageOptions: 0
   - time: 0.56
     functionName: IncreaseLightIntensity
