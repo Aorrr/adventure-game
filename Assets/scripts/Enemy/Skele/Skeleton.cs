@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Skeleton : Enemy
 {
-    float attackCD = 3.5f;
-    float attackTimer = 1f;
+    float attackCD = 5f;
+    float attackTimer = 0f;
     Player player;
     Animator amtr;
     EnemyBody body;
     EnemyMovement movement;
 
-    [SerializeField] int DefenceStrength = 300;
+    [SerializeField] int DefenceStrength = 400;
     bool defence = false;
     bool detected = false;
 
@@ -42,13 +42,14 @@ public class Skeleton : Enemy
         if(defence) { return; }
 
         if(myAnimator.GetBool("Idle")) { return; } 
-        int action = Random.Range(0, 2);
-        if(action == 0 && InRange() && CouldDamage())
+        if(CouldDamage())
         {
+            amtr.SetBool("Defend", false);
             Attack();
             attackTimer = 0;
         } else
         {
+            attackTimer += Time.deltaTime;
             Defend();
         }
         Rotate();
@@ -67,16 +68,16 @@ public class Skeleton : Enemy
 
     public void Defend()
     {
+        DefendMode();
         amtr.SetBool("Defend", true);
-        defence = true;
         StartCoroutine(EndDefence());
     }
 
     IEnumerator EndDefence()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
+        CancelDefendMode();
         amtr.SetBool("Defend", false);
-        defence = false;
     }
 
     public override bool CouldDamage()
@@ -131,9 +132,9 @@ public class Skeleton : Enemy
     {
         if(defence)
         {
-            Damage += 10;
-            myAnimator.SetBool("Idle", true);
-            StartCoroutine(Wait(idleDuration));
+            Damage += 5;
+            armour += 10;
+            magicalResistance += 10;
         }
 
         base.Hurt(damage, type, method);
@@ -160,5 +161,6 @@ public class Skeleton : Enemy
     public override void PlayerNotDetected()
     {
         detected = false;
+        movement.ToggleMovement(true);
     }
 }
