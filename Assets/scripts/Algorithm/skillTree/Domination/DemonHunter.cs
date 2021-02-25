@@ -10,13 +10,6 @@ public class DemonHunter : Skill
     [SerializeField] int initialPene;
     [SerializeField] int upgradePene;
 
-    StatsManager stats;
-    private void Start()
-    {
-        stats = FindObjectOfType<StatsManager>();
-        SetColorToGrey();
-    }
-
     public override void TakeEffect()
     {
         if (!this.IfUnlocked())

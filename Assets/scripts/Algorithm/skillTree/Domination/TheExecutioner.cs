@@ -8,14 +8,6 @@ public class TheExecutioner : Skill
     [SerializeField] int UnlockLifeThreshold;
     [SerializeField] int UpgradeLifeThreshold;
 
-
-    StatsManager stats;
-    private void Start()
-    {
-        stats = FindObjectOfType<StatsManager>();
-        SetColorToGrey();
-    }
-
     public override void TakeEffect()
     {
         if (!this.IfUnlocked())

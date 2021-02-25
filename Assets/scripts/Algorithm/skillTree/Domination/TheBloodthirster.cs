@@ -9,15 +9,6 @@ public class TheBloodthirster : Skill
     [SerializeField] int UnlockLifeSteal;
     [SerializeField] int UpgradeLifeSteal;
 
-
-    StatsManager stats;
-    private void Start()
-    {
-        stats = FindObjectOfType<StatsManager>();
-        SetColorToGrey();
-    }
-
-
     public override void TakeEffect()
     {
         if (!this.IfUnlocked())
