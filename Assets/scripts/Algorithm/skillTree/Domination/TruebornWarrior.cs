@@ -10,12 +10,6 @@ public class TruebornWarrior : Skill
     [SerializeField] int initialMeleeDmg;
     [SerializeField] int levelMeleeDmg;
 
-    StatsManager stats;
-    private void Start()
-    {
-        stats = FindObjectOfType <StatsManager> ();
-        SetColorToGrey();
-    }
     public override void TakeEffect()
     {
        if(!this.IfUnlocked())

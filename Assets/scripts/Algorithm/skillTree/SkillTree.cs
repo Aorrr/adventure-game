@@ -24,7 +24,7 @@ public class SkillTree : MonoBehaviour
 
 
     List<Skill> unlockedSkills;
-    
+
 
 
     // Start is called before the first frame update
@@ -32,15 +32,6 @@ public class SkillTree : MonoBehaviour
     {
         currentSkill = defaultSkill;
         stats = FindObjectOfType<StatsManager>();
-
-        /* setup unlocked skills */
-        unlockedSkills = stats.GetUnlockedSkills("Domination");
-        if(unlockedSkills == null)
-        {
-            unlockedSkills = new List<Skill>();
-        }
-
-        Debug.Log(unlockedSkills[0].GetName());
     }
 
     // Update is called once per frame
@@ -57,25 +48,23 @@ public class SkillTree : MonoBehaviour
     public void ConfirmBtnPress()
     {
         if (!currentSkill.CouldUnlock() ||
-            !(stats.GetSkillPtsRemaining() >= currentSkill.AmountOfSkillPtsNeeded())
+            !(stats.GetSkillPtsRemaining() >= currentSkill.AmountOfSkillPtsNeeded()) ||
+            currentSkill.GetCurrentLevel() >= currentSkill.GetMaxLevel()
             ) { return; }
 
         currentSkill.LevelUp();
+        stats.SpendSkillPt(currentSkill.AmountOfSkillPtsNeeded());
+        stats.SkillLevelUp(currentSkill);
+
         if (!currentSkill.IfUnlocked())
         {
-            AddToSkillList(currentSkill);
-            stats.SpendSkillPt(currentSkill.AmountOfSkillPtsNeeded());
             currentSkill.ToggleUnlockStatus(true);
-            stats.UnlockSkill(currentSkill);
-        } else if(currentSkill.GetCurrentLevel() < currentSkill.GetMaxLevel())
-        {
-            stats.SpendSkillPt(currentSkill.AmountOfSkillPtsNeeded());
         }
     }
 
     private void ShowCurrentSkillInfo()
     {
-        if(currentSkill != null)
+        if (currentSkill != null)
         {
             levelText.text = String.Format(currentSkill.GetCurrentLevel() + "/"
                 + currentSkill.GetMaxLevel());
@@ -92,22 +81,11 @@ public class SkillTree : MonoBehaviour
             {
                 confirmBtnTxt.text = "UNLOCK";
             }
-
             skillPtsRemaining.text = String.Format("REMAINING POINTS: [" +
                 stats.GetSkillPtsRemaining() + "]");
 
             skillPtsNeeded.text = String.Format("SKILL POINTS NEEDED: [" +
                 currentSkill.AmountOfSkillPtsNeeded() + "]");
-            
-        }
-    }
-
-    public void AddToSkillList(Skill skill)
-    {
-        currentSkill = skill;
-        if(!unlockedSkills.Contains(skill))
-        {
-            unlockedSkills.Add(skill);
 
         }
     }

@@ -8,8 +8,7 @@ public abstract class Skill : MonoBehaviour
 {
     [Header("Skill Information")]
     [SerializeField] string skillName;
-    [SerializeField] string skillType;
-    [SerializeField] [TextArea(3,6)] public string description;
+    [SerializeField] [TextArea(3, 6)] public string description;
 
     [Header("Skill Setting")]
     [SerializeField] int maxLevel;
@@ -25,20 +24,34 @@ public abstract class Skill : MonoBehaviour
     [SerializeField] int LevelUpSkillPoints = 5;
 
     bool unlocked = false;
-    int currentLevel = 0;
+    public int currentLevel;
+    protected StatsManager stats;
 
     // Update is called once per frame
     void Update()
     {
     }
+
+    private void Start()
+    {
+        stats = FindObjectOfType<StatsManager>();
+        if (stats.IsUnlocked(skillName))
+        {
+            currentLevel = stats.GetSkillLevel(skillName);
+            unlocked = true;
+            GetComponent<Image>().color = Color.white;
+            if (vertex != null)
+            {
+                vertex.color = Color.red;
+            }
+        }
+        else
+            SetColorToGrey();
+    }
+
     public string GetName()
     {
         return skillName;
-    }
-
-    public string GetSkillType()
-    {
-        return skillType;
     }
 
     public int GetCurrentLevel()
@@ -56,7 +69,8 @@ public abstract class Skill : MonoBehaviour
         if (CouldUnlock())
         {
             return description;
-        } else
+        }
+        else
         {
             return GetAltText();
         }
@@ -64,27 +78,27 @@ public abstract class Skill : MonoBehaviour
 
     public void LevelUp()
     {
-        if(currentLevel == 0)
+        if (currentLevel == 0)
         {
-            if(!CouldUnlock()) { return; }
-            if(vertex!=null)
+            if (!CouldUnlock()) { return; }
+            if (vertex != null)
             {
                 vertex.color = Color.red;
             }
             GetComponent<Image>().color = Color.white;
         }
 
-        if(currentLevel < maxLevel)
+        if (currentLevel < maxLevel)
         {
             currentLevel++;
             TakeEffect();
-        } 
+        }
     }
 
     public Sprite GetImage()
     {
         return GetComponent<Image>().sprite;
- 
+
     }
 
     public void SkillSelected()
@@ -106,10 +120,11 @@ public abstract class Skill : MonoBehaviour
 
     public int AmountOfSkillPtsNeeded()
     {
-        if(!unlocked)
+        if (!unlocked)
         {
             return UnlockSkillPoints;
-        } else
+        }
+        else
         {
             return LevelUpSkillPoints;
         }
@@ -118,7 +133,7 @@ public abstract class Skill : MonoBehaviour
     public void SetColorToGrey()
     {
         GetComponent<Image>().color = Color.grey;
-        if(vertex != null)
+        if (vertex != null)
         {
             vertex.color = Color.grey;
         }
@@ -127,10 +142,11 @@ public abstract class Skill : MonoBehaviour
 
     public bool CouldUnlock()
     {
-        if(LowerlevelSkill == null)
+        if (LowerlevelSkill == null)
         {
             return true;
-        } else
+        }
+        else
         {
             return LowerlevelSkill.GetCurrentLevel() >= LowerSkillLvRequirement;
         }
