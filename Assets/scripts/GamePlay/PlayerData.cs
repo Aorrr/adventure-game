@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
 
-public class PlayerData : MonoBehaviour
+[System.Serializable]
+public class PlayerData
 {
     public int gameLevel;
 
@@ -10,18 +12,22 @@ public class PlayerData : MonoBehaviour
     public int currentExp;
     public int expToNextLevel;
 
+    public string unlockedSkills;
+    public int skillPts;
+
     public int meleeDamage;
     public int armor;
     public int MeleeLifeSteal;
 
     public int arrowDamage;
     public int armorPenetration;
-    public GameObject arrowPrefab;
     public float arrowSpeed;
 
 
     public int magicalPower;
     public int magicalResistance;
+
+    int executionThreshold = 0;
 
     public PlayerData (StatsManager stats)
     {
@@ -31,13 +37,15 @@ public class PlayerData : MonoBehaviour
         currentExp = stats.currentExp;
         expToNextLevel = stats.expToNextLevel;
 
+        unlockedSkills = JsonConvert.SerializeObject(stats.unlockedSkills, Formatting.Indented);
+        skillPts = stats.skillPts;
+
         meleeDamage = stats.meleeDamage;
         armor = stats.armor;
         MeleeLifeSteal = stats.MeleeLifeSteal;
 
         arrowDamage = stats.arrowDamage;
         armorPenetration = stats.armorPenetration;
-        arrowPrefab = stats.arrowPrefab;
         arrowSpeed = stats.arrowSpeed;
 
         magicalPower = stats.magicalPower;

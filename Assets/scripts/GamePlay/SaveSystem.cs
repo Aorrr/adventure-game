@@ -7,11 +7,15 @@ public class SaveSystem
 {
     public static void SavePlayer(StatsManager stats)
     {
+        Debug.Log("OK1");
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
         FileStream stream = new FileStream(path, FileMode.Create);
-
-        PlayerData data = new PlayerData(stats);
+        Debug.Log("OK2");
+        PlayerData playerData = new PlayerData(stats);
+        formatter.Serialize(stream, playerData);
+        stream.Close();
+        Debug.Log("SUCCESSFULL");
     }
 
     public static PlayerData LoadPlayer()
@@ -22,10 +26,9 @@ public class SaveSystem
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            PlayerData data = formatter.Deserialize(stream) as PlayerData;
+            PlayerData playerData = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
-
-            return data;
+            return playerData;
         } 
         else
         {
