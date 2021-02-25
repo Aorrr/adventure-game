@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3161951265001348972}
-  m_Layer: 11
+  m_Layer: 17
   m_Name: LIghtening
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 8373091914035897453}
   - component: {fileID: 8373091914035897443}
   - component: {fileID: 2822334512116101726}
-  m_Layer: 11
+  m_Layer: 17
   m_Name: Lightening
   m_TagString: Untagged
   m_Icon: {fileID: 0}

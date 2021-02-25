@@ -7,10 +7,12 @@ public class Lightening : MonoBehaviour
     BoxCollider2D box;
     bool couldDmg = false;
     int dmg = 100;
+    // Start is called before the first frame update
+
 
     public void SetDmg()
     {
-        couldDmg =!couldDmg;
+        couldDmg = !couldDmg;
     }
     // destroyed at the end of the frame
     public void DestroyThis()
@@ -20,12 +22,10 @@ public class Lightening : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        //if(!couldDmg) { return; }
-
-        EnemyBody enemy = collision.GetComponent<EnemyBody>();
+        EnemyBody enemy = collision.gameObject.GetComponent<EnemyBody>();
         if (enemy != null)
         {
+            Debug.Log("collided");
             enemy.Hurt(dmg, "magical", "melee");
         }
     }

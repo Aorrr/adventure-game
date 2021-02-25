@@ -13,6 +13,7 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] int baseDamage;
     [SerializeField] CamShakeController shaker;
     [SerializeField] AudioClip clip;
+    [SerializeField] AudioClip lightening;
 
 
     [SerializeField] Lightening ltn;
@@ -49,11 +50,12 @@ public class MeleeAttack : MonoBehaviour
 
         if (enemiesInRange.Length > 0)
         {
-            AudioSource.PlayClipAtPoint(clip, Camera.main.gameObject.transform.position);
+            AudioSource.PlayClipAtPoint(clip, Camera.main.gameObject.transform.position, 0.4f);
 
             if(charged)
             {
                 Instantiate(ltn, attackPos.position + new Vector3(0f, 6f, 0f), Quaternion.identity);
+                AudioSource.PlayClipAtPoint(lightening, Camera.main.transform.position, 0.8f);
             }
         }
 

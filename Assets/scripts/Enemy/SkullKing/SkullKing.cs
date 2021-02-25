@@ -59,7 +59,6 @@ public class SkullKing : Enemy
         enemyBody = GetComponentInChildren<EnemyBody>();
         animator = GetComponent<Animator>();
         wayPoints = new List<Transform>();
-        //body = GetComponent<Rigidbody2D>();
         foreach(Transform child in skullKingPath.transform)
         {
             wayPoints.Add(child);
@@ -71,6 +70,8 @@ public class SkullKing : Enemy
     // Update is called once per frame
     void Update()
     {
+        
+
         if (GetHealthPercentage() >= 0.35)
             {
             if (canMove)
@@ -310,12 +311,6 @@ public class SkullKing : Enemy
     {
         base.PlayerNotDetected();
     }
-    
-    public override void Hurt(int damage, string type, string method)
-    {
-        base.Hurt(damage, type, method);
-    }
-
     public void OnFire()
     {
         myAnimator.SetBool("Fire", true);
