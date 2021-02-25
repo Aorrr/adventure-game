@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
 
 public class StatsManager : MonoBehaviour
 {
@@ -50,13 +51,34 @@ public class StatsManager : MonoBehaviour
     /* save & load stats data */
     public void LoadStatsData()
     {
-        //not yet implemented
+        PlayerData playerData = SaveSystem.LoadPlayer();
+        this.gameLevel = playerData.gameLevel;
+
+        this.playerLevel = playerData.playerLevel;
+        this.currentExp = playerData.currentExp;
+        this.expToNextLevel = playerData.expToNextLevel;
+
+        this.unlockedSkills = JsonConvert.DeserializeObject<Dictionary<string, int>>(playerData.unlockedSkills);
+        this.skillPts = playerData.skillPts;
+
+        this.meleeDamage = playerData.meleeDamage;
+        this.armor = playerData.armor;
+        this.MeleeLifeSteal = playerData.MeleeLifeSteal;
+
+        this.arrowDamage = playerData.arrowDamage;
+        this.armorPenetration = playerData.armorPenetration;
+        this.arrowSpeed = playerData.arrowSpeed;
+
+        this.magicalPower = playerData.magicalPower;
+        this.magicalResistance = playerData.magicalResistance;
+
         return;
     }
 
     public void SaveStatsData()
     {
-        //not yet implemented
+        SaveSystem.SavePlayer(this);
+        Debug.Log("SAVED");
         return;
     }
 
@@ -224,4 +246,3 @@ public class StatsManager : MonoBehaviour
         currentExp = 0;
     }
 }
-

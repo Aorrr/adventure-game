@@ -33,7 +33,6 @@ public class healthBar : MonoBehaviour
             rotation.x = Mathf.Abs(rotation.x);
             Hpbar.transform.localScale = rotation;
         }
-
         transform.localScale = localScale;
     }
 }
