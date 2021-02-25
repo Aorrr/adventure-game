@@ -39,6 +39,8 @@ public class Skeleton : Enemy
             attackTimer += Time.deltaTime;
         }
 
+        if(defence) { return; }
+
         if(myAnimator.GetBool("Idle")) { return; } 
         int action = Random.Range(0, 2);
         if(action == 0 && InRange() && CouldDamage())
@@ -65,7 +67,16 @@ public class Skeleton : Enemy
 
     public void Defend()
     {
-        amtr.SetTrigger("Defend");
+        amtr.SetBool("Defend", true);
+        defence = true;
+        StartCoroutine(EndDefence());
+    }
+
+    IEnumerator EndDefence()
+    {
+        yield return new WaitForSeconds(3);
+        amtr.SetBool("Defend", false);
+        defence = false;
     }
 
     public override bool CouldDamage()
@@ -130,6 +141,10 @@ public class Skeleton : Enemy
 
     public void Rotate()
     {
+        if(myAnimator.GetBool("idle"))
+        {
+            return;
+        } 
         if (player.transform.position.x > transform.position.x)
         {
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x)
