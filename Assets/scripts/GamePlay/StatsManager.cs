@@ -13,7 +13,7 @@ public class StatsManager : MonoBehaviour
     public int expToNextLevel;
 
     [Header("Skills Stats")]
-    public List<Skill> dominationSkills;
+    public Dictionary<string, int> unlockedSkills;
     public int skillPts;
 
     [Header("Melee Stats")]
@@ -38,7 +38,7 @@ public class StatsManager : MonoBehaviour
     void Start()
     {
         StatsManager[] sms = FindObjectsOfType<StatsManager>();
-        dominationSkills = new List<Skill>();
+        unlockedSkills = new Dictionary<string, int>();
         if (sms.Length > 1)
             Destroy(gameObject);
         else
@@ -128,23 +128,28 @@ public class StatsManager : MonoBehaviour
         }
     }
 
-    public void UnlockSkill(Skill skill)
+    public void SkillLevelUp(Skill skill)
     {
-        string type = skill.GetSkillType();
-        switch(type)
+        if (!skill.IfUnlocked())
         {
-            case "Domination": dominationSkills.Add(skill); return;
-            default: return;
+            unlockedSkills.Add(skill.GetName(), 1);
+            Debug.Log(unlockedSkills[skill.GetName()]);
+        }
+        else
+        {
+            unlockedSkills[skill.GetName()]++;
+            Debug.Log(unlockedSkills[skill.GetName()]);
         }
     }
 
-    public List<Skill> GetUnlockedSkills(string type)
+    public bool IsUnlocked(string skillName)
     {
-        switch (type)
-        {
-            case "Domination": return dominationSkills;
-            default: return null;
-        }
+        return unlockedSkills.ContainsKey(skillName);
+    }
+
+    public int GetSkillLevel(string skillName)
+    {
+        return unlockedSkills[skillName];
     }
 
     /* settings in regards to arrows */

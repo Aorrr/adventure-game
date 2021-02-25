@@ -825,6 +825,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2985093519963232689, guid: d2ca2b418552141fc8f7c3bbb1ad29ea,
+        type: 3}
+      propertyPath: skillPts
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2985093519963232703, guid: d2ca2b418552141fc8f7c3bbb1ad29ea,
         type: 3}
       propertyPath: m_Name
@@ -1422,6 +1427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrossFade
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444334017526504649, guid: 4b2341d60831a59488d584f5b87f2acc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2341d60831a59488d584f5b87f2acc, type: 3}
