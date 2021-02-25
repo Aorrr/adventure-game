@@ -111,6 +111,7 @@ public class Enemy: MonoBehaviour
 
     public float GetHealthPercentage()
     {
+        if(maxHealth == 0) { return 0; }
         return (float)hp / (float)maxHealth;
     }
 
@@ -124,7 +125,7 @@ public class Enemy: MonoBehaviour
         return Damage;
     }
 
-    public bool CouldDamage()
+    public virtual bool CouldDamage()
     {
         return myAnimator.GetBool("Fire");
     }

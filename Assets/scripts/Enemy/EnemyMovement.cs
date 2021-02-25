@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     float unStuckTime = 0;
     float minUnStuckTime = 1f;
     float leapAttempt = 1;
+    bool couldMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,15 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isStatic) { return; }
+        if(!couldMove) {
+            myRigidBody.velocity = new Vector2(0f, 0f);
+            return; }
+        else
+        {
+            changeMoveSpeed(1);
+        }
+        if(isStatic) {
+            return; }
         if(!enemy.CouldDamage())
         {
             checkCollision();
@@ -77,6 +86,11 @@ public class EnemyMovement : MonoBehaviour
         isStatic = true;
         yield return new WaitForSeconds(interval);
         isStatic = false;
+    }
+
+    public void ToggleMovement(bool status)
+    {
+        couldMove = status;
     }
 
 }
