@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicPlayer : MonoBehaviour
 {
@@ -18,7 +19,20 @@ public class MusicPlayer : MonoBehaviour
             DontDestroyOnLoad(this);
             audioSource = GetComponent<AudioSource>();
             audioSource.volume = 0.8f;
-        }  
+        }
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.name.Equals("FireSkullCountry"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SetVolume(float volume)

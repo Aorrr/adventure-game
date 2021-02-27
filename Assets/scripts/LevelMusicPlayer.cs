@@ -17,6 +17,10 @@ public class LevelMusicPlayer : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 0.8f;
         //box = FindObjectOfType<bossSceneTrigger>().GetComponent<BoxCollider2D>();
+
+        //destroy the music player of main menu
+        MusicPlayer mp = FindObjectOfType<MusicPlayer>();
+        Destroy(mp);
     }
 
     private void Update()
