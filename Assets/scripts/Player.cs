@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isAlive) { return; }
+        if (!isAlive || myAnimator.GetBool("CutScene")) { return; }
         if(myAnimator.GetBool("controllable"))
         {
             Run();
@@ -355,6 +355,11 @@ public class Player : MonoBehaviour
     public bool GetIdleState()
     {
         return ifIdle;
+    }
+
+    public void EnterCutScene(bool state)
+    {
+        myAnimator.SetBool("CutScene", state);
     }
 
 }
