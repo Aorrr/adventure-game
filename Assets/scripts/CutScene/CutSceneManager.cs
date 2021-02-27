@@ -20,7 +20,7 @@ public class CutSceneManager : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("hey");
+            FindObjectOfType<CameraControl>().EnterCutScene();
         }
     }
 }

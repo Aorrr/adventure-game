@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     bool couldHurt = true;
     float attackInterval;
     float initialSpeed;
+    bool ifIdle = false;
     List<string> bag;
 
     // cached component references
@@ -339,6 +340,21 @@ public class Player : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public bool GetRunState()
+    {
+        return myAnimator.GetBool("isRunning");
+    }
+
+    public void ToggleIdleState(bool state)
+    {
+        ifIdle = state;
+    }
+
+    public bool GetIdleState()
+    {
+        return ifIdle;
     }
 
 }
