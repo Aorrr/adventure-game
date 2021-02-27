@@ -40,6 +40,7 @@ public class StatsManager : MonoBehaviour
     {
         StatsManager[] sms = FindObjectsOfType<StatsManager>();
         unlockedSkills = new Dictionary<string, int>();
+        LoadStatsData();
         if (sms.Length > 1)
             Destroy(gameObject);
         else
@@ -52,6 +53,8 @@ public class StatsManager : MonoBehaviour
     public void LoadStatsData()
     {
         PlayerData playerData = SaveSystem.LoadPlayer();
+        if (playerData == null)
+            return;
         this.gameLevel = playerData.gameLevel;
 
         this.playerLevel = playerData.playerLevel;
@@ -78,8 +81,35 @@ public class StatsManager : MonoBehaviour
     public void SaveStatsData()
     {
         SaveSystem.SavePlayer(this);
-        Debug.Log("SAVED");
         return;
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveStatsData();
+    }
+
+    public void ResetStats()
+    {
+        gameLevel = 1;
+
+        playerLevel = 1;
+        currentExp = 0;
+        expToNextLevel = 20;
+
+        unlockedSkills = new Dictionary<string, int>();
+        skillPts = 0;
+
+        meleeDamage = 10;
+        armor = 50;
+        MeleeLifeSteal = 0;
+
+        arrowDamage = 5;
+        armorPenetration = 0;
+        arrowSpeed = 25f;
+
+        magicalPower = 0;
+        magicalResistance = 20;
     }
 
     /* melee & magical stats */
@@ -238,11 +268,12 @@ public class StatsManager : MonoBehaviour
         currentExp += amount;
     }
 
-    public void PlayerLevelUp(int skillPt)
+    public void PlayerLevelUp(int skillPt, int exp, int nextExp)
     {
         if (skillPt < 0) { return; }
         skillPts += skillPt;
         playerLevel++;
-        currentExp = 0;
+        currentExp = exp;
+        expToNextLevel = nextExp;
     }
-}
+} 

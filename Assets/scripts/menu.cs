@@ -18,9 +18,37 @@ public class menu : MonoBehaviour
         StartCoroutine(LoadLevelWithCrossFade(1));
     }
 
+    public void LoadNewGame()
+    {
+        StatsManager stats = FindObjectOfType<StatsManager>();
+        stats.ResetStats();
+        LoadLevelSelection();
+    }
+
+    public void ContinueGame()
+    {
+        if (SaveSystem.LoadPlayer() == null)
+        {
+            PopupWindow[] windows = Resources.FindObjectsOfTypeAll<PopupWindow>();
+            if (windows.Length > 0)
+            {
+                windows[0].gameObject.SetActive(true);
+            }
+        } 
+        else
+        {
+            LoadLevelSelection();
+        }
+    }
+
     public void LoadMainMenu()
     {
         StartCoroutine(LoadLevelWithCrossFade(0));
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
     IEnumerator LoadLevelWithCrossFade(int index)

@@ -46,12 +46,7 @@ public class Exp : MonoBehaviour
             expToNextLevel = (int)Mathf.Round((float)expToNextLevel * ExpIncreaseBtwnLvs);
             levelText.text = currentLevel.ToString();
 
-            GainSkillPtn();
+            stats.PlayerLevelUp(skillPtPerLevel + currentLevel / skillPtGainIncrement, currentExp, expToNextLevel);
         }
-    }
-
-    public void GainSkillPtn()
-    {
-        stats.PlayerLevelUp(skillPtPerLevel + currentLevel/skillPtGainIncrement);
     }
 }
