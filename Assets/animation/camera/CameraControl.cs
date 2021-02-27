@@ -24,5 +24,12 @@ public class CameraControl : MonoBehaviour
     public void EnterCutScene()
     {
         animator.SetBool("CutScene", true);
+        player.EnterCutScene(true);
+    }
+
+    public void OutOfCutScene()
+    {
+        animator.SetBool("CutScene", false);
+        player.EnterCutScene(false);
     }
 }

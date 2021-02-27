@@ -24,14 +24,20 @@ public class PlayerDetection : MonoBehaviour
 
     private void DetectPlayer()
     {
-        if(box.IsTouchingLayers(LayerMask.GetMask("Player")))
+        if(box)
         {
-            enemy.PlayerDetected();
+            if (box.IsTouchingLayers(LayerMask.GetMask("Player")))
+            {
+                enemy.PlayerDetected();
+            }
         }
 
-        if (!cap.IsTouchingLayers(LayerMask.GetMask("Player")))
+        if(cap)
         {
-            enemy.PlayerNotDetected();
+            if (!cap.IsTouchingLayers(LayerMask.GetMask("Player")))
+            {
+                enemy.PlayerNotDetected();
+            }
         }
 
     }
