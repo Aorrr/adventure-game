@@ -31,7 +31,7 @@ public class Wizard : MonoBehaviour
             circle.SetActive(true);
             hasCast = true;
             king.GetComponent<SkullKing>().Appear();
-            amtr.SetTrigger("cast");
+            amtr.SetTrigger("Cast");
         }
     }
 
@@ -39,7 +39,7 @@ public class Wizard : MonoBehaviour
     {
         if(!disappearing)
         {
-            amtr.SetTrigger("disappear");
+            amtr.SetTrigger("Fade");
             disappearing = true;
         }
     }
