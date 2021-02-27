@@ -12,6 +12,8 @@ public class summon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(toSummon == null) { return; }
+     
         summoned = (FireSkull)Instantiate(toSummon, transform.position, Quaternion.identity);
         if(SummonIn)
         {

@@ -19,6 +19,7 @@ public class SkullKing : Enemy
     [SerializeField] GameObject BossHealthBar;
 
     Sanity sanity;
+    bool isStatic = true;
     bool SummonSkull = true;
     List<Transform> wayPoints;
     bool canMove = true;
@@ -71,6 +72,7 @@ public class SkullKing : Enemy
     // Update is called once per frame
     void Update()
     {
+        if(isStatic) { return; }
         if (GetHealthPercentage() >= 0.35)
             {
             if (canMove)
@@ -357,5 +359,16 @@ public class SkullKing : Enemy
     public int GetDmg()
     {
         return Damage;
+    }
+
+    public void ToggleStaticStatus()
+    {
+        isStatic = !isStatic;
+    }
+
+    public void Appear()
+    {
+        GetComponent<Renderer>().enabled = true;
+        myAnimator.SetTrigger("Appear");
     }
 }
