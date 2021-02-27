@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3692251892759203738}
   - component: {fileID: 3692251892759203737}
   - component: {fileID: 3692251892759203740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Movable Pedal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 77852303
-  m_SortingLayer: 3
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 2066292361582265874, guid: fc125cd2b902af1428138adb4c7f6ec4,
     type: 3}
@@ -96,8 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa402d4e14383a408eb2420ba9e5ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xLeft: -9.3
-  xRight: -4.35
+  x1: 0
+  x2: 0
+  y1: 0
+  y2: 0
   speed: 2
   dir: 1
 --- !u!61 &3692251892759203740

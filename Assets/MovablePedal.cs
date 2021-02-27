@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MovablePedal : MonoBehaviour
 {
-    public float xLeft;
-    public float xRight;
+    public float x1;
+    public float x2;
+    public float y1;
+    public float y2;
     public float speed;
     public int dir = 0; // 0:left, 1:right
 
@@ -28,20 +30,20 @@ public class MovablePedal : MonoBehaviour
         Vector2 target;
         if (dir == 0)
         {
-            target = new Vector2(xLeft, transform.position.y);
+            target = new Vector2(x1, y1);
             transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
         } 
         else if (dir == 1)
         {
-            target = new Vector2(xRight, transform.position.y);
+            target = new Vector2(x2, y2);
             transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
         }
         
-        if (System.Math.Abs(x - xRight) < 0.01)
+        if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), new Vector2(x2, y2)) < 0.01)
         {
             dir = 0;
         }
-        else if (System.Math.Abs(x - xLeft) < 0.01)
+        else if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), new Vector2(x1, y1)) < 0.01)
         {
             dir = 1;      
         }
@@ -54,11 +56,11 @@ public class MovablePedal : MonoBehaviour
         Vector2 target;
         if (dir == 1)
         {
-            target = new Vector2(xRight, obj.transform.position.y);
+            target = new Vector2(x2, obj.transform.position.y);
         }
         else
         {
-            target = new Vector2(xLeft, obj.transform.position.y);
+            target = new Vector2(x1, obj.transform.position.y);
         }
         obj.transform.position = Vector2.MoveTowards(obj.transform.position, target, speed * Time.deltaTime);
     }
