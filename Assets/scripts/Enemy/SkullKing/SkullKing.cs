@@ -73,7 +73,7 @@ public class SkullKing : Enemy
     void Update()
     {
         if(isStatic) { return; }
-        if (GetHealthPercentage() >= 0.35)
+        if (GetHealthPercentage() >= 0.5)
             {
             if (canMove)
             {

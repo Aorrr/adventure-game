@@ -53,7 +53,7 @@ public class CutSceneManager : MonoBehaviour
 
     IEnumerator TransitOutOfCutScene()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         FindObjectOfType<CameraControl>().OutOfCutScene();
         Destroy(system);
         wizard.DestroyThis();
