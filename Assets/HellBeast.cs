@@ -9,6 +9,8 @@ public class HellBeast : Enemy
     [SerializeField] GameObject shootPoint;
     [SerializeField] float projectileSpeed;
     [SerializeField] float shootInterval = 2.5f;
+    [SerializeField] float boundLeft;
+    [SerializeField] float boundRight;
     [SerializeField] int rangeShootInterval = 3;
     [SerializeField] float fireInterval = 2.5f;
     [SerializeField] AudioClip scream;
@@ -56,9 +58,15 @@ public class HellBeast : Enemy
         return fireCountDown;
     }
 
+    public float[] GetBounds()
+    {
+        float[] bounds = { boundLeft, boundRight };
+        return bounds;
+    }
+
     public void ActivateBurnt()
     {
-        if(GetHealthPercentage() <= 0.5 && !isBurnt)
+        if (GetHealthPercentage() <= 0.5 && !isBurnt)
         {
             myAnimator.SetTrigger("burnt");
             isBurnt = true;
@@ -92,7 +100,7 @@ public class HellBeast : Enemy
     }
 
     public void Shoot2()
-    {      
+    {
         GameObject fireBall1 = Instantiate(
                 projectile2,
                 shootPoint.transform.position,
@@ -114,12 +122,12 @@ public class HellBeast : Enemy
     public void RangeShoot()
     {
         GameObject[] fireBalls = new GameObject[7];
-        float[] xCoefficients = { -1, -0.87f, -0.5f, 0, 0.5f, 0.87f, 1};
+        float[] xCoefficients = { -1, -0.87f, -0.5f, 0, 0.5f, 0.87f, 1 };
         float[] yCoefficients = { 0, 0.5f, 0.87f, 1, 0.87f, 0.5f, 0 };
         float[] rotation = { 0, -30f, -60f, -90f, -120f, -150f, -180f };
         for (int i = 0; i < 7; i++)
         {
-            
+
             fireBalls[i] = Instantiate(
                 projectile2,
                 shootPoint.transform.position,
@@ -138,7 +146,7 @@ public class HellBeast : Enemy
         camShakeController.ShakeRunAtController(1.3f, 2f, 2f);
         GameObject myRipple = Instantiate(ripple, shootPoint.transform.position, shootPoint.transform.rotation);
         Destroy(myRipple, 1f);
-        FindObjectOfType<Player>().PushBack(-7.5f * transform.localScale.x , 10f, 1);
+        FindObjectOfType<Player>().PushBack(-7.5f * transform.localScale.x, 10f, 1);
     }
 
     public void LookAtPlayer()
@@ -146,7 +154,8 @@ public class HellBeast : Enemy
         if (FindObjectOfType<Player>().transform.position.x - transform.position.x > 0)
         {
             transform.localScale = new Vector2(-1f, 1f);
-        } else
+        }
+        else
         {
             transform.localScale = new Vector2(1f, 1f);
         }
@@ -157,7 +166,7 @@ public class HellBeast : Enemy
         if (hp <= 0) { return; }
         Debug.Log(isBurnt);
         Debug.Log(method);
-        if(isBurnt && method == "arrow")
+        if (isBurnt && method == "arrow")
         {
             damage = 0;
             popUpObject.SetDamage(damage);
@@ -165,7 +174,7 @@ public class HellBeast : Enemy
             (popUpObject.gameObject, shootPoint.transform.position, Quaternion.identity);
             Destroy(pop, 2f);
             return;
-        } 
+        }
         float reduction = 1;
         // calculate physical damage with armour
         if (type.ToLower() == "physical")
