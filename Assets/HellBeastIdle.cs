@@ -5,8 +5,6 @@ using System;
 
 public class HellBeastIdle : StateMachineBehaviour
 {
-    public float attackRange = 5;
-
     Transform player;
     HellBeast beast;
     Rigidbody2D rb;
@@ -14,11 +12,16 @@ public class HellBeastIdle : StateMachineBehaviour
     bool couldShoot;
     bool couldFire;
 
+    float boundLeft;
+    float boundRight;
+
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = FindObjectOfType<Player>().transform;
         rb = animator.GetComponent<Rigidbody2D>();
         beast = animator.GetComponent<HellBeast>();
+        boundLeft = beast.GetBounds()[0];
+        boundRight = beast.GetBounds()[1];
         couldShoot = true;
         couldFire = true;
     }
@@ -31,7 +34,7 @@ public class HellBeastIdle : StateMachineBehaviour
             animator.SetTrigger("breath");
             couldShoot = false;
         }         
-        else
+        else if(player.transform.position.x <= boundRight && player.transform.position.x >= boundLeft)
         {
             animator.SetTrigger("walk");
         }

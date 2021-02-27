@@ -9,6 +9,8 @@ public class HellBeast : Enemy
     [SerializeField] GameObject shootPoint;
     [SerializeField] float projectileSpeed;
     [SerializeField] float shootInterval = 2.5f;
+    [SerializeField] float boundLeft;
+    [SerializeField] float boundRight;
     [SerializeField] int rangeShootInterval = 3;
     [SerializeField] float fireInterval = 2.5f;
     [SerializeField] AudioClip scream;
@@ -54,6 +56,12 @@ public class HellBeast : Enemy
     public float GetFireCountDown()
     {
         return fireCountDown;
+    }
+
+    public float[] GetBounds()
+    {
+        float[] bounds = { boundLeft, boundRight };
+        return bounds;
     }
 
     public void ActivateBurnt()
